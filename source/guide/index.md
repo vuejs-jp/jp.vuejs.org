@@ -5,89 +5,89 @@ order: 2
 
 ## Introduction
 
-Vue.js is a library for building interactive web interfaces.
+Vue.js はインタラクティブなウェブインターフェースを作るためのライブラリーです。
 
-Technically, Vue.js is focused on the [ViewModel](#ViewModel) layer of the MVVM pattern. It connects the [View](#View) and the [Model](#Model) via two way data bindings. Actual DOM manipulations and output formatting are abstracted away into [Directives](#Directives) and [Filters](#Filters).
+技術的に、Vue.js はMVVM pattern の [ViewModel](#ViewModel) layer に注目しています。[ViewModel](#ViewModel) layer は双方向バインディングによって [View](#View) と [Model](#Model) を接続します。実際の DOM 操作と出力の形式は[Directives](#Directives) と [Filters](#Filters)によって抽象化されています。
 
-Philosophically, the goal is to provide the benefits of reactive data binding and composable view components with an API that is as simple as possible. It is not a full-blown framework - it is designed to be a view layer that is simple and flexible. You can use it alone for rapid prototyping, or mix and match with other libraries for a custom front-end stack. It's also a natural fit for no-backend services such as Firebase.
+Vue.js の哲学的なゴールは、可能な限り簡単なAPIを通じて、反応性の良いデータバインディングの利点と構成可能なviewのコンポーネントを提供することです。Vue.jsは万能なフレームワークではありません。 Vue.jsは単純かつ自由自在なview layerになるようにデザインされています。Vue.jsを単体でラピッドプロトタイピングができます。特別な front-end stack 用のライブラリー達と一緒に使ったり組み合わせたりもできます。Vue.jsは Firebase のようなノーバックエンドサービスとも合性が良いです。
 
-Vue.js' API is heavily influenced by [AngularJS], [KnockoutJS], [Ractive.js] and [Rivets.js]. Despite the similarities, I believe Vue.js offers a valuable alternative to these existing libraries by finding a sweetspot between simplicity and functionality.
+Vue.js の API は [AngularJS]、[KnockoutJS]、[Ractive.js]、 [Rivets.js]に強く影響を受けています。それらと似てはいますが、単純さと機能性のちょうど良いスィートスポットを見つけることによって、Vue.jsはそれらのライブラリーに対して価値ある代変手段になりうると私は信じています。
 
-Even if you are already familiar with some of these terms, it is recommended that you go through the following concepts overview because your notion of these terms might be different from what they mean in the Vue.js context.
+貴方は、その他のライブラリーの表現に既に慣れているかもしれませんが、それらの表現の記法がVue.js の文脈において意味するところとは違っているかもしれませんので、以下に示すコンセプトの全体像に目を通してみてください。
 
 ## Concepts Overview
 
 ### ViewModel
 
-An object that syncs the Model and the View. In Vue.js, every Vue instance is a ViewModel. They are instantiated with the `Vue` constructor or its sub-classes:
+Model と Viewを同期するオブジェクト。 Vue.js において, 全ての Vue インスタンスはViewModelです。 それらは `Vue` コンストラクターかそのサブクラスでインスタンス化されます:
 
 ```js
 var vm = new Vue({ /* options */ })
 ```
 
-This is the primary object that you will be interacting with as a developer when using Vue.js. For more details see [The Vue Constructor](/api/).
+これは貴方がVue.jsをつかって開発するときに初めて出会うオブジェクトです。詳細は [The Vue Constructor](/api/) を見てください。
 
 ### View
 
-The actual DOM that is managed by Vue instances.
+Vue インスタンスによって管理される実際の DOM.
 
 ```js
 vm.$el // The View
 ```
 
-Vue.js uses DOM-based templating. Each Vue instance is associated with a corresponding DOM element. When a Vue instance is created, it recursively walks all child nodes of its root element while setting up the necessary data bindings. After the View is compiled, it becomes reactive to data changes.
+Vue.js は DOM ベースのテンプレーティングを使います。各々のVue インスタンスはassociated with a 対応する DOM 要素と関連づいています。Vue インスタンスが作られると、必要なデータバインディングを設定している間、Vue インスタンスはその親要素の全ての子ノードを再帰的に巡回します。
 
-When using Vue.js, you rarely have to touch the DOM yourself except in custom directives (explained later). View updates will be automatically triggered when the data changes. These view updates are highly granular with the precision down to a textNode. They are also batched and executed asynchronously for greater performance.
+Vue.jsを使っているときに、貴方が貴方自身でDOM に触れることはcustom directives (後述)を除いて殆どありません。 View の更新はデータが変わったときに自動的に行われます。これらのView の更新は、textNodeに至る精度を持った高い粒度（？）で行われます。 これらは高性能化のために、バッチ化されて非同期実行されてもいます。
 
 ### Model
 
-A slightly modified plain JavaScript object.
+若干修正されたプレーンな JavaScript オブジェクト。
 
 ```js
 vm.$data // The Model
 ```
 
-In Vue.js, models are simply plain JavaScript objects, or **data objects**. You can manipulate their properties and Vue instances that are observing them will be notified of the changes. Vue.js achieves transparent reactivity by converting the properties on data objects into ES5 getter/setters. There's no need for dirty checking, nor do you have to explicitly signal Vue to update the View. Whenever the data changes, the View is updated on the next frame.
+Vue.jsにおいて、Model は単純にプレーンな JavaScript オブジェクトか**data objects**です。貴方はそれらのプロパティと、それらが変更されるかを観察しているVue インスタンスを操作できます。Vue.js はdata objectsのプロパティをES5 getter/settersに変換することによって、透過的な応答（？）を実現します。 ダーティーチェックは必要ありませんし、Viewを更新するために、明示的なシグナルを Vue に送る必要もありません。 データが変更されたときはいつでも、次のフレームでViewは更新されます。
 
-Vue instances proxy all properties on data objects they observe. So once an object `{ a: 1 }` has been observed, both `vm.$data.a` and `vm.a` will return the same value, and setting `vm.a = 2` will modify `vm.$data`.
+Vue インスタンスは、それらが観察している data objects の全てのプロパティをプロキシしています。 そのため、一度オブジェクト `{ a: 1 }` が観察されれば、 `vm.$data.a` と`vm.a` の両方が同じ値を返します。また、`vm.a = 2` に設定すると `vm.$data` が変わります.
 
-The data objects are mutated in place, so modifying it by reference has the same effects as modifying `vm.$data`. This makes it possible for multiple Vue instances to observe the same piece of data. In larger applications it is also recommended to treat Vue instances as pure views, and externalize the data manipulation logic into a more discrete store layer.
+data objectsは適当な位置で変化します。そのため、参照によってそれらを変更することは、`vm.$data` を変更することと同じ効果を持っています. この事が、複数の Vue インスタンスがデータの同じ部分を観察することを可能にしています。より広い応用としては、 Vue インスタンスは純粋なviewとして使われること、and externalize the data 操作のロジックをより離散的なstore layerに具体化すること（？）、も推奨されます。
 
-One caveat here is that once the observation has been initiated, Vue.js will not be able to detect newly added or deleted properties. To get around that, observed objects are augmented with `$add` and `$delete` methods.
-
+ここでの問題は、一度観察が始まったら、Vue.js はプロパティの新規追加と削除を検出できないことです。
+この問題を避けるために、観察されたオブジェクトは`$add` と `$delete` メソッドで追加削除されます。
 ### Directives
 
-Prefixed HTML attributes that tell Vue.js to do something about a DOM element.
+Vue.js が DOM 要素についての何かをすることを伝えている プレフィックスのついた HTML 属性
 
 ```html
 <div v-text="message"></div>
 ```
 
-Here the div element has a `v-text` directive with the value `message`. This tells Vue.js to keep the div's textContent in sync with the Vue instance's `message` property.
+ここでHere the div 要素は valueが `message` `v-text` directiveを持っています。 これはVue.js が、divの textContent がVue インスタンスの`message` プロパティと同期していることを、保っていることを伝えています。
 
-Directives can encapsulate arbitrary DOM manipulations. For example `v-attr` manipulates an element's attributes, `v-repeat` clones an element based on an Array, `v-on` attaches event listeners... we will cover them later.
+Directive は任意の DOM 操作をカプセル化できます。例えば、`v-attr` は要素の属性を操作しますし、`v-repeat` はアレイに基づいて要素をクローンしますし、, `v-on` はイベントリスナーを随行します。これらは後にまとめます。
 
 ### Mustache Bindings
 
-You can also use mustache-style bindings, both in text and in attributes. They are translated into `v-text` and `v-attr` directives under the hood. For example:
+貴方はテキストと属性の両方においてmustache-style バインディングを使うこともできます。それらは内部で、`v-text`ディレクティブ と `v-attr` ディレクティブに翻訳されます。例えば:
 
 ```html
 <div id="person-{{id}}">Hello {{name}}!</div>
 ```
 
-Although it is convenient, there are a few things you need to be aware of:
+この書き方は便利ですが、いくつか注意しなければならないことがあります:
 
-<p class="tip">The `src` attribute on an `<image>` element makes an HTTP request when a value is set, so when the template is first parsed it will result in a 404. In this case `v-attr` is preferred.</p>
+<p class="tip"> `<image>` 要素の `src` 属性は、値が設定されたときにHTTP リクエストを作成します。そのため、テンプレートが初めに解析されたときに、404の結果が返ってきます. この場合は、`v-attr` を使うのが良いです。 </p>
 
-<p class="tip">Internet Explorer will remove invalid inline `style` attributes when parsing HTML, so always use `v-style` when binding inline CSS if you want to support IE.</p>
+<p class="tip">Internet Explorer は、HTMLを解析しているときに、`style`属性の無効なインラインを削除します。 そのためIEをサポートしたい場合、 インラインCSS をバインディングするときにはいつも`v-style`を使ってください。</p>
 
-You can use triple mustaches for unescaped HTML, which translates to `v-html` internally:
+エスケープされていない（？）HTMLに対して3重のmustacheを使うことができ、それは内部で`v-html` に翻訳されます:
 
 ``` html
 {{{ safeHTMLString }}}
 ```
 
-However, this can open up windows for potential XSS attacks, therefore it is suggested that you only use triple mustaches when you are absolutely sure about the security of the data source, or pipe it through a custom filter that sanitizes untrusted HTML.
+しかしながら、this can open up windows for potential XSS attacks, therefore it is suggested that you only use triple mustaches when you are absolutely sure about the security of the data source, or pipe it through a custom filter that sanitizes untrusted HTML.
 
 Finally, you can add `*` to your mustache bindings to indicate a one-time only interpolation, which does not react to data changes:
 
