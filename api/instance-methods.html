@@ -124,8 +124,9 @@
 <li><strong>expOrFn</strong> <code>String|Function</code></li>
 <li><strong>callback( newValue, oldValue )</strong> <code>Function</code></li>
 <li><strong>options</strong> <code>Object</code> <em>任意</em><ul>
-<li><strong>deep</strong> <code>Boolean</code> <em>任意</em></li>
-<li><strong>immediate</strong> <code>Boolean</code> <em>任意</em></li>
+<li><strong>deep</strong> <code>Boolean</code></li>
+<li><strong>immediate</strong> <code>Boolean</code></li>
+<li><strong>sync</strong> <code>Boolean</code></li>
 </ul>
 </li>
 </ul>
@@ -163,7 +164,7 @@
 <h3 id="vm-$interpolate(_templateString_)">vm.$interpolate( templateString )</h3><ul>
 <li><strong>templateString</strong> <code>String</code></li>
 </ul>
-<p>中括弧補間をもつテンプレートの文字列のかたまりを評価します。このメソッドは、単に文字列を挿入するだけであるということに気をつけてください。つまり、属性を持ったディレクティブはコンパイルされません。</p>
+<p>mustache 挿入をもつテンプレートの文字列のかたまりを評価します。このメソッドは、単に文字列を挿入するだけであるということに気をつけてください。つまり、属性を持ったディレクティブはコンパイルされません。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vm.msg = 'hello' を仮定</span></span><br><span class="line">vm.$interpolate(<span class="string">'&#123;&#123;msg&#125;&#125; world!'</span>) <span class="comment">// -&gt; 'hello world!'</span></span><br></pre></td></tr></table></figure>
 <h3 id="vm-$log(_[keypath]_)">vm.$log( [keypath] )</h3><ul>
 <li><strong>keypath</strong> <code>String</code> <em>任意</em></li>

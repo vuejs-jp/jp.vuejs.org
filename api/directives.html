@@ -123,7 +123,7 @@
 <p>このディレクティブは、それ自身を Vue インスタンスのプロパティやインスタンスの文脈の中で評価される表現にバインドすることができます。配下のプロパティや表現の値が変更されたら、それらのディレクティブの <code>update()</code> 関数が同期的に呼ばれます。</p>
 </blockquote>
 <h3 id="v-text">v-text</h3><p>ある要素の<code>textContent</code>を更新します。</p>
-<p>内部的には、&#123;&#123; Mustache &#125;&#125; 表現も textNode 上の <code>v-text</code> ディレクティブとしてコンパイルされます。</p>
+<p>内部的には、&#123;&#123; Mustache &#125;&#125; 挿入も textNode 上の <code>v-text</code> ディレクティブとしてコンパイルされます。</p>
 <h3 id="v-html">v-html</h3><p>ある要素の <code>innerHTML</code> を更新します。</p>
 <p class="tip">ユーザによって与えられるデータを含む <code>v-html</code> は、危険な可能性があります。データソースのセキュリティが安全であると保証される場合は <code>v-html</code> を使うことを勧めますが、それ以外の場合はパイプ(|)を使用して、信頼できない HTML をサニタイズするカスタムフィルタを使用することをお勧めします。</p>
 
@@ -137,17 +137,17 @@
 <p>もし何も属性が与えられなかった場合、このディレクティブは要素の classList にバインディングの値を追加し、値が変更されたときに class が更新されます。</p>
 <p>もしディレクティブの属性が与えられたら、その属性はバインディングの値の真偽値に応じてトグルする class になります。複数項目の記法と併せると、非常に便利になります:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">v-class</span>=<span class="value">"</span><br><span class="line">  red    : hasError,</span><br><span class="line">  bold   : isImportant,</span><br><span class="line">  hidden : isHidden</span><br><span class="line">"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>別な方法としては、直接ディレクティブをオブジェクトにバインドできます。オブジェクトのキーは、クラスのリストは対応する値に基づいてトグルします。</p>
+<p>別な方法としては、直接ディレクティブをオブジェクトにバインドできます。オブジェクトのキーは、対応する値に基づいてトグルする class のリストになります。</p>
 <h3 id="v-attr">v-attr</h3><ul>
 <li>このディレクティブは、ひとつの属性が必要となります。</li>
 </ul>
 <p>要素の(引数によって指定された)属性を更新します。</p>
 <p><strong>例:</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">canvas</span> <span class="attribute">v-attr</span>=<span class="value">"width:w, height:h"</span>&gt;</span><span class="tag">&lt;/<span class="title">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>0 を除く偽となりうる値は、属性を削除します。<br>Falsy values except 0 will remove the attribute.</p>
+<p>0 を除く偽となりうる値は、属性を削除します。</p>
 <p>別な方法としては、直接ディレクティブをオブジェクトにバインドできます。オブジェクトのキーは、属性のリストは対応する値に基づいてトグルします。</p>
 <p>内部的には、&#123;&#123; Mustache &#125;&#125; 表現の中の引数を computed <code>v-attr</code> ディレクティブにコンパイルします。</p>
-<p>0.12.8 以降では、プロパティが存在する場合、<code>v-attr</code> は要素に対応するプロパティを設定します。例えば、<code>&lt;input value=&quot;{{val}}&quot;&gt;</code> は属性を更新するだけではなく、value プロパティも設定します。もし、要素がバインドされた属性に対応するプロパティを持っていない場合は、設定しません。</p>
+<p>0.12.8 以降では、input 要素で <code>value</code> 属性プロパティが使用された場合、<code>v-attr</code> はその要素に対応する <code>value</code> プロパティを設定します。例えば、<code>&lt;input value=&quot;{{val}}&quot;&gt;</code> は属性を更新するだけではなく、内在する JavaScript のプロパティも設定します。</p>
 <p class="tip"> <code>&lt;img&gt;</code> 要素上の <code>src</code> 要素を設定するときには、Mustache バインディングの代わりに <code>v-attr</code> を使用するべきです。テンプレートは Vue.js によってコンパイルされる前にブラウザによってパースされるので、ブラウザがイメージの URL を取得しようとしたときに、Mustache バインディングは 404 エラーの原因になり得ます。</p>
 
 <h3 id="v-style">v-style</h3><ul>
