@@ -6,7 +6,8 @@
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "examples"
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link current">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -59,16 +69,31 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link current">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
     <div class="list">
+        <h2>
         
-        <h2>例</h2>
+        例
         
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
         <ul class="menu-root">
             
                 <li>
@@ -96,11 +121,15 @@
                 </li>
             
                 <li>
-                    <a href="/examples/image-slider.html" class="sidebar-link">イメージスライダーコンポーネント</a>
+                    <a href="/examples/modal.html" class="sidebar-link">モーダルコンポーネント</a>
                 </li>
             
                 <li>
-                    <a href="/examples/modal.html" class="sidebar-link new">モーダルコンポーネント</a>
+                    <a href="/examples/elastic-header.html" class="sidebar-link">弾力のあるヘッダ</a>
+                </li>
+            
+                <li>
+                    <a href="/examples/select2.html" class="sidebar-link">カスタムディレクティブ</a>
                 </li>
             
                 <li>
@@ -111,12 +140,6 @@
                     <a href="/examples/hackernews.html" class="sidebar-link">HackerNews クローン</a>
                 </li>
             
-            <li><a href="http://legacy.vuejs.org">0.11 のドキュメントをお探しですか？</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
@@ -130,9 +153,10 @@
     <blockquote>
 <p>この例はカスタムコンポーネントの組み合わせ、computed property、Two way (双方向)バインディング、そして SVG 対応を紹介します。</p>
 </blockquote>
-<iframe width="100%" height="500" src="http://jsfiddle.net/yyx990803/bbt0f3nz/embedded/result,html,js,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="500" src="http://jsfiddle.net/yyx990803/tfpcsxgf/embedded/result,html,js,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
 </div>
 
                 

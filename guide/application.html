@@ -6,7 +6,8 @@
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -59,16 +69,31 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
     <div class="list">
+        <h2>
         
-        <h2>ガイド</h2>
+        ガイド
         
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
         <ul class="menu-root">
             
                 <li>
@@ -80,27 +105,51 @@
                 </li>
             
                 <li>
-                    <a href="/guide/directives.html" class="sidebar-link">ディレクティブ</a>
+                    <a href="/guide/overview.html" class="sidebar-link">概要</a>
                 </li>
             
                 <li>
-                    <a href="/guide/filters.html" class="sidebar-link">フィルタ</a>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue インスタンス</a>
                 </li>
             
                 <li>
-                    <a href="/guide/list.html" class="sidebar-link">リスト表示</a>
+                    <a href="/guide/syntax.html" class="sidebar-link">データバインディング構文</a>
                 </li>
             
                 <li>
-                    <a href="/guide/events.html" class="sidebar-link">イベントのリスニング</a>
+                    <a href="/guide/computed.html" class="sidebar-link">算出プロパティ</a>
                 </li>
             
                 <li>
-                    <a href="/guide/forms.html" class="sidebar-link">フォームのハンドリング</a>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">クラスとスタイルのバインディング</a>
                 </li>
             
                 <li>
-                    <a href="/guide/computed.html" class="sidebar-link">Computed Properties</a>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件付きレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">リストレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">メソッドとイベントハンドリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">フォーム入力バインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">トランジション</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">コンポーネント</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">リアクティブの探求</a>
                 </li>
             
                 <li>
@@ -112,11 +161,11 @@
                 </li>
             
                 <li>
-                    <a href="/guide/components.html" class="sidebar-link">コンポーネントシステム</a>
+                    <a href="/guide/mixins.html" class="sidebar-link">ミックスイン</a>
                 </li>
             
                 <li>
-                    <a href="/guide/transitions.html" class="sidebar-link">トランジションシステム</a>
+                    <a href="/guide/plugins.html" class="sidebar-link">プラグイン</a>
                 </li>
             
                 <li>
@@ -124,23 +173,9 @@
                 </li>
             
                 <li>
-                    <a href="/guide/extending.html" class="sidebar-link">Vue の拡張</a>
+                    <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
-                <li>
-                    <a href="/guide/best-practices.html" class="sidebar-link new">コツ & ベストプラクティス</a>
-                </li>
-            
-                <li>
-                    <a href="/guide/faq.html" class="sidebar-link">FAQ</a>
-                </li>
-            
-            <li><a href="http://legacy.vuejs.org">0.11 のドキュメントをお探しですか？</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
@@ -151,46 +186,64 @@
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <p>Vue.js は、他のアーキテクチャと干渉せず、可能な限り柔軟に対応ができるよう設計されているインターフェイス・ライブラリです。Vue.js は、ラピッドプロトタイピングの手法において非常に扱いやすい一方で、大規模アプリケーションを構築する場合では、構築経験の少ない開発者にとって悩ましい問題にもなります。ここでは、Vue.js を活用して大規模なプロジェクトを整理する方法について、独断的視点から示しています。</p>
-<h2 id="モジュール化">モジュール化</h2><p>スタンドアロンで動作する Vue.js コードは、グローバルで使用できますが煩雑になりやすいので、モジュールのビルドツールを利用して、コードをより良く整理していくことが望ましいです。実践への導入としては、CommonJS モジュールにコード（Node.js、および Vue.js のソースコードで使用されているフォーマット）を記述して、<a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> や <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a> でバンドルする方法をおすすめします。</p>
-<p>Webpack と Browserify は単にモジュールバンドラ以上のものです。それら両方は、他のプリプロセッサでソースコードを変換することができるソース変換 API を提供します。例えば、<a href="https://github.com/babel/babel-loader" target="_blank" rel="external">babel-loader</a> または <a href="https://github.com/babel/babelify" target="_blank" rel="external">babelify</a> を使用して、将来サポートされる ES6/7 シンタックスでコードを書くことができます。</p>
-<h2 id="単一ファイルコンポーネント">単一ファイルコンポーネント</h2><p>Vue.js を利用した典型的なプロジェクトでは、たくさんの個別のコンポーネントにコードを分割して、コンポーネントごとに HTML/CSS/JavaScript(Vue.js) を配置しておくと便利です。上述したように、Webpack または Browserify を使用するとき、次のようなコンポーネントを適切なソース変換できます:</p>
+    <p>Vue.js コアライブラリは、View レイヤーにフォーカスされて柔軟に設計されており、全てのアプリケーションレベルのアーキテクチャと干渉しないライブラリです。これは既存プロジェクトとの統合のために素晴らしいことができますが、スクラッチからの大規模アプリケーションを構築する場合は、構築経験の少ない開発者にとって悩ましい問題にもなります。</p>
+<p>Vue.js のエコシステムは、Vue で大規模なシングルページアプリケーション (SPA: single page application) を構築する方法のライブラリのツールセットを提供します。このパートは、私達が少しだけ”フレームワーク”のように感じるようなものを開始しますが、それは本当にごく推奨するリストです。今までどおりに積み重ねられた各パートにおいて使用するものを選ぶとよいでしょう。</p>
+<h2 id="モジュール化">モジュール化</h2><p>大規模なプロジェクトの場合、あなたのコードをよく整理するためにモジュール化ビルドシステムを利用することが必要です。そうすることの推奨するアプローチは、CommonJS または ES6 モジュールにあなたのソースコードを書いて、<a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> または <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a> を使用してそれらをバンドルします。</p>
+<p>Webpack と Browserify は単にモジュールバンドラ以上のものです。それら両方は、他のプリプロセッサでソースコードを変換することができるソース変換 API を提供します。例えば、<a href="https://github.com/babel/babel-loader" target="_blank" rel="external">babel-loader</a> または <a href="https://github.com/babel/babelify" target="_blank" rel="external">babelify</a> を使用して、将来サポートされる ES2015/2016 構文でコードを書くことができます。</p>
+<p>これまでにそれらを使用したことがない場合は、私は、いくつかのチュートリアルを通って、モジュールバンドラの概念に精通して得て、最新の ECMAScript の機能を使用して書き始めるのを、大いにお勧めします。</p>
+<h2 id="単一ファイルコンポーネント">単一ファイルコンポーネント</h2><p>Vue.js を利用した典型的なプロジェクトでは、たくさんの個別のコンポーネントにコードを分割して、コンポーネントごとに HTML/CSS/JavaScript を配置しておくと便利です。上述したように、Webpack または Browserify を使用するとき、次のようなコンポーネントを適切なソース変換できます:</p>
 <p><img src="/images/vue-component.png"></p>
 <p>もし、プリプロセッサに詳しいなら、次のようにも書くことができます：</p>
 <p><img src="/images/vue-component-with-pre-processors.png"></p>
-<p>これらの単一ファイル Vue コンポーネントを Webpack + <a href="https://github.com/vuejs/vue-loader" target="_blank" rel="external">vue-loader</a> または Browserify + <a href="https://github.com/vuejs/vueify" target="_blank" rel="external">vueify</a> でビルドできます。もしプリプロセッサを使用している場合、Webpack ローダ API はより良いファイル依存関係追跡とキャッシングが可能であるため、Webpack をセットアップして使用することをお勧めします。</p>
+<p>これらの単一ファイル Vue コンポーネントを Webpack + <a href="https://github.com/vuejs/vue-loader" target="_blank" rel="external">vue-loader</a> または Browserify + <a href="https://github.com/vuejs/vueify" target="_blank" rel="external">vueify</a> でビルドできます。Webpack ローダ API はより良いファイル依存関係追跡/キャッシング、そして Browserify transforms で実行できないいくつかの高度な機能があるため、Webpack をセットアップして使用することをお勧めします。</p>
 <p>GitHub のビルドセットアップの例を探すことができます。</p>
 <ul>
 <li><a href="https://github.com/vuejs/vue-loader-example" target="_blank" rel="external">Webpack + vue-loader</a></li>
 <li><a href="https://github.com/vuejs/vueify-example" target="_blank" rel="external">Browserify + vueify</a></li>
 </ul>
-<h2 id="ルーティング">ルーティング</h2><p class="tip">オフィシャルな <code>vue-router</code> モジュールは開発がアクティブでまもなくリリースされます。</p>
-
-<p>ハッシュチェンジへのイベントリスニングと、動的なコンポーネントを利用することで基本的なルーティングのロジックを実装することができます。</p>
+<h2 id="ルーティング">ルーティング</h2><p>シングルページアプリケーションについては、現在テクニカルプレビューな<a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">オフィシャル vue-router ライブラリ</a>の使用を推奨します。詳細については、どうか vue-router の<a href="http://vuejs.github.io/vue-router/" target="_blank" rel="external">ドキュメンテーション</a>を参照してください。</p>
+<p>もし、いくつかとてもシンプルなルーティングのロジックを必要としている場合は、ハッシュチェンジへのイベントリスニングと、動的なコンポーネントを利用することでそれを実装することができます。</p>
 <p><strong>例：:</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">component</span> <span class="attribute">is</span>=<span class="value">"&#123;&#123;currentView&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">component</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">'home'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</span><br><span class="line">Vue.component(<span class="string">'page1'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    currentView: <span class="string">'home'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// route ハンドラでページを切り替え</span></span><br><span class="line">app.currentView = <span class="string">'page1'</span></span><br></pre></td></tr></table></figure>
-<p>このメカニズムでは、<a href="https://github.com/visionmedia/page.js" target="_blank" rel="external">Page.js</a> や <a href="https://github.com/flatiron/director" target="_blank" rel="external">Director</a> などの、ルーティングライブラリを活用すると非常に簡単です。</p>
-<h2 id="サーバーとの通信">サーバーとの通信</h2><p>すべての Vue インスタンスは、<code>JSON.stringify()</code> で直接シリアライズされる生の <code>$data</code> を持つことができます。Vue.js コミュニティは <a href="https://github.com/vuejs/vue-resource" target="_blank" rel="external">vue-resource</a> プラグインを貢献していて、RESTFul API で動作するため簡単な方法を提供します。例えば jQuery の <code>$.ajax</code> または <a href="https://github.com/visionmedia/superagent" target="_blank" rel="external">SuperAgent</a> などの好きな Ajax ライブラリも使用できます。Vue.js はバックエンドを持たない Firebase や Parse などのサービスとの連携にも適しています。</p>
-<h2 id="単体テスト">単体テスト</h2><p>CommonJS ベースのビルドシステムと互換性のあるものであれば、お好きなものを選んでください。おすすめは、<a href="http://karma-runner.github.io/0.12/index.html" target="_blank" rel="external">Karma</a> と、そのプラグインの <a href="https://github.com/karma-runner/karma-commonjs" target="_blank" rel="external">CommonJS pre-processor</a> を使用して、テストを実行する方法です。</p>
-<p>最良の実践は、モジュール内のオプションや関数をエクスポートします。次の例を考えてみます：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// my-component.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  template: <span class="string">'&lt;span&gt;&#123;&#123;msg&#125;&#125;&lt;/span&gt;'</span>,</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      msg: <span class="string">'hello!'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'my-component created!'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">component</span> <span class="attribute">:is</span>=<span class="value">"currentView"</span>&gt;</span><span class="tag">&lt;/<span class="title">component</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">'home'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</span><br><span class="line">Vue.component(<span class="string">'page1'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    currentView: <span class="string">'home'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// route ハンドラでページを切り替え</span></span><br><span class="line">app.currentView = <span class="string">'page1'</span></span><br></pre></td></tr></table></figure>
+<p>このメカニズムでは、<a href="https://github.com/visionmedia/page.js" target="_blank" rel="external">Page.js</a> や <a href="https://github.com/flatiron/director" target="_blank" rel="external">Director</a> などの、外部ルーティングライブラリを活用すると非常に簡単です。</p>
+<h2 id="サーバーとの通信">サーバーとの通信</h2><p>すべての Vue インスタンスは、<code>JSON.stringify()</code> で直接シリアライズされる生の <code>$data</code> を持つことができます。Vue.js コミュニティは <a href="https://github.com/vuejs/vue-resource" target="_blank" rel="external">vue-resource</a> プラグインに貢献していて、RESTFul API で動作するため簡単な方法を提供します。例えば jQuery の <code>$.ajax</code> または <a href="https://github.com/visionmedia/superagent" target="_blank" rel="external">SuperAgent</a> などの好きな Ajax ライブラリも使用できます。Vue.js はバックエンドを持たない Firebase や Parse などのサービスとの連携にも適しています。</p>
+<h2 id="状態管理">状態管理</h2><p>大規模なアプリケーションで、状態管理はしばしば、状態が多くのコンポーネントに散らばって、それらコンポーネントの間に相互作用している複数の部品のために複雑になります。それは、Vue.js アプリケーションにおける本当のソースは生データのオブジェクトであることを、よく見落とされています。Vue インスタンスは単純にそれにプロキシアクセスします。それゆえ、複数のインスタンスによって共有されるべき状態の部品を持つ場合は、その重複を避けて、同一性によってそれを共有すべきです:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> sourceOfTruth = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: sourceOfTruth</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: sourceOfTruth</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>現在、<code>sourceOfTruth</code> が変化されるたびに、<code>vmA</code> と <code>vmB</code> の両方は、自動的にそれら View を更新します。さらに、この考えた方を拡張して、私達は <strong>store パターン</strong>にたどり着くでしょう:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> store = &#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    message: <span class="string">'Hello!'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  actionA: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.state.message = <span class="string">'action A triggered'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  actionB: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.state.message = <span class="string">'action B triggered'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    privateState: &#123;&#125;,</span><br><span class="line">    sharedState: store.state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    privateState: &#123;&#125;,</span><br><span class="line">    sharedState: store.state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>私達は、store 自体の内部に store の状態を変化させる全てのアクションに置いていることに注意してください。集中型の状態管理のこのタイプは、変化のタイプが状態に起こる可能性を、簡単に理解することができ、トリガされる方法があります。各コンポーネントはまだ所有し、そのプライベートな状態を管理することができます。</p>
+<p><img src="/images/state.png" alt="State Management"></p>
+<p>注意することの1つは、あなたのアクションにおいて元の状態オブジェクトを決して置き換えてはいけないということです。コンポーネントと store は、変化が監視されるべきために、同じオブジェクトへの参照を共有する必要があります。</p>
+<p>私達は、コンポーネントが直接 store に属する状態を変化させるのはできない規約を強制する場合は、代わりに、アクションを実行するために store に通知するイベントを送りだす必要がありますが、私達は本質的に <a href="https://facebook.github.io/flux/" target="_blank" rel="external">Flux</a> アーキテクチャにたどり着きました。この規約の利点は、私達が store に起こっている変化を全ての状態を記録でき、そしてその上で、私達は変化ログ、スナップショット、履歴の再転用などのような、高度なデバッギングヘルパーを実装することができます。</p>
+<p>Flux アーキテクチャは React アプリケーションで一般的に使用されています。コアなアイデアの裏からひっくり返して、Flux は Vue.js で非常に単純に達成することができるので、地味なリアクティブシステムに感謝します。私達が、コンセプトを導入するための一例にすぎない、ここで実証するものであるということに注意してください。すべての単純なシナリオのためにそれを必要としておらず、あなたのアプリケーションの真のニーズに合わせてパターンを調整する必要があります。</p>
+<h2 id="単体テスト">単体テスト</h2><p>モジュールベースのビルドシステムと互換性のあるものであれば、お好きなものを選んでください。おすすめは、<a href="http://karma-runner.github.io/0.12/index.html" target="_blank" rel="external">Karma</a> テストランナーです。それは、たくさんのコミュニティプラグインがあり、<a href="https://github.com/webpack/karma-webpack" target="_blank" rel="external">Webpack</a> と <a href="https://github.com/Nikku/karma-browserify" target="_blank" rel="external">Browserify</a> にサポートを含んでいます。詳細なセットアップについては各プロジェクトのそれぞれのドキュメントを参照してください。</p>
+<p>テストのためにコード構造の観点から、ベストプラクティスはあなたのコンポーネントモジュールで生のオプション/機能をエクスポートすることです。この例を考えてみます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// my-component.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  template: <span class="string">'&lt;span&gt;&#123;&#123;msg&#125;&#125;&lt;/span&gt;'</span>,</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      msg: <span class="string">'hello!'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'my-component created!'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>このファイルは、エントリーモジュールで次のように使用できます：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">var</span> Vue = <span class="built_in">require</span>(<span class="string">'vue'</span>)</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    <span class="string">'my-component'</span>: <span class="built_in">require</span>(<span class="string">'./my-component'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">var</span> Vue = <span class="built_in">require</span>(<span class="string">'vue'</span>)</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    <span class="string">'my-component'</span>: <span class="built_in">require</span>(<span class="string">'./my-component'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>そして、出来たモジュールは次のようにテストできます：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Some Jasmine 2.0 tests</span></span><br><span class="line">describe(<span class="string">'my-component'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  </span><br><span class="line">  <span class="comment">// require source module</span></span><br><span class="line">  <span class="keyword">var</span> myComponent = <span class="built_in">require</span>(<span class="string">'../src/my-component'</span>)</span><br><span class="line">  it(<span class="string">'should have a created hook'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    expect(<span class="keyword">typeof</span> myComponent.created).toBe(<span class="string">'function'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  it(<span class="string">'should set correct default data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    expect(<span class="keyword">typeof</span> myComponent.data).toBe(<span class="string">'function'</span>)</span><br><span class="line">    <span class="keyword">var</span> defaultData = myComponent.data()</span><br><span class="line">    expect(defaultData.message).toBe(<span class="string">'hello!'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Jasmine 2.0 のテストと同じ</span></span><br><span class="line">describe(<span class="string">'my-component'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ソースモジュールを require</span></span><br><span class="line">  <span class="keyword">var</span> myComponent = <span class="built_in">require</span>(<span class="string">'../src/my-component'</span>)</span><br><span class="line">  it(<span class="string">'should have a created hook'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    expect(<span class="keyword">typeof</span> myComponent.created).toBe(<span class="string">'function'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  it(<span class="string">'should set correct default data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    expect(<span class="keyword">typeof</span> myComponent.data).toBe(<span class="string">'function'</span>)</span><br><span class="line">    <span class="keyword">var</span> defaultData = myComponent.data()</span><br><span class="line">    expect(defaultData.msg).toBe(<span class="string">'hello!'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p class="tip">Vue.js のディレクティブは、非同期でデータ更新に反応するので、データ更新後の DOM ステータスに対してアサーションを行うには、<code>Vue.nextTick</code> のコールバックを利用する必要があります。</p>
 
-<h2 id="プロダクション向けのデプロイ">プロダクション向けのデプロイ</h2><p>Vue.js の縮小されたスタンドアローンビルド版は、既に小さいファイルサイズにするため全ての警告を取り除いていますが、Vue.js アプリケーションを構築するために Browserify や Webpack のようなツールを使用するとき、そのやり方はあまり明白ではないです。</p>
-<p>0.12.8 以降では、警告を取り除くためのツールを設定するのは非常に簡単です:</p>
-<h3 id="Webpack">Webpack</h3><p>警告ブロックが自動的に UglifyJS によって縮小中を削除できるように、プロダクション環境を示すために Webpack の <a href="http://webpack.github.io/docs/list-of-plugins.html#defineplugin" target="_blank" rel="external">DefinePlugin</a> を使ってください。設定例:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">new</span> webpack.DefinePlugin(&#123;</span><br><span class="line">      <span class="string">'process.env'</span>: &#123;</span><br><span class="line">        NODE_ENV: <span class="string">'"production"'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(&#123;</span><br><span class="line">      compress: &#123;</span><br><span class="line">        warnings: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="プロダクション向けのデプロイ">プロダクション向けのデプロイ</h2><p>Vue.js の縮小されたスタンドアローンビルド版は、既に小さいファイルサイズにするため全ての警告を取り除いていますが、Vue.js アプリケーションを構築するために Browserify や Webpack のようなツールを使用するとき、これを達成するためにいくつかの追加設定をする必要があります。</p>
+<h3 id="Webpack">Webpack</h3><p>警告ブロックが自動的に UglifyJS によって縮小中に削除されるように、プロダクション環境を示すために Webpack の <a href="http://webpack.github.io/docs/list-of-plugins.html#defineplugin" target="_blank" rel="external">DefinePlugin</a> を使ってください。設定例:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">new</span> webpack.DefinePlugin(&#123;</span><br><span class="line">      <span class="string">'process.env'</span>: &#123;</span><br><span class="line">        NODE_ENV: <span class="string">'"production"'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(&#123;</span><br><span class="line">      compress: &#123;</span><br><span class="line">        warnings: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Browserify">Browserify</h3><p><code>NODE_ENV</code> に <code>&quot;production&quot;</code> を設定して、あなたのビルドコマンドを実行します。Vue は自動的に <a href="https://github.com/hughsk/envify" target="_blank" rel="external">envify</a> transform でそれ自身に適用し、警告ブロックに到達不能になります。例:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NODE_ENV=production browserify <span class="operator">-e</span> main.js | uglifyjs -c -m &gt; build.js</span><br></pre></td></tr></table></figure>
-<h2 id="例">例</h2><p><a href="https://github.com/yyx990803/vue-hackernews" target="_blank" rel="external">Vue.js Hackernews Clone</a> は、Browserify と vue-loader を利用したソースコード管理と、Director.js を利用したルーティングの基本設計、また HackerNews の Firebase API をバックエンドとして利用したサンプルアプリケーションです。決して大きなアプリケーションではないですが、このページで説明する概念の併用を実証しています。</p>
-<p>次: <a href="/guide/extending.html">Vue の拡張</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">NODE_ENV=production browserify <span class="operator">-e</span> main.js | uglifyjs -c -m &gt; build.js</span><br></pre></td></tr></table></figure>
+<h2 id="アプリケーションの例">アプリケーションの例</h2><p><a href="https://github.com/vuejs/vue-hackernews" target="_blank" rel="external">Vue.js Hackernews Clone</a> は、Webpack と vue-loader を利用したソースコード管理と、vue-router を利用したルーティングの基本設計、また HackerNews の Firebase API をバックエンドとして利用したサンプルアプリケーションです。決して大きなアプリケーションではないですが、このページで説明する概念の併用を実証しています。</p>
 
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/plugins.html">プラグイン</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/comparison.html">他のフレームワークとの比較</a> →</span>
+        
+      </div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
 </div>
 
                 

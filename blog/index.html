@@ -6,7 +6,8 @@
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = ""
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link current">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link current">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -58,15 +68,34 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link current">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link current">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
   </ul>
 </div>
 <div class="content blog">
 <h1 style="text-align: center; margin-bottom:.5em">The Vue.js Blog</h1>
+
+    <div class="post">
+        <h2><a href="/2015/10/26/1.0.0-release/">Vue.js 1.0.0 リリースしました</a></h2>
+        <h4>Oct 26, 2015</h4>
+        <div><blockquote>
+<p>こんにちは HN！ Vue.js に精通していない場合は、より高い概要について、この<a href="http://blog.evanyou.me/2015/10/25/vuejs-re-introduction/">ブログ記事</a>を読みたいかもしれません。</p>
+</blockquote>
+<p>300 以上のコミットの後に、8 つのアルファ (alpha) バージョン 、4 つのベータ (beta) バージョン 、そして 2 つのリリース候補(RC)バージョン、今日、私は <a href="https://github.com/vuejs/vue/releases/tag/1.0.0">Vue.js 1.0.0 エヴァンゲリオン (Evangelion)</a>のリリースを発表するのをとても誇りに思っています！それはコミュニティから全てのフィードバックなしには不可能でした。API の再設計プロセスに参加した全ての人々に感謝します。</p></div>
+        <a href="/2015/10/26/1.0.0-release/">... continue reading</a>
+    </div>
 
     <div class="post">
         <h2><a href="/2015/06/11/012-release/">Vue.js 0.12 released!</a></h2>
@@ -107,6 +136,7 @@
     </div>
 
 </div>
+
                 
             </div>
             <script src="/js/smooth-scroll.min.js"></script>

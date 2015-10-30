@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>概要 - vue.js</title>
+        <title>vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "api"
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link">ガイド</a></li>
-<li><a href="/api/" class="nav-link current">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link current">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -59,77 +69,1402 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link">ガイド</a></li>
-<li><a href="/api/" class="nav-link current">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link current">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
     <div class="list">
+        <h2>
         
-        <h2>API</h2>
+        API
         
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
         <ul class="menu-root">
             
-                <li>
-                    <a href="/api/index.html" class="sidebar-link current">概要</a>
-                </li>
-            
-                <li>
-                    <a href="/api/options.html" class="sidebar-link">コンポーネントオプション</a>
-                </li>
-            
-                <li>
-                    <a href="/api/instance-properties.html" class="sidebar-link">インスタンスプロパティ</a>
-                </li>
-            
-                <li>
-                    <a href="/api/instance-methods.html" class="sidebar-link">インスタンスメソッド</a>
-                </li>
-            
-                <li>
-                    <a href="/api/global-api.html" class="sidebar-link">グローバル API</a>
-                </li>
-            
-                <li>
-                    <a href="/api/directives.html" class="sidebar-link">ディレクティブ</a>
-                </li>
-            
-                <li>
-                    <a href="/api/filters.html" class="sidebar-link">フィルタ</a>
-                </li>
-            
-                <li>
-                    <a href="/api/elements.html" class="sidebar-link new">特別な要素</a>
-                </li>
-            
-            <li><a href="http://legacy.vuejs.org">0.11 のドキュメントをお探しですか？</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
 
 
 <div class="content api with-sidebar">
-    <h1>概要</h1>
+    <h1></h1>
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <h2 id="Vue_コンストラクタ">Vue コンストラクタ</h2><p><code>Vue</code> コンストラクタは、Vue.js の中核です。これは、Vue インスタンスの生成を可能にする、コンストラクタ関数です。Vue インスタンスの生成は、簡単です:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123; <span class="comment">/* options */</span> &#125;)</span><br></pre></td></tr></table></figure>
-<p>Vue インスタンスを生成するときは、DOM 要素に関する情報やデータオブジェクト、mixin メソッド、ライフサイクルコールバックなどの情報を含むオプションオブジェクトを渡す必要があります。すべてのリストは、<a href="/api/options.html">コンポーネントオプション</a>を参照してください。</p>
-<p>各 Vue インスタンスは、本質的には ViewModel です（それ故に、変数名 <code>vm</code> がドキュメントの各所で見られます）。各インスタンスは関連する DOM 要素 <code>$el</code> をもち、これはおおまかに言って MVVM の V に該当します。また、関連する JavaScript オブジェクト <code>$data</code> も持っており、これは MVVM の M に該当します。M における変更によって、V が更新されます。Two way (双方向)バインディングでは、V におけるユーザーの入力が M の更新を引き起こします。Vue インスタンスで利用可能なプロパティについてより詳細な説明は、<a href="/api/instance-properties.html">インスタンスプロパティ</a>を参照してください。</p>
-<p>それぞれの Vue インスタンスは、データ監視、イベント通信や DOM 操作をするいくつかの<a href="/api/instance-methods.html">インスタンスメソッド</a>を持っています。</p>
-<p><code>Vue</code> コンストラクタそのものは<a href="/api/global-api.html">グローバル API</a> を公開しており、<code>Vue</code> クラスの拡張や、グローバル設定、コンポーネントやディレクティブ、フィルタなどのグローバルなカスタムの資産を登録することを可能としています。</p>
-<h2 id="初期化">初期化</h2><p>インスタンスの生成の際に <code>el</code> オプションが与えられた場合、Vueインスタンスは直ちにコンパイルの段階に入ります。さもなければ、コンパイルが開始される前に、<code>vm.$mount()</code> が呼ばれるのを待ちます。コンパイルの段階の間に、Vue は DOM をひと通り見て、遭遇したディレクティブを収集します。一旦紐付けられると、それらの DOM ノードは Vue インスタンスによって管理されていると言えます。ひとつの DOM ノードはひとつの Vue インスタンスによってのみ管理され、一回より多くコンパイルされるべきではありません。</p>
-<h2 id="データのプロキシ">データのプロキシ</h2><p>Vue インスタンスはその <code>$data</code> オブジェクトにプロキシアクセスするため、もし <code>vm.$data.msg</code> があれば、<code>vm.msg</code> としてもアクセスすることができます。これは少し不思議に見えますが、全く最適なものです。より明示的なデータアクセスのために <code>vm.$data.msg</code> とすることも可能です。しかし、他の Vue インスタンスからはデータとして監視できないため、<code>vm</code> と <code>vm.$data</code> との違いに気をつけることも依然として重要です。</p>
-<p>データオブジェクトはひとつのVueインスタンスのみに属する必要がないことも知っておくべきです。つまり、複数の ViewModel は <code>$data</code> の直下であろうと、ネストされた下のデータであろうと、同じデータを監視することができます。これは複数のコンポーネントが共有されたグローバルなオブジェクトの状態に反応しなければならないときに便利です。</p>
+    <h2 id="グローバル設定">グローバル設定</h2><p><code>Vue.config</code> は Vue のグローバル設定を含んでいるオブジェクトです。あなたのアプリケーションが読み込まれる前に、下記のプロパティを変更することが出来ます:</p>
+<h3 id="debug">debug</h3><ul>
+<li><p><strong>型:</strong> <code>Boolean</code></p>
+</li>
+<li><p><strong>デフォルト:</strong> <code>false</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.config.debug = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>デバッグモードでは、 Vue は下記の動作を実行します:</p>
+<ol>
+<li><p>全て警告としてスタックトレースを出力します。</p>
+</li>
+<li><p>全てのアンカーノードは DOM でコメントノードとして表示します。これはレンダリングされた結果の構造を詳しく調べるために容易になります。</p>
+</li>
+</ol>
+<p class="tip">デバッグモードは、 production ビルドのみ有効です。</p>
 
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+</li>
+</ul>
+<h3 id="delimiters">delimiters</h3><ul>
+<li><p><strong>型:</strong> <code>Array&lt;String&gt;</code></p>
+</li>
+<li><p><strong>デフォルト:</strong> <code>["{{", "}}"]</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ES6 テンプレート文字列スタイル</span></span><br><span class="line">Vue.config.delimiters = [<span class="string">'$&#123;'</span>, <span class="string">'&#125;'</span>]</span><br></pre></td></tr></table></figure>
+<p>プレーンテキスト展開デリミタを変更します。</p>
+</li>
+</ul>
+<h3 id="unsafeDelimiters">unsafeDelimiters</h3><ul>
+<li><p><strong>型:</strong> <code>Array&lt;String&gt;</code></p>
+</li>
+<li><p><strong>デフォルト:</strong> <code>["{{{", "}}}"]</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// より危険に見えるようにします</span></span><br><span class="line">Vue.config.delimiters = [<span class="string">'&#123;!!'</span>, <span class="string">'!!&#125;'</span>]</span><br></pre></td></tr></table></figure>
+<p>Raw HTML 展開デリミタを変更します。</p>
+</li>
+</ul>
+<h3 id="silent">silent</h3><ul>
+<li><p><strong>型:</strong> <code>Boolean</code></p>
+</li>
+<li><p><strong>デフォルト:</strong> <code>false</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.config.silent = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>Vue.js のすべてのログと警告を抑制します。</p>
+</li>
+</ul>
+<h3 id="async">async</h3><ul>
+<li><p><strong>型:</strong> <code>Boolean</code></p>
+</li>
+<li><p><strong>デフォルト:</strong> <code>true</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.config.async = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>非同期モードがオフの場合、Vue はデータ変更を検知した時に、すべての DOM 更新を同期的に実行します。これは幾つかのシナリオでのデバッグに役立つかもしれませんが、パフォーマンスの悪化や watch のコールバックが呼ばれる順序に影響を及ぼす可能性があります。 <strong> <code>async: false</code> は本番環境での利用は非推奨です。 </strong></p>
+</li>
+</ul>
+<h2 id="グローバル_API">グローバル API</h2><h3 id="Vue-extend(_options_)">Vue.extend( options )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Object} options</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue コンストラクタベースの “サブクラス” を作成します。引数はコンポーネントオプションを含むオブジェクトである必要があります。</p>
+<p>ここでの注意すべき特別なケースは、<code>el</code> と <code>data</code> で、このケースでは関数にしなければなりません。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"mount-point"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 再利用可能なコンストラクタを作成</span></span><br><span class="line"><span class="keyword">var</span> Profile = Vue.extend(&#123;</span><br><span class="line">  template: <span class="string">'&lt;p&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125; aka &#123;&#123;alias&#125;&#125;&lt;/p&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// Profile のインスタンスを作成</span></span><br><span class="line"><span class="keyword">var</span> profile = <span class="keyword">new</span> Profile(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Walter'</span>,</span><br><span class="line">    lastName: <span class="string">'White'</span>,</span><br><span class="line">    alias: <span class="string">'Heisenberg'</span></span><br><span class="line">  &#125;  </span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 要素上にマウントする</span></span><br><span class="line">profile.$mount(<span class="string">'#mount-point'</span>)</span><br></pre></td></tr></table></figure>
+<p>結果は以下のようになります:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>Walter White aka Heisenberg<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/components.html">コンポーネント</a></p>
+</li>
+</ul>
+<h3 id="Vue-nextTick(_callback_)">Vue.nextTick( callback )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Functon} callback</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>callback を延期し、DOM の更新サイクル後に実行します。DOM 更新を待ち受けるために、いくつかのデータを変更した直後に使用してください。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// データの編集</span></span><br><span class="line">vm.msg = <span class="string">'Hello'</span></span><br><span class="line"><span class="comment">// DOM はまだ更新されていない</span></span><br><span class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// DOM が更新されている</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/reactivity.html#非同期更新キュー">非同期更新キュー</a></p>
+</li>
+</ul>
+<h3 id="Vue-set(_object,_key,_value_)">Vue.set( object, key, value )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Object} object</code></li>
+<li><code>{String} key</code></li>
+<li><code>{*} value</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>オブジェクトにプロパティを設定します。オブジェクトがリアクティブの場合、プロパティがリアクティブプロパティとして作成されることを保証し、View 更新をトリガします。これは主に Vue がプロパティの追加を検知できないという制約を回避するために使われます。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/reactivity.html">リアクティブの探求</a></p>
+</li>
+</ul>
+<h3 id="Vue-delete(_object,_key_)">Vue.delete( object, key )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Object} object</code></li>
+<li><code>{String} key</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>オブジェクトのプロパティを削除します。オブジェクトがリアクティブの場合、削除がトリガし View が更新されることを保証します。これは主に Vue がプロパティの削除を検知できないという制約を回避するために使われますが、使う必要があることはまれです。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/reactivity.html">リアクティブの探求</a></p>
+</li>
+</ul>
+<h3 id="Vue-directive(_id,_[definition]_)">Vue.directive( id, [definition] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{Function | Object} [definition]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>グローバルディレクティブを登録または取得します。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 登録</span></span><br><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 登録 (シンプルな function directive)</span></span><br><span class="line">Vue.directive(<span class="string">'my-directive'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// `update` として呼ばれる</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// getter、登録されていればディレクティブ定義を返す</span></span><br><span class="line"><span class="keyword">var</span> myDirective = Vue.directive(<span class="string">'my-directive'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/custom-directive.html">カスタムディレクティブ</a></p>
+</li>
+</ul>
+<h3 id="Vue-elementDirective(_id,_[definition]_)">Vue.elementDirective( id, [definition] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{Object} [definition]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>グローバルエレメントディレクティブに登録または取得します。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 登録</span></span><br><span class="line">Vue.elementDirective(<span class="string">'my-element'</span>, &#123;</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  <span class="comment">// エレメントディレクティブは `update` を利用しない</span></span><br><span class="line">  unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// getter、登録されていればディレクティブ定義を返す</span></span><br><span class="line"><span class="keyword">var</span> myDirective = Vue.elementDirective(<span class="string">'my-element'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/custom-directive.html#エレメントディレクティブ">エレメントディレクティブ</a></p>
+</li>
+</ul>
+<h3 id="Vue-filter(_id,_[definition]_)">Vue.filter( id, [definition] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{Function | Object} [definition]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>グローバルフィルタに登録または取得します。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 登録</span></span><br><span class="line">Vue.filter(<span class="string">'my-filter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 処理された値を返す</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 双方向フィルタ</span></span><br><span class="line">Vue.filter(<span class="string">'my-filter'</span>, &#123;</span><br><span class="line">  read: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  write: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// getter、登録されていればフィルタを返す</span></span><br><span class="line"><span class="keyword">var</span> myFilter = Vue.filter(<span class="string">'my-filter'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/custom-filter.html">カスタムフィルタ</a></p>
+</li>
+</ul>
+<h3 id="Vue-component(_id,_[definition]_)">Vue.component( id, [definition] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{Function | Object} [definition]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>グローバルコンポーネントに登録または取得します。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 拡張コンストラクタを登録</span></span><br><span class="line">Vue.component(<span class="string">'my-component'</span>, Vue.extend(&#123; <span class="comment">/* ... */</span>&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">// オプションオブジェクトを登録 (Vue.extend を自動的に呼ぶ)</span></span><br><span class="line">Vue.component(<span class="string">'my-component'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 登録されたコンポーネントを取得 (常にコンストラクタを返す)</span></span><br><span class="line"><span class="keyword">var</span> MyComponent = Vue.component(<span class="string">'my-component'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/components.html">コンポーネント</a></p>
+</li>
+</ul>
+<h3 id="Vue-transition(_id,_[hooks]_)">Vue.transition( id, [hooks] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{Object} [hooks]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>グローバルトランジションフックオブジェクトに登録または取得します。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 登録</span></span><br><span class="line">Vue.transition(<span class="string">'fade'</span>, &#123;</span><br><span class="line">  enter: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  leave: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 登録されたフックを返す</span></span><br><span class="line"><span class="keyword">var</span> fadeTransition = Vue.transition(<span class="string">'fade'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/transitions.html">トランジション</a></p>
+</li>
+</ul>
+<h3 id="Vue-partial(_id,_[partial]_)">Vue.partial( id, [partial] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{String} [partial]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>グローバルテンプレート partial 文字列に登録または取得します。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 登録</span></span><br><span class="line">Vue.partial(<span class="string">'my-partial'</span>, <span class="string">'&lt;div&gt;Hi&lt;/div&gt;'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 登録された partial を返す</span></span><br><span class="line"><span class="keyword">var</span> myPartial = Vue.partial(<span class="string">'my-partial'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="#partial">特別な要素 - &lt;partial&gt;</a></p>
+</li>
+</ul>
+<h3 id="Vue-use(_plugin,_[options]_)">Vue.use( plugin, [options] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Object | Function} plugin</code></li>
+<li><code>{Object} [options]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue.js のプラグインをインストールします。plugin がオブジェクトならば、それは <code>install</code> メソッドを実装していなければなりません。それ自身が関数ならば、それは install メソッドとして扱われます。install メソッドは、Vue を引数として呼び出されます。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/plugins.html">プラグイン</a></p>
+</li>
+</ul>
+<h3 id="Vue-mixin(_mixin_)">Vue.mixin( mixin )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Object} mixin</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>全ての Vue インスタンスが作成された後に影響を及ぼす、ミックスイン (mixin) をグローバルに適用します。これは、コンポーネントにカスタム動作を注入するために、プラグイン作成者によって使用することができます。<strong>アプリケーションコードでの使用は推奨されません。</strong></p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/mixins.html#グローバルミックスイン">グローバルミックスイン</a></p>
+</li>
+</ul>
+<h2 id="オプション_/_データ">オプション / データ</h2><h3 id="data">data</h3><ul>
+<li><p><strong>型:</strong> <code>Object | Function</code></p>
+</li>
+<li><p><strong>制約:</strong> <code>Vue.extend()</code> の中で使用する場合は、<code>Function</code> タイプのみを受け付けます。</p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスのためのデータオブジェクトです。Vue.js は再帰的にインスタンスのプロパティを getter/setter に変換し、”リアクティブ” にします。<strong>オブジェクトはプレーンなネイティブオブジェクトである必要があります</strong>。既存の getter/setter およびプロトタイププロパティは無視されます。複雑なオブジェクトを監視することは推奨されません。</p>
+<p>一度インスタンスが生成されると、オリジナルのデータオブジェクトは <code>vm.$data</code> としてアクセス出来ます。Vue インスタンスはデータオブジェクト上に見つかったすべてのプロパティに代理アクセスします。</p>
+<p>Vue の内部的なプロパティや API メソッドと衝突する可能性があるため、<code>_</code> または <code>$</code> から始まるプロパティは Vue インスタンスにプロキシ<strong>されない</strong>ことに注意してください。それらは <code>vm.$data._property</code> としてアクセスできます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; a: <span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// インスタンスの直接生成</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line">vm.a <span class="comment">// -&gt; 1</span></span><br><span class="line">vm.$data === data <span class="comment">// -&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Vue.extend() 内では、関数を使わなければいけない</span></span><br><span class="line"><span class="keyword">var</span> Component = Vue.extend(&#123;</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; a: <span class="number">1</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/reactivity.html">リアクティブの探求</a></p>
+</li>
+</ul>
+<h3 id="props">props</h3><ul>
+<li><p><strong>型:</strong> <code>Array | Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>親コンポーネントからデータを受け取るためにエクスポートされた属性のリスト/ハッシュです。シンプルな配列ベースの構文、そして型チェック、カスタム検証そしてデフォルト値などの高度な構成を可能とする配列ベースの代わりとなるオブジェクトベースの構文があります。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// シンプルな構文</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-simple'</span>, &#123;</span><br><span class="line">  props: [<span class="string">'size'</span>, <span class="string">'myMessage'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// バリデーション付きのオブジェクト構文</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-advanced'</span>, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    <span class="comment">// 単なる型チェック</span></span><br><span class="line">    size: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="comment">// 型チェックとその他のバリデーション</span></span><br><span class="line">    name: &#123;</span><br><span class="line">      type: <span class="built_in">String</span>,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/components.html#Props">Props</a></p>
+</li>
+</ul>
+<h3 id="computed">computed</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスに組み込まれる算出プロパティ (Computed property) です。すべての getter や setter は、自動的に Vue インスタンスにバインドされた <code>this</code> コンテキストを持ちます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123; a: <span class="number">1</span> &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    <span class="comment">// get のみ。必要なのは関数一つだけ</span></span><br><span class="line">    aDouble: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.a * <span class="number">2</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// get と set 両方</span></span><br><span class="line">    aPlus: &#123;</span><br><span class="line">      get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="number">1</span></span><br><span class="line">      &#125;,</span><br><span class="line">      set: <span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a = v - <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.aPlus   <span class="comment">// -&gt; 2</span></span><br><span class="line">vm.aPlus = <span class="number">3</span></span><br><span class="line">vm.a       <span class="comment">// -&gt; 2</span></span><br><span class="line">vm.aDouble <span class="comment">// -&gt; 4</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/computed.html">算出プロパティ</a></li>
+<li><a href="/guide/reactivity.html#算出プロパティの内部">リアクティブの探求: 算出プロパティの内部</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="methods">methods</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスに組み込まれるメソッドです。VM インスタンスでは、これらのメソッドに直接アクセスでき、ディレクティブの式で使用することもできます。すべてのメソッドは、Vue インスタンスに自動的にバインドされた <code>this</code> コンテキストを持ちます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123; a: <span class="number">1</span> &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    plus: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.a++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.plus()</span><br><span class="line">vm.a <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/events.html">メソッドとイベントハンドリング</a></p>
+</li>
+</ul>
+<h3 id="watch">watch</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>キーが監視する評価式で、値が対応するコールバックをもつオブジェクトです。値はメソッド名の文字列、または追加のオプションが含まれているオブジェクトを取ることができます。Vue インスタンスはインスタンス化の際にオブジェクトの各エントリに対して <code>$watch()</code> を呼びます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    <span class="string">'a'</span>: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'new: %s, old: %s'</span>, val, oldVal)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 文字列メソッド名</span></span><br><span class="line">    <span class="string">'b'</span>: <span class="string">'someMethod'</span>,</span><br><span class="line">    <span class="comment">// 深いウオッチャ (watcher)</span></span><br><span class="line">    <span class="string">'c'</span>: &#123;</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      deep: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.a = <span class="number">2</span> <span class="comment">// -&gt; new: 2, old: 1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="#vm-watch">インスタンスメソッド - vm.$watch</a></p>
+</li>
+</ul>
+<h2 id="オプション_/_DOM">オプション / DOM</h2><h3 id="el">el</h3><ul>
+<li><p><strong>型:</strong> <code>String | HTMLElement | Function</code></p>
+</li>
+<li><p><strong>制約:</strong> <code>Vue.extend()</code> の中で使用する場合は、<code>Function</code> タイプのみを受け付けます。</p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>既存の DOM 要素に Vue インスタンスを与えます。CSS セレクタの文字列、実際の HTML 要素、または、HTML 要素を返す関数をとることができます。単にマウンティングポイントとして役に立つ要素が提供されていることに注意してください。<code>replace</code> が false に設定されていない限り、テンプレートが提供される場合は置き換えられます。解決された要素は、<code>vm.$el</code> としてアクセス可能になります。</p>
+<p><code>Vue.extend</code> の中で使用されているとき、それぞれのインスタンスが独立に要素を作るような関数が与えられる必要があります。</p>
+<p>インスタンス化の際にオプションが有効であれば、そのインスタンスはただちにコンパイルの段階に入ります。さもなければ、ユーザーがコンパイルを始めるために手作業で明示的に <code>vm.$mount()</code> を呼ぶ必要があります。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h3 id="template">template</h3><ul>
+<li><p><strong>型:</strong> <code>String</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスに対してマークアップとして使用するための、文字列のテンプレートです。デフォルトで、テンプレートはマウントされた要素として<strong>置換</strong>されます。<code>replace</code> オプションが <code>false</code> に設定されるときは、反対にマウントされた要素に挿入されます。両方の場合において、コンテンツ挿入位置がテンプレートの中にない限り、マウントされた要素内部のあらゆる既存のマークアップは無視されます。</p>
+<p><code>#</code> による文字列で始まる場合、querySelector として使用され、選択された要素の innerHTML をテンプレート文字列として使用します。これにより、テンプレートを組み込むための共通の <code>&lt;script type=&quot;x-template&quot;&gt;</code> というやり方を使うことができるようになります。</p>
+<p>テンプレートが1トップレベル以上ノードを含む場合は、インスタンスはフラグメントインスタンスになることに注意してください。すなわち、それは単一ノードではなくむしろノードのリストを管理します。フラグメントインスタンスのマウント位置上にある非 flow-control ディレクティブは無視されます。</p>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></li>
+<li><a href="/guide/components.html#スロットによるコンテンツ配信">スロットによるコンテンツ配信</a></li>
+<li><a href="/guide/components.html#フラグメントインスタンス">フラグメントインスタンス</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="replace">replace</h3><ul>
+<li><p><strong>型:</strong> <code>Boolean</code>  </p>
+</li>
+<li><p><strong>デフォルト:</strong> <code>true</code></p>
+</li>
+<li><p><strong>制約:</strong> <strong>template</strong> オプションが存在するときのみ、有効なので注意してください。</p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>マウントされている要素を template で置き換えるかどうかを意味します。<code>false</code> を設定する場合は、template はコンテンツ内部の要素を要素自身で置き換えずに上書きします。</p>
+</li>
+<li><p><strong>例</strong>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"replace"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#replace'</span>,</span><br><span class="line">  template: <span class="string">'&lt;p&gt;replaced&lt;/p&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>結果は以下のとおり:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>replaced<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>replace</code> が <code>false</code> に設定される時との比較:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"insert"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#insert'</span>,</span><br><span class="line">  replace: <span class="literal">false</span>,</span><br><span class="line">  template: <span class="string">'&lt;p&gt;inserted&lt;/p&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>結果は以下のとおり:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"insert"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span>inserted<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="オプション/_ライフサイクルフック">オプション/ ライフサイクルフック</h2><h3 id="created">created</h3><ul>
+<li><p><strong>型:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>インスタンスが作成された後に、同期的に呼ばれます。この段階では、インスタンスは次の設定されたオプションの処理を終了しています: data の監視、computed properties、methods、watch / event コールバック。 しかしながら、DOM のコンパイルは開始されておらず、<code>$el</code> プロパティはまだ有効ではありません。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h3 id="beforeCompile">beforeCompile</h3><ul>
+<li><p><strong>型:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>コンパイルが開始される寸前に呼ばれます。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h3 id="compiled">compiled</h3><ul>
+<li><p><strong>型:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>コンパイルが終了した後に呼ばれます。この段階では、すべてのディレクティブはリンクされているため、データの変更は DOM の更新のトリガになります。しかし、<code>$el</code> がドキュメントに挿入されていることは保証されません。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h3 id="ready">ready</h3><ul>
+<li><p><strong>型:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>コンパイルが終了した後に呼ばれます。<strong>そして</strong>、<code>$el</code> が<strong>ドキュメントの中に初めて挿入されます</strong>(すなわち、最初の <code>attached</code> フックの直後)。この挿入は <code>ready</code> フックのトリガになるように (<code>vm.$appendTo()</code> のようなメソッドやディレクティブの更新の結果をもった) Vue 経由で実行されなくてはならないことに注意してください。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h3 id="attached">attached</h3><ul>
+<li><p><strong>型:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p><code>vm.$el</code> がディレクティブもしくは VM インスタンスもしくは<code>$appendTo()</code> のような VM インスタンスのメソッドによって DOM に追加されたときに呼ばれます。<code>vm.$el</code> の直接の操作はこのフックのトリガに<strong>なりません</strong>。</p>
+</li>
+</ul>
+<h3 id="detached">detached</h3><ul>
+<li><p><strong>型:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>ディレクティブか VM インスタンスのメソッドによって DOM から <code>vm.$el</code> が削除されたときに呼ばれます。ディレクティブの <code>vm.$el</code> の操作はこのフックのトリガに<strong>なりません</strong>。</p>
+</li>
+</ul>
+<h3 id="beforeDestroy">beforeDestroy</h3><ul>
+<li><p><strong>型:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスが破棄される寸前に呼ばれます。この段階では、インスタンスはまだ完全に使用可能ではありません。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h3 id="destroyed">destroyed</h3><ul>
+<li><p><strong>型:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスが破棄された後に呼ばれます。このフックが呼ばれたとき、Vue インスタンスのすべてのバインディングとディレクティブはバインドを解かれ、すべての子 Vue インスタンスも破棄されます。</p>
+<p>leave トランジションが存在する場合、<code>destroyed</code> フックはトランジションが終了した<strong>後に</strong>呼ばれます。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h2 id="オプション_/_アセット">オプション / アセット</h2><h3 id="directives">directives</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスで使用できるような、ディレクティブのハッシュです。</p>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/custom-directive.html">カスタムディレクティブ</a></li>
+<li><a href="/guide/components.html#アセットの命名規則">アセットの命名規則</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="elementDirectives">elementDirectives</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスで使用できるような、エレメントディレクティブのハッシュです。</p>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/custom-directive.html#エレメントディレクティブ">エレメントディレクティブ</a></li>
+<li><a href="/guide/components.html#アセットの命名規則">アセットの命名規則</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="filters">filters</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスで使用できるようなフィルタのハッシュです。</p>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/custom-filter.html">カスタムフィルタ</a></li>
+<li><a href="/guide/components.html#アセットの命名規則">アセットの命名規則</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="components">components</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスで使用できるようなコンポーネントのハッシュです。</p>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/components.html">コンポーネント</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="transitions">transitions</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスで使用できるようなトランジションのハッシュです。</p>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/transitions.html">トランジション</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="partials">partials</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスで使用できるような partial 文字列のハッシュです。</p>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="#partial">特別な要素 - partial</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="オプション_/_その他">オプション / その他</h2><h3 id="parent">parent</h3><ul>
+<li><p><strong>型:</strong> <code>Vue instance</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>作成されるインスタンスの親インスタンスを指定します。2つのインスタンス間で親子関係を確立します。親は子の <code>this.$parent</code> としてアクセス可能となり、子は親の <code>$children</code> 配列に追加されます。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/components.html#親子間の通信">親子間の通信</a></p>
+</li>
+</ul>
+<h3 id="events">events</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>キーが監視するべきイベントで、値が対応するコールバックのオブジェクトです。DOM のイベントというよりはむしろ Vue のイベントです。値はメソッド名の文字列をとることもできます。Vue インスタンスはインスタンス化の際にオブジェクトの各エントリに対して <code>$on()</code> を呼びます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  events: &#123;</span><br><span class="line">    <span class="string">'hook:created'</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'created!'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    greeting: <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(msg)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// メソッド名の文字列も使用可能</span></span><br><span class="line">    bye: <span class="string">'sayGoodbye'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    sayGoodbye: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'goodbye!'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;) <span class="comment">// -&gt; 作られた!</span></span><br><span class="line">vm.$emit(<span class="string">'greeting'</span>, <span class="string">'hi!'</span>) <span class="comment">// -&gt; hi!</span></span><br><span class="line">vm.$emit(<span class="string">'bye'</span>)             <span class="comment">// -&gt; goodbye!</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="#インスタンスメソッド_/_イベント">インスタンスメソッド - イベント</a></li>
+<li><a href="/guide/components.html#親子間の通信">親子間の通信</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="mixins">mixins</h3><ul>
+<li><p><strong>型:</strong> <code>Array</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p><code>mixins</code> オプションは、ミックスインオブジェクトの配列を受け入れます。ミックスインオブジェクトは、通常のインスタンスオブジェクトのようなインスタンスオプションを含むことができ、<code>Vue.extend()</code> における同じオプションを併合するロジックを使った結果のオプションに対して併合されます。例えば、あなたのミックスインが作成されたフックをもち、コンポーネントそのものもそれを持っていた場合、両方の関数が呼ばれます。</p>
+<p>ミックスインのフックはそれらが提供された順に呼び出され、コンポーネント自身のフックの前に呼び出されます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> mixin = &#123;</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="number">1</span>) &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="number">2</span>) &#125;,</span><br><span class="line">  mixins: [mixin]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// -&gt; 1</span></span><br><span class="line"><span class="comment">// -&gt; 2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/mixins.html">ミックスイン</a></p>
+</li>
+</ul>
+<h3 id="name">name</h3><ul>
+<li><p><strong>型:</strong> <code>String</code></p>
+</li>
+<li><p><strong>制約:</strong> <code>Vue.extend()</code> 内で使われたときのみ、有効なので注意してください。</p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>テンプレート内でのコンポーネント自身の再帰呼び出しを許可します。コンポーネントは <code>Vue.component()</code> でグローバルに登録され、グローバル ID はその名前に自動的に設定される事に注意してください。</p>
+<p><code>name</code> オプションのもう1つの利点は、コンソールインスペクションです。拡張された Vue コンポーネントをコンソールのインスペクタで見る時、デフォルトコンストラクタ名は <code>VueComponent</code> です。これは十分に説明的ではありません。<code>name</code> オプションを <code>Vue.extend()</code> に渡すことで、より良いインスペクタ出力を得られ、今見ているコンポーネントを知る事ができます。文字列はキャメルケース化されてコンストラクタ名に使われます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Ctor = Vue.extend(&#123;</span><br><span class="line">  name: <span class="string">'stack-overflow'</span>,</span><br><span class="line">  template:</span><br><span class="line">    <span class="string">'&lt;div&gt;'</span> +</span><br><span class="line">      <span class="comment">// 自分自身の再帰呼び出し</span></span><br><span class="line">      <span class="string">'&lt;stack-overflow&gt;&lt;/stack-overflow&gt;'</span> +</span><br><span class="line">    <span class="string">'&lt;/div&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// これは実際のところ、スタックの最大サイズ超過エラーとなります。</span></span><br><span class="line"><span class="comment">// しかし動くと仮定してみましょう...</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Ctor()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(vm) <span class="comment">// -&gt; StackOverflow &#123;$el: null, ...&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="インスタンスプロパティ">インスタンスプロパティ</h2><h3 id="vm-$data">vm.$data</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスが監視しているデータオブジェクト。新しいオブジェクトでスワップできます。Vue インスタンスプロキシはデータオブジェクトのプロパティにアクセスします。</p>
+</li>
+</ul>
+<h3 id="vm-$el">vm.$el</h3><ul>
+<li><p><strong>型:</strong> <code>HTMLElement</code></p>
+</li>
+<li><p><strong>読み込みのみ</strong></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>Vue インスタンスが管理している DOM 要素。これは<a href="/guide/components.html#フラグメントインスタンス">フラグメントインスタンス</a>向けであることに注意が必要で、<code>vm.$el</code> はフラグメントの開始位置を示すアンカーノードを返します。</p>
+</li>
+</ul>
+<h3 id="vm-$options">vm.$options</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>読み込みのみ</strong></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>現在の Vue インスタンスのためのインストールオプションとして使われます。これはオプションにカスタムプロパティを含めたいとき便利です:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  customOption: <span class="string">'foo'</span>,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.$options.customOption) <span class="comment">// -&gt; 'foo'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="vm-$parent">vm.$parent</h3><ul>
+<li><p><strong>型:</strong> <code>Vue instance</code></p>
+</li>
+<li><p><strong>読み込みのみ</strong></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>現在のインスタンスが1つ持つ場合は、親のインスタンス。</p>
+</li>
+</ul>
+<h3 id="vm-$root">vm.$root</h3><ul>
+<li><p><strong>型:</strong> <code>Vue instance</code></p>
+</li>
+<li><p><strong>読み込みのみ</strong></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>現在のコンポーネントツリーのルート Vue インスタンス。現在のインスタンスが親ではない場合、この値はそれ自身でしょう。</p>
+</li>
+</ul>
+<h3 id="vm-$children">vm.$children</h3><ul>
+<li><p><strong>型:</strong> <code>Array&lt;Vue instance&gt;</code></p>
+</li>
+<li><p><strong>読み込みのみ</strong></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>現在のインスタンスの直接的な子コンポーネント。</p>
+</li>
+</ul>
+<h3 id="vm-$refs">vm.$refs</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>読み込みのみ</strong></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p><code>v-ref</code> で登録した子コンポーネントを保持するオブジェクト。</p>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/components.html#子コンポーネントの参照">子コンポーネントの参照</a></li>
+<li><a href="#v-ref">v-ref</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="vm-$els">vm.$els</h3><ul>
+<li><p><strong>型:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>読み込みのみ</strong></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p><code>v-el</code> で登録した DOM 要素を保持するオブジェクト。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="#v-el">v-el</a></p>
+</li>
+</ul>
+<h2 id="インスタンスメソッド_/_データ">インスタンスメソッド / データ</h2><h3 id="vm-$watch(_expOrFn,_callback,_[options]_)">vm.$watch( expOrFn, callback, [options] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String|Function} expOrFn</code></li>
+<li><code>{Function} callback</code></li>
+<li><code>{Object} [options]</code><ul>
+<li><code>{Boolean} deep</code></li>
+<li><code>{Boolean} immediate</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>戻り値:</strong> <code>{Function} unwatch</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue インスタンス上でのひとつの式または算出関数 (computed function) の変更を監視します。コールバックは新しい値と古い値とともに呼びだされます。引数の式には、単一の keypath か、任意の有効なバインディング式を入れることができます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// キーパス</span></span><br><span class="line">vm.$watch(<span class="string">'a.b.c'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 何かする</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 式</span></span><br><span class="line">vm.$watch(<span class="string">'a + b'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 何かする</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 関数</span></span><br><span class="line">vm.$watch(</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="keyword">this</span>.b</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 何かする</span></span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><code>vm.$watch</code> はコールバックの実行を停止する unwatch 関数を返します。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> unwatch = vm.$watch(<span class="string">'a'</span>, cb)</span><br><span class="line"><span class="comment">// 後で watcher を破壊する</span></span><br><span class="line">unwatch()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>任意: deep</strong></p>
+<p>オブジェクトの中のネストされた値の変更を検出するには、options 引数に <code>deep: true</code> を渡す必要があります。Array の値の変更は、リッスンする必要はないことに注意してください。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$watch(<span class="string">'someObject'</span>, callback, &#123;</span><br><span class="line">  deep: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line">vm.someObject.nestedValue = <span class="number">123</span></span><br><span class="line"><span class="comment">// コールバックが発火する</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>任意: immediate</strong></p>
+<p>options 引数に <code>immediate: true</code> を渡すと、その時の式の値で、コールバックが直ちに実行されます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$watch(<span class="string">'a'</span>, callback, &#123;</span><br><span class="line">  immediate: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// その時の `a` の値でコールバックがただちに発火します</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="vm-$get(_expression_)">vm.$get( expression )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} expression</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>式を与えられた Vue インスタンスから値を取得します。エラーが発生する式は抑制され、<code>undefined</code> を返します。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: &#123;</span><br><span class="line">      b: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.$get(<span class="string">'a.b'</span>) <span class="comment">// -&gt; 1</span></span><br><span class="line">vm.$get(<span class="string">'a.b + 1'</span>) <span class="comment">// -&gt; 2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="vm-$set(_keypath,_value_)">vm.$set( keypath, value )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} keypath</code></li>
+<li><code>{*} value</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue インスタンスの data の、該当する keypath に値をセットします。ほとんどのケースでプレーンオブジェクト文法(例: <code>vm.a.b = 123</code>)を用いてプロパティを設定するほうがいいでしょう。このメソッドは2つのシナリオでのみ必要になります。</p>
+<ol>
+<li><p>キーパス文字列があって、キーパスを用いて動的に値を設定したい場合。</p>
+</li>
+<li><p>存在しないプロパティを設定したい場合。</p>
+</li>
+</ol>
+<p>パスが存在しない場合、再帰的に生成されリアクティブになります。新しいルートレベルのリアクティブプロパティが <code>$set</code> の呼び出しによって生成された場合、Vue インスタンスはすべてのウオッチャ (watcher) が再評価される “ダイジェストサイクル” を強制されます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: &#123;</span><br><span class="line">      b: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 存在するパスを設定</span></span><br><span class="line">vm.$set(<span class="string">'a.b'</span>, <span class="number">2</span>)</span><br><span class="line">vm.a.b <span class="comment">// -&gt; 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 存在しないパスを設定し、ダイジェストを強制</span></span><br><span class="line">vm.$set(<span class="string">'c'</span>, <span class="number">3</span>)</span><br><span class="line">vm.c <span class="comment">// -&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/reactivity.html">リアクティブの探求</a></p>
+</li>
+</ul>
+<h3 id="vm-$delete(_key_)">vm.$delete( key )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} key</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue インスタンス（それと、その <code>$data</code>）のルートレベルのプロパティを削除します。 ダイジェストサイクルを強制します。非推奨です。</p>
+</li>
+</ul>
+<h3 id="vm-$eval(_expression_)">vm.$eval( expression )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} expression</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>現在のインスタンス上の有効なバインディング式を評価します。式はフィルタを含むことができます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vm.msg = 'hello' とみなす</span></span><br><span class="line">vm.$<span class="built_in">eval</span>(<span class="string">'msg | uppercase'</span>) <span class="comment">// -&gt; 'HELLO'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="vm-$interpolate(_templateString_)">vm.$interpolate( templateString )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} templateString</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>mustache 挿入をもつテンプレートの文字列のかたまりを評価します。このメソッドは、単に文字列を挿入するだけであるということに気をつけてください。つまり、属性を持ったディレクティブはコンパイルされません。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vm.msg = 'hello' とみなす</span></span><br><span class="line">vm.$interpolate(<span class="string">'&#123;&#123;msg&#125;&#125; world!'</span>) <span class="comment">// -&gt; 'hello world!'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="vm-$log(_[keypath]_)">vm.$log( [keypath] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} [keypath]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>現在のインスタンスを getter や setter よりもコンソールで検査しやすいプレーンオブジェクトとして記録します。オプションのキーも受けつけます。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$log() <span class="comment">// ViewModel のすべてのデータのログをとる</span></span><br><span class="line">vm.$log(<span class="string">'item'</span>) <span class="comment">// vm.item のログをとる</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="インスタンスメソッド_/_イベント">インスタンスメソッド / イベント</h2><h3 id="vm-$on(_event,_callback_)">vm.$on( event, callback )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} event</code></li>
+<li><code>{Function} callback</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>現在の vm 上のイベントを監視します。イベントは <code>vm.$emit</code>、<code>vm.$dispatch</code> または <code>vm.$broadcast</code> からトリガすることができます。それらのイベントトリガを行うメソッドに渡した追加の引数は、コールバックがすべて受け取ります。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(msg)</span><br><span class="line">&#125;)</span><br><span class="line">vm.$emit(<span class="string">'test'</span>, <span class="string">'hi'</span>)</span><br><span class="line"><span class="comment">// -&gt; "hi"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="vm-$once(_event,_callback_)">vm.$once( event, callback )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} event</code></li>
+<li><code>{Function} callback</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>一度きりのイベントリスナを提供します。リスナは最初にトリガされた時に削除されます。</p>
+</li>
+</ul>
+<h3 id="vm-$off(_[event,_callback]_)">vm.$off( [event, callback] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} [event]</code></li>
+<li><code>{Function} [callback]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>1つまたは複数のイベントリスナを削除します。</p>
+<ul>
+<li><p>引数が与えられなければ、すべてのイベントリスナを削除します。</p>
+</li>
+<li><p>イベントがひとつだけ与えられたら、そのイベントに関するすべてのイベントリスナを削除します。</p>
+</li>
+<li><p>イベントとコールバックの両方が与えられたら、その特定のコールバックに対するイベントリスナのみを削除します。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="vm-$emit(_event,_[…args]_)">vm.$emit( event, […args] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} event</code></li>
+<li><code>[...args]</code></li>
+</ul>
+<p>現在のインスタンス上のイベントをトリガします。追加の引数はリスナのコールバックファンクションに渡されます。</p>
+</li>
+</ul>
+<h3 id="vm-$dispatch(_event,_[…args]_)">vm.$dispatch( event, […args] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} event</code></li>
+<li><code>[...args]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>イベントをディスパッチします。まずそれ自身のインスタンス上のイベントをトリガし、それから parent chain の上方向にイベントを伝えます。イベントの伝ぱは親イベントリスナが <code>true</code> を返さない限り、親のイベントリスナのトリガ時に停止します。追加の引数はリスナのコールバックファンクションに渡されます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// parent chain を作成</span></span><br><span class="line"><span class="keyword">var</span> parent = <span class="keyword">new</span> Vue()</span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> Vue(&#123; parent: parent &#125;)</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> Vue(&#123; parent: child1 &#125;)</span><br><span class="line"></span><br><span class="line">parent.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'parent notified'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">child1.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'child1 notified'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">child2.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'child2 notified'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">child2.$dispatch(<span class="string">'test'</span>)</span><br><span class="line"><span class="comment">// -&gt; "child2 notified"</span></span><br><span class="line"><span class="comment">// -&gt; "child1 notified"</span></span><br><span class="line"><span class="comment">// child1 のコールバックが true を返していないため、親には通知されません。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/components.html#親子間の通信">親子間の通信</a></p>
+</li>
+</ul>
+<h3 id="vm-$broadcast(_event,_[…args]_)">vm.$broadcast( event, […args] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} event</code></li>
+<li><code>[...args]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>ブロードキャストは現在のインスタンスの子孫すべてにイベントを下方向に伝ぱさせます。子孫が複数のサブツリーに展開されるため、イベント伝ぱはたくさんの異なる”パス”をたどります。各パスのイベント伝ぱは、リスナのコールバックが <code>true</code> を返さない限り、イベントリスナがパス沿いに発火した時に停止します。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> parent = <span class="keyword">new</span> Vue()</span><br><span class="line"><span class="comment">// child1 と child2 は兄弟です</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> Vue(&#123; parent: parent &#125;)</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> Vue(&#123; parent: parent &#125;)</span><br><span class="line"><span class="comment">// child3 は child2 下にネストされています</span></span><br><span class="line"><span class="keyword">var</span> child3 = <span class="keyword">new</span> Vue(&#123; parent: child2 &#125;)</span><br><span class="line"></span><br><span class="line">child1.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'child1 notified'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">child2.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'child2 notified'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">child3.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'child3 notified'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">parent.$broadcast(<span class="string">'test'</span>)</span><br><span class="line"><span class="comment">// -&gt; "child1 notified"</span></span><br><span class="line"><span class="comment">// -&gt; "child2 notified"</span></span><br><span class="line"><span class="comment">// child2 のコールバックが true を返していないため、child3 には通知されません。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="インスタンスメソッド_/_DOM">インスタンスメソッド / DOM</h2><h3 id="vm-$appendTo(_elementOrSelector,_[callback]_)">vm.$appendTo( elementOrSelector, [callback] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Element|String} elementOrSelector</code></li>
+<li><code>{Function} [callback]</code></li>
+</ul>
+</li>
+<li><p><strong>戻り値:</strong> <code>vm</code> - インスタンス自身</p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue インスタンスの DOM 要素またはフラグメントを対象要素に追加します。対象には、要素またはクエリセレクタ文字列が指定できます。このメソッドは表示されている場合にトランジションをトリガします。トランジションが終了した後に（またはトランジションがトリガされなかった時は即座に）コールバックが発火します。</p>
+</li>
+</ul>
+<h3 id="vm-$before(_elementOrSelector,_[callback]_)">vm.$before( elementOrSelector, [callback] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Element|String} elementOrSelector</code></li>
+<li><code>{Function} [callback]</code></li>
+</ul>
+</li>
+<li><p><strong>戻り値:</strong> <code>vm</code> - インスタンス自身</p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue インスタンスの DOM 要素またはフラグメントを対象要素に挿入します。対象には、要素またはクエリセレクタ文字列が指定できます。このメソッドは表示されている場合にトランジションをトリガします。トランジションが終了した後に（またはトランジションがトリガされなかった時は即座に）コールバックが発火します。</p>
+</li>
+</ul>
+<h3 id="vm-$after(_elementOrSelector,_[callback]_)">vm.$after( elementOrSelector, [callback] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Element|String} elementOrSelector</code></li>
+<li><code>{Function} [callback]</code></li>
+</ul>
+</li>
+<li><p><strong>戻り値:</strong> <code>vm</code> - インスタンス自身</p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue インスタンスの DOM 要素またはフラグメントを対象要素の後に挿入します。対象には、要素またはクエリセレクタ文字列が指定できます。このメソッドは表示されている場合にトランジションをトリガします。トランジションが終了した後に（またはトランジションがトリガされなかった時は即座に）コールバックが発火します。</p>
+</li>
+</ul>
+<h3 id="vm-$remove(_[callback]_)">vm.$remove( [callback] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Function} [callback]</code></li>
+</ul>
+</li>
+<li><p><strong>戻り値:</strong> <code>vm</code> - インスタンス自身</p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>Vue インスタンスの DOM 要素またはフラグメントを DOM から削除します。このメソッドは表示されている場合にトランジションをトリガします。トランジションが終了した後に（またはトランジションがトリガされなかった時は即座に）コールバックが発火します。</p>
+</li>
+</ul>
+<h3 id="vm-$nextTick(_callback_)">vm.$nextTick( callback )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Function} [callback]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>callback を延期し、DOM の更新サイクル後に実行します。DOM の更新を待ち受けるためにいくつかのデータを更新した直後に使用してください。callback の <code>this</code> コンテキストは自動的にこのメソッドを呼びだすインスタンスにバインドされることを除いて、グローバルな <code>Vue.nextTick</code> と同じです。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    example: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// データを編集</span></span><br><span class="line">      <span class="keyword">this</span>.message = <span class="string">'changed'</span></span><br><span class="line">      <span class="comment">// DOM はまだ更新されない</span></span><br><span class="line">      <span class="keyword">this</span>.$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// DOM が更新された</span></span><br><span class="line">        <span class="comment">// `this` は現在のインスタンスにバインドされる</span></span><br><span class="line">        <span class="keyword">this</span>.doSomethingElse()</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="#Vue-nextTick">Vue.nextTick</a></li>
+<li><a href="/guide/reactivity.html#非同期更新キュー">非同期更新キュー</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="インスタンスメソッド_/_ライフサイクル">インスタンスメソッド / ライフサイクル</h2><h3 id="vm-$mount(_[elementOrSelector]_)">vm.$mount( [elementOrSelector] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Element|String} [elementOrSelector]</code></li>
+</ul>
+</li>
+<li><p><strong>戻り値:</strong> <code>vm</code> - インスタンス自身</p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>インスタンス化の際に、Vue インスタンスが <code>el</code> オプションを受け取らなかった場合、DOM 要素またはフラグメントと関連のない “unmounted” 状態となります。<code>vm.$mount()</code> を使うことで、このような Vue インスタンスのコンパイルフェーズを手動で開始することができます。</p>
+<p>引数が何も与えられなかったら、テンプレートはドキュメント外のフラグメントとして作成されます。そしてあなた自身によってそれをドキュメントに挿入するために他の DOM インスタンスメソッドを使用しなければなりません。<code>replace</code> オプションが <code>false</code> に設定される場合は、wrapper 要素として空の <code>&lt;div&gt;</code> が自動的に作られます。</p>
+<p>既にマウントされた状態のインスタンスで <code>$mount()</code> を呼んでも、何も起きません。このメソッドはインスタンスそのものを返しますので、他のインスタンスメソッドをその後につなげることができます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> MyComponent = Vue.extend(&#123;</span><br><span class="line">  template: <span class="string">'&lt;div&gt;Hello!&lt;/div&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 生成して #app にマウント (#app で置換されます)</span></span><br><span class="line"><span class="keyword">new</span> MyComponent().$mount(<span class="string">'#app'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 上記はこれと同じ:</span></span><br><span class="line"><span class="keyword">new</span> MyComponent(&#123; el: <span class="string">'#app'</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// または、ドキュメントと分離状態でコンパイルして、あとで追加する:</span></span><br><span class="line"><span class="keyword">new</span> MyComponent().$mount().$appendTo(<span class="string">'#container'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h3 id="vm-$destroy(_[remove]_)">vm.$destroy( [remove] )</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Boolean} [remove] - default: false</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>vm を完全に破棄します。既存の他の vm との接続を切り、そのすべてのディレクティブとのバインドを解消し、すべてのイベントリスナを開放し、また <code>remove</code> 引数が true の場合、vm と関連した DOM 要素または DOM からのフラグメントを削除します。</p>
+<p><code>beforeDestroy</code> および <code>destroyed</code> をトリガします。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/instance.html#ライフサイクルダイアグラム">ライフサイクルダイアグラム</a></p>
+</li>
+</ul>
+<h2 id="ディレクティブ">ディレクティブ</h2><h3 id="v-text">v-text</h3><ul>
+<li><p><strong>要求事項:</strong> <code>String</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>ある要素の<code>textContent</code>を更新します。</p>
+<p>内部的には、 <code>{{ Mustache }}</code> 挿入も textNode 上の <code>v-text</code> ディレクティブとしてコンパイルされます。このディレクティブ形式は wrapper 要素が必要ですが、パフォーマンスが若干改善し、FOUC (まだコンパイルされていないコンテンツのちらつき) を回避します。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">v-text</span>=<span class="value">"msg"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 以下と同じ --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="v-html">v-html</h3><ul>
+<li><p><strong>要求事項:</strong> <code>String</code></p>
+</li>
+<li><p><strong>詳細:</strong></p>
+<p>ある要素の <code>innerHTML</code> を更新します。コンテンツはプレーン HTML として挿入され、データバインディングは無視されます。テンプレート片を再利用する必要があるならば、<a href="#partial">partials</a> を使ってください。</p>
+<p>内部的には、<code>{{{ Mustache }}}</code> 展開はアンカーノードを利用して <code>v-html</code> ディレクティブとしてもコンパイルされます。ディレクティブ形式はラッパー要素を必要としますが、パフォーマンスが若干改善し、FOUC (まだコンパイルされていないコンテンツのちらつき)を回避します。</p>
+<p class="tip">任意の HTML をあなたの Web サイト上で動的にレンダリングすることは、 <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="external">XSS 攻撃</a>を招くため大変危険です。<code>v-html</code> は信頼済みコンテンツのみに利用し、 <strong>絶対に</strong> ユーザの提供するコンテンツには使わないで下さい。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-html</span>=<span class="value">"html"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 以下と同じ --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>&#123;&#123;&#123;html&#125;&#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="v-if">v-if</h3><ul>
+<li><p><strong>要求事項:</strong> <code>*</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>バインディングの値の真偽値に基いて要素のレンダリングを行います。要素および、データバインディングまたはコンポーネントを含むコンテンツは、トグルしている間に破壊され再構築されます。要素が <code>&lt;template&gt;</code> 要素であれば、その内容は状態ブロックとして抽出されます。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/conditional.html">条件付きレンダリング</a></p>
+</li>
+</ul>
+<h3 id="v-show">v-show</h3><ul>
+<li><p><strong>要求事項:</strong> <code>*</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>式の値の真偽に応じて、要素の CSS プロパティ <code>display</code> をトグルします。表示時にトランジションをトリガします。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/conditional.html#v-show">条件付きレンダリング - v-show</a></p>
+</li>
+</ul>
+<h3 id="v-else">v-else</h3><ul>
+<li><p><strong>式を受け付けません</strong></p>
+</li>
+<li><p><strong>制約:</strong> 直前の兄弟要素は <code>v-if</code> または <code>v-show</code> を持つ必要があります。</p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p><code>v-if</code> と <code>v-show</code> に対応する “else block” であることを示します。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-if</span>=<span class="value">"Math.random() &gt; 0.5"</span>&gt;</span></span><br><span class="line">  Sorry</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-else</span>&gt;</span></span><br><span class="line">  Not sorry</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/conditional.html#v-else">条件付きレンダリング - v-else</a></p>
+</li>
+</ul>
+<h3 id="v-for">v-for</h3><ul>
+<li><p><strong>要求事項:</strong> <code>Array | Object | Number | String</code></p>
+</li>
+<li><p><strong>パラメータ属性:</strong></p>
+<ul>
+<li><a href="/guide/list.html#track-by"><code>track-by</code></a></li>
+<li><a href="/guide/transitions.html#スタガリングトランジション"><code>stagger</code></a></li>
+<li><a href="/guide/transitions.html#スタガリングトランジション"><code>enter-stagger</code></a></li>
+<li><a href="/guide/transitions.html#スタガリングトランジション"><code>leave-stagger</code></a></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>ソースデータに基づき、要素またはテンプレートブロックを複数回レンダリングします。式には、繰り返される要素へのエイリアスを提供する為に、特別な文法を使う必要があります:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"item in items"</span>&gt;</span></span><br><span class="line">  &#123;&#123; item.text &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>あるいは、インデックス(またはオブジェクトで使用されている場合、キー)に対してエイリアスを指定することもできます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"(index, item) in items"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"(key, val) in object"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>v-for</code> の詳細な使用方法は下記にリンクしたガイドセクション内で説明しています。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/list.html">リストレンダリング</a></p>
+</li>
+</ul>
+<h3 id="v-on">v-on</h3><ul>
+<li><p><strong>省略記法:</strong> <code>@</code></p>
+</li>
+<li><p><strong>要求事項:</strong> <code>Function | Inline Statement</code></p>
+</li>
+<li><p><strong>引数:</strong> <code>event (必須)</code></p>
+</li>
+<li><p><strong>修飾子:</strong></p>
+<ul>
+<li><code>.stop</code> - <code>event.stopPropagation()</code> を呼び出します。</li>
+<li><code>.prevent</code> - <code>event.preventDefault()</code> を呼び出します。</li>
+<li><code>.{keyCode | keyAlias}</code> - 指定したキーが押された時のみトリガされるハンドラです。</li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>要素にイベントリスナをアタッチします。イベント種別は引数で示されます。式はメソッド名またはインラインステートメントのいずれかを指定することができ、または修飾子 (modifire) が存在するときは、単純に省略されます。</p>
+<p>通常の要素上で利用した場合、<strong>ネイティブ DOM イベント</strong> を監視します。カスタム要素コンポーネント上で利用した場合、子コンポーネント上での <strong>カスタムイベント</strong> の発行も監視します。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- メソッドハンドラ --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- インラインステートメント --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"doThat('hello')"</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> @<span class="attribute">click</span>=<span class="value">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- イベント伝播の停止 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> @<span class="attribute">click.stop</span>=<span class="value">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- デフォルト挙動を防ぐ --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> @<span class="attribute">click.prevent</span>=<span class="value">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 式なしでデフォルト挙動を防ぐ --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">form</span> @<span class="attribute">submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 修飾子の繋ぎ合わせ --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> @<span class="attribute">click.stop.prevent</span>=<span class="value">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- キーエイリアスを使ったキー修飾子 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> @<span class="attribute">keyup.enter</span>=<span class="value">"onEnter"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- キーコードを使ったキー修飾子 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> @<span class="attribute">keyup.13</span>=<span class="value">"onEnter"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>子コンポーネント上のカスタムイベントを監視する (ハンドラは “my-event” が子コンポーネント上で発行された時に呼ばれる):</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">my-component</span> @<span class="attribute">my-event</span>=<span class="value">"handleThis"</span>&gt;</span><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/events.html">メソッドとイベントハンドリング</a></p>
+</li>
+</ul>
+<h3 id="v-bind">v-bind</h3><ul>
+<li><p><strong>省略記法:</strong> <code>:</code></p>
+</li>
+<li><p><strong>要求事項:</strong> <code>* (引数あり) | Object (引数なし)</code></p>
+</li>
+<li><p><strong>引数:</strong> <code>attrOrProp (任意)</code></p>
+</li>
+<li><p><strong>修飾子:</strong></p>
+<ul>
+<li><code>.sync</code> - バインディングを双方向にします。prop バインディングにのみ有効なので注意してください。</li>
+<li><code>.once</code> - バインディングを一度きり実行されるようにします。prop バインディングにのみ有効なので注意してください。</li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>1つ以上の属性またはコンポーネント prop と式を動的にバインドします。</p>
+<p><code>class</code> または <code>style</code> 属性とバインドする場合、配列やオブジェクトのような追加の値タイプをサポートします。詳細は下記にリンクしたガイドセクションを参照してください。</p>
+<p>prop バインディングに使う場合、prop は子コンポーネント内で適切に宣言される必要があります。prop バインディングには修飾子の1つを用いることで異なるバインディングタイプを指定することができます。</p>
+</li>
+<li><p><strong>例:</strong><br>引数なしで使用するとき、名前と値のペアを含んでいるオブジェクトをバインドして使用することができます。このモードは <code>class</code> と <code>style</code> は配列とオブジェクトをサポートしないことに注意してください。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 属性をバインド --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">v-bind:src</span>=<span class="value">"imageSrc"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">:src</span>=<span class="value">"imageSrc"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- クラスバインディング --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">:class</span>=<span class="value">"&#123; red: isRed &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">:class</span>=<span class="value">"[classA, classB]"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- スタイルバインディング --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">:style</span>=<span class="value">"&#123; fontSize: size + 'px' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">:style</span>=<span class="value">"[styleObjectA, styleObjectB]"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 属性のオブジェクトのバインディング --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-bind</span>=<span class="value">"&#123; id: someProp, 'other-attr': otherProp &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- prop バインディング。"prop" は my-component 内で宣言される必要があります。 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">my-component</span> <span class="attribute">:prop</span>=<span class="value">"someThing"</span>&gt;</span><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 双方向 prop バインディング --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">my-component</span> <span class="attribute">:prop.sync</span>=<span class="value">"someThing"</span>&gt;</span><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 一度きりの prop バインディング --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">my-component</span> <span class="attribute">:prop.once</span>=<span class="value">"someThing"</span>&gt;</span><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong></p>
+<ul>
+<li><a href="/guide/class-and-style.html">クラスととスタイルのバインディング</a></li>
+<li><a href="/guide/components.html#Props">コンポーネント - Props</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="v-model">v-model</h3><ul>
+<li><p><strong>要求事項:</strong> input type に応じて変化します。</p>
+</li>
+<li><p><strong>適用対象制限:</strong></p>
+<ul>
+<li><code>&lt;input&gt;</code></li>
+<li><code>&lt;select&gt;</code></li>
+<li><code>&lt;textarea&gt;</code></li>
+</ul>
+</li>
+<li><p><strong>パラメータ属性:</strong></p>
+<ul>
+<li><a href="/guide/forms.html#lazy"><code>lazy</code></a></li>
+<li><a href="/guide/forms.html#number"><code>number</code></a></li>
+<li><a href="/guide/forms.html#debounce"><code>debounce</code></a></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>form input 要素上に双方向バインディングを作成します。詳細は下にリンクしたガイドセクションを参照してください。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/forms.html">フォーム入力バインディング</a></p>
+</li>
+</ul>
+<h3 id="v-ref">v-ref</h3><ul>
+<li><p><strong>式を受け付けません</strong></p>
+</li>
+<li><p><strong>適用対象制限:</strong> 子コンポーネント</p>
+</li>
+<li><p><strong>引数:</strong> <code>id (必須)</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>直接アクセスの為に親から子コンポーネントへの参照を登録します。式を受け付けません。登録する id として引数が必要です。コンポーネントインスタンスは親の <code>$refs</code> オブジェクトから参照可能になります。</p>
+<p><code>v-for</code> と共に使用するとき、値はそれにバインドしている配列に対応するすべての子コンポーネントインスタンスを含む配列になります。<code>v-for</code> のデータソースがオブジェクトの場合、登録された値はソースオブジェクトとミラーリングされた各キーとインスタンスを含むオブジェクトになります。</p>
+</li>
+<li><p><strong>注意:</strong><br>HTML は case-insensitive であるため、<code>v-ref:someRef</code> のようなキャメルケース (camlCase) の使用は全て小文字に変換されます。適切に <code>this.$refs.someRef</code> を設定し、<code>v-ref:some-ref</code> を使用することができます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">comp</span> <span class="attribute">v-ref:child</span>&gt;</span><span class="tag">&lt;/<span class="title">comp</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">comp</span> <span class="attribute">v-ref:some-child</span>&gt;</span><span class="tag">&lt;/<span class="title">comp</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 親からアクセス:</span></span><br><span class="line"><span class="keyword">this</span>.$refs.child</span><br><span class="line"><span class="keyword">this</span>.$refs.someChild</span><br></pre></td></tr></table></figure>
+<p><code>v-for</code>と共に利用:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">comp</span> <span class="attribute">v-ref:list</span> <span class="attribute">v-for</span>=<span class="value">"item in list"</span>&gt;</span><span class="tag">&lt;/<span class="title">comp</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// これは親の中の配列になる</span></span><br><span class="line"><span class="keyword">this</span>.$refs.list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/components.html#子コンポーネントの参照">子コンポーネントの参照</a></p>
+</li>
+</ul>
+<h3 id="v-el">v-el</h3><ul>
+<li><p><strong>式を受け付けません</strong></p>
+</li>
+<li><p><strong>引数:</strong> <code>id (必須)</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>簡単にアクセス可能にするために、所有者の Vue インスタンスの <code>$els</code> オブジェクト上に DOM 要素へのリファレンスを登録します。</p>
+</li>
+<li><p><strong>注意:</strong><br>HTML は case-insensitive であるため、<code>v-el:someEl</code> のようなキャメルケース (camlCase) の使用は全て小文字に変換されます。適切に <code>this.$els.someEl</code> を設定し、<code>v-el:some-el</code> を使用することができます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">v-el:msg</span>&gt;</span>hello<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">v-el:other-msg</span>&gt;</span>world<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$els.msg.textContent <span class="comment">// -&gt; "hello"</span></span><br><span class="line"><span class="keyword">this</span>.$els.otherMsg.textContent <span class="comment">// -&gt; "world"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="v-pre">v-pre</h3><ul>
+<li><p><strong>式を受け付けません</strong></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>この要素とすべての子要素のコンパイルをスキップします。生の mustache タグを表示するためにも使うことができます。ディレクティブのない大量のノードをスキップすることで、コンパイルのスピードを上げます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">v-pre</span>&gt;</span>&#123;&#123; this will not be compiled &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="v-cloak">v-cloak</h3><ul>
+<li><p><strong>式を受け付けません</strong></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>このディレクティブは関連付けられた Vue インスタンスのコンパイルが終了するまでの間残存します。<code>[v-cloak] { display: none }</code> のような CSS のルールと組み合わせて、このディレクティブは Vue インスタンス が用意されるまでの間、コンパイルされていない Mustache バインディングを隠すのに使うことができます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr_selector">[v-cloak]</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-cloak</span>&gt;</span></span><br><span class="line">  &#123;&#123; message &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>&lt;div&gt;</code> はコンパイルが終了するまでは不可視となります。</p>
+</li>
+</ul>
+<h2 id="特別な要素">特別な要素</h2><h3 id="component">component</h3><ul>
+<li><p><strong>属性:</strong></p>
+<ul>
+<li><code>is</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>コンポーネントを起動するための代替構文です。主に、動的コンポーネント向けに <code>is</code> 属性で使用されます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 動的コンポーネントは vm で `componentId` プロパティによってコントロールされます --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">component</span> <span class="attribute">:is</span>=<span class="value">"componentId"</span>&gt;</span><span class="tag">&lt;/<span class="title">component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/components.html#動的コンポーネント">動的コンポーネント</a></p>
+</li>
+</ul>
+<h3 id="slot">slot</h3><ul>
+<li><p><strong>属性:</strong></p>
+<ul>
+<li><code>name</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p><code>&lt;slot&gt;</code> 要素はコンポーネントテンプレートでコンテンツ挿入アウトレットとして役に立ちます。slot 要素はそれ自身が置き換えられます。</p>
+<p><code>name</code> 属性を指定したスロットは名前付きスロットと呼ばれます。名前付きスロットは名前と一致した <code>slot</code> 属性と共にコンテンツを配信します。</p>
+<p>詳細な使用方法は、下記にリンクしたガイドセクションを参照してください。</p>
+</li>
+<li><p><strong>参照:</strong> <a href="/guide/components.html#スロットによるコンテンツ配信">スロットによるコンテンツ配信</a></p>
+</li>
+</ul>
+<h3 id="partial">partial</h3><ul>
+<li><p><strong>属性:</strong></p>
+<ul>
+<li><code>name</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p><code>&lt;partial&gt;</code> 要素は登録された template partial 向けのアウトレットとして役に立ちます。partial なコンテンツが挿入された時、Vue によってコンパイルされます。<code>&lt;partial&gt;</code> 要素はそれ自身が置き換えられます。partial のコンテンツを解決するために <code>name</code> 属性が必要です。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// partial の登録</span></span><br><span class="line">Vue.partial(<span class="string">'my-partial'</span>, <span class="string">'&lt;p&gt;This is a partial! &#123;&#123;msg&#125;&#125;&lt;/p&gt;'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 静的な partial --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">partial</span> <span class="attribute">name</span>=<span class="value">"my-partial"</span>&gt;</span><span class="tag">&lt;/<span class="title">partial</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 動的な partial --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- id === vm.partialId で partial をレンダリング --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">partial</span> <span class="attribute">v-bind:name</span>=<span class="value">"partialId"</span>&gt;</span><span class="tag">&lt;/<span class="title">partial</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- v-bind 省略記法を使った動的 partial --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">partial</span> <span class="attribute">:name</span>=<span class="value">"partialId"</span>&gt;</span><span class="tag">&lt;/<span class="title">partial</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="フィルタ">フィルタ</h2><h3 id="capitalize">capitalize</h3><ul>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; msg | capitalize &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p><em>‘abc’ =&gt; ‘Abc’</em></p>
+</li>
+</ul>
+<h3 id="uppercase">uppercase</h3><ul>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; msg | uppercase &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p><em>‘abc’ =&gt; ‘ABC’</em></p>
+</li>
+</ul>
+<h3 id="lowercase">lowercase</h3><ul>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; msg | lowercase &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p><em>‘ABC’ =&gt; ‘abc’</em></p>
+</li>
+</ul>
+<h3 id="currency">currency</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} [symbol] - default: &#39;$&#39;</code></li>
+</ul>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; amount | currency &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p><em>12345 =&gt; $12,345.00</em></p>
+<p>違う記号を使います:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; amount | currency '£' &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p><em>12345 =&gt; £12,345.00</em></p>
+</li>
+</ul>
+<h3 id="pluralize">pluralize</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} single, [double, triple, ...]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>フィルタされた値に基づいた引数を複数形にします。ちょうど1つの引数が指定されているとき、単純にその引数の終わりに “s” を追加します。よりもっと多くの引数が指定されているとき、それらの引数は single、double、triple というような、複数形化される言葉の形式に対応する文字列の配列として利用されます。複数形化される数が引数の長さを上回るとき、それは配列の最後のエントリを利用します。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123;count&#125;&#125; &#123;&#123;count | pluralize 'item'&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p><em>1 =&gt; ‘1 item’</em><br><em>2 =&gt; ‘2 items’</em></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123;date&#125;&#125;&#123;&#123;date | pluralize 'st' 'nd' 'rd' 'th'&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>結果は以下のとおり:</p>
+<p><em>1 =&gt; ‘1st’</em><br><em>2 =&gt; ‘2nd’</em><br><em>3 =&gt; ‘3rd’</em><br><em>4 =&gt; ‘4th’</em><br><em>5 =&gt; ‘5th’</em></p>
+</li>
+</ul>
+<h3 id="json">json</h3><ul>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Number} [indent] - default: 2</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>文字列表現(いわゆる <code>[object Object]</code>)を出力するというより、むしろ入ってくる値を JSON.stringify() を実行するフィルタです。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<p>4スペースインデントでオブジェクトを出力します:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">pre</span>&gt;</span>&#123;&#123; nestedObject | json 4 &#125;&#125;<span class="tag">&lt;/<span class="title">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="debounce">debounce</h3><ul>
+<li><p><strong>適用対象制限:</strong> <code>Function</code> 値を要求するディレクティブ。例えば <code>v-on</code> 。</p>
+</li>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Number} [wait] - default: 300</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>X が引数であるとすると、X ミリ秒の間デバウンスするために、指定されたハンドラを Wrap します。デフォルトでは 300ms です。デバウンスされたハンドラは、少なくとも呼び出された瞬間から X ミリ秒経過するまで遅延されます。遅延期間が終わる前に再びハンドラが呼ばれた場合、遅延期間は X ミリ秒にリセットされます。</p>
+</li>
+<li><p><strong>例:</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> @<span class="attribute">keyup</span>=<span class="value">"onKeyup | debounce 500"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="limitBy">limitBy</h3><ul>
+<li><p><strong>適用対象制限:</strong> <code>Array</code> 値を要求するディレクティブ。例えば <code>v-for</code>。</p>
+</li>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{Number} limit</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>引数によって指定されたように、最初の N 個に配列を制限します。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 最初の 10 アイテムだけ表示される --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"item in items | limitBy 10"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="filterBy">filterBy</h3><ul>
+<li><p><strong>適用対象制限:</strong> <code>Array</code> 値を要求するディレクティブ。例えば <code>v-for</code>。</p>
+</li>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String | Function} targetStringOrFunction</code></li>
+<li><code>&quot;in&quot; (optional delimiter)</code></li>
+<li><code>{String} [...searchKeys]</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>元の配列のフィルタされたバージョンを返します。最初の引数は文字列またはファンクションです。</p>
+<p>最初の引数が文字列の場合、配列内の各要素に対しての検索対象文字列となります:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"item in items | filterBy 'hello'"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上の例の中では、対象文字列 <code>&quot;hello&quot;</code> を含む items のみが表示されます。</p>
+<p>item がオブジェクトなら、フィルタはそのオブジェクトのネストしたプロパティをすべて再帰的に対象文字列で検索します。検索スコープを狭めるためには、追加の検索キーを指定することができます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"user in users | filterBy 'Jack' in 'name'"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上の例の中では、フィルタは各 user オブジェクトの <code>name</code> フィールドから <code>&quot;Jack&quot;</code> のみを検索します。<strong>パフォーマンス向上のために、常に検索スコープを制限するのはいいアイデアです。</strong></p>
+<p>以上の例は静的な引数を使っていますが、もちろん、動的な引数を対象文字列もしくは検索キーとして使うこともできます。<code>v-model</code> と組み合わせると入力中のフィルタリングも簡単に実装することができます。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"filter-by-example"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"name"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"user in users | filterBy name in 'name'"</span>&gt;</span></span><br><span class="line">      &#123;&#123; user.name &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#filter-by-example'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    name: <span class="string">''</span>,</span><br><span class="line">    users: [</span><br><span class="line">      &#123; name: <span class="string">'Bruce'</span> &#125;,</span><br><span class="line">      &#123; name: <span class="string">'Chuck'</span> &#125;,</span><br><span class="line">      &#123; name: <span class="string">'Jackie'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+  <div id="filter-by-example" class="demo">
+    <input v-model="name">
+    <ul>
+      <li v-for="user in users | filterBy name in 'name'">
+        {{ user.name }}
+      </li>
+    </ul>
+  </div>
+  <script>
+  new Vue({
+    el: '#filter-by-example',
+    data: {
+      name: '',
+      users: [{ name: 'Bruce' }, { name: 'Chuck' }, { name: 'Jackie' }]
+    }
+  })
+  </script>
+  
+</li>
+<li><p><strong>追加サンプル:</strong></p>
+<p>複数の検索キー:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"user in users | filterBy searchText in 'name' 'phone'"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>動的な配列引数による複数の検索キー:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- fields = ['fieldA', 'fieldB'] --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"user in users | filterBy searchText in fields"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>カスタムフィルタファンクションの利用:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"user in users | filterBy myCustomFilterFunction"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="orderBy">orderBy</h3><ul>
+<li><p><strong>適用対象制限:</strong> <code>Array</code> 値を要求するディレクティブ。例えば <code>v-for</code>。</p>
+</li>
+<li><p><strong>引数:</strong></p>
+<ul>
+<li><code>{String} sortKey</code></li>
+<li><code>{String} [order] - default: 1</code></li>
+</ul>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<p>入力された配列のソートされたバージョンを返します。<code>sortKey</code> 引数はソートに利用されるキーです。オプションの <code>order</code> 引数は、結果を昇順 (<code>order &gt;= 0</code>) または降順 (<code>order &lt; 0</code>) のどちらで返すかを指定します。</p>
+<p>プリミティブ値の配列では、<code>sortKey</code> には truthy (真偽値に変換すると true になる値のこと) な値なら何でも指定できます。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>例:</strong></p>
+<p>ユーザを名前でソート:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"user in users | orderBy 'name'"</span>&gt;</span></span><br><span class="line">    &#123;&#123; user.name &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>降順ではこのようにします:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"user in users | orderBy 'name' -1"</span>&gt;</span></span><br><span class="line">    &#123;&#123; user.name &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>プリミティブ値のソート:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"n in numbers | orderBy true"</span>&gt;</span></span><br><span class="line">    &#123;&#123; n &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>動的ソート順:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"orderby-example"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">button</span> @<span class="attribute">click</span>=<span class="value">"order = order * -1"</span>&gt;</span>ソート順の反転<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"user in users | orderBy 'name' order"</span>&gt;</span></span><br><span class="line">      &#123;&#123; user.name &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#orderby-example'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    order: <span class="number">1</span>,</span><br><span class="line">    users: [&#123; name: <span class="string">'Bruce'</span> &#125;, &#123; name: <span class="string">'Chuck'</span> &#125;, &#123; name: <span class="string">'Jackie'</span> &#125;]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+  <div id="orderby-example" class="demo">
+    <button @click="order = order * -1">ソート順の反転</button>
+    <ul>
+      <li v-for="user in users | orderBy 'name' order">
+        {{ user.name }}
+      </li>
+    </ul>
+  </div>
+  <script>
+  new Vue({
+    el: '#orderby-example',
+    data: {
+      order: 1,
+      users: [{ name: 'Bruce' }, { name: 'Chuck' }, { name: 'Jackie' }]
+    }
+  })
+  </script>
+  
+</li>
+</ul>
+
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
 </div>
 
                 

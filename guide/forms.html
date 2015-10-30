@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>フォームのハンドリング - vue.js</title>
+        <title>フォーム入力バインディング - vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -59,16 +69,31 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
     <div class="list">
+        <h2>
         
-        <h2>ガイド</h2>
+        ガイド
         
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
         <ul class="menu-root">
             
                 <li>
@@ -80,27 +105,51 @@
                 </li>
             
                 <li>
-                    <a href="/guide/directives.html" class="sidebar-link">ディレクティブ</a>
+                    <a href="/guide/overview.html" class="sidebar-link">概要</a>
                 </li>
             
                 <li>
-                    <a href="/guide/filters.html" class="sidebar-link">フィルタ</a>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue インスタンス</a>
                 </li>
             
                 <li>
-                    <a href="/guide/list.html" class="sidebar-link">リスト表示</a>
+                    <a href="/guide/syntax.html" class="sidebar-link">データバインディング構文</a>
                 </li>
             
                 <li>
-                    <a href="/guide/events.html" class="sidebar-link">イベントのリスニング</a>
+                    <a href="/guide/computed.html" class="sidebar-link">算出プロパティ</a>
                 </li>
             
                 <li>
-                    <a href="/guide/forms.html" class="sidebar-link current">フォームのハンドリング</a>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">クラスとスタイルのバインディング</a>
                 </li>
             
                 <li>
-                    <a href="/guide/computed.html" class="sidebar-link">Computed Properties</a>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件付きレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">リストレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">メソッドとイベントハンドリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link current">フォーム入力バインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">トランジション</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">コンポーネント</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">リアクティブの探求</a>
                 </li>
             
                 <li>
@@ -112,11 +161,11 @@
                 </li>
             
                 <li>
-                    <a href="/guide/components.html" class="sidebar-link">コンポーネントシステム</a>
+                    <a href="/guide/mixins.html" class="sidebar-link">ミックスイン</a>
                 </li>
             
                 <li>
-                    <a href="/guide/transitions.html" class="sidebar-link">トランジションシステム</a>
+                    <a href="/guide/plugins.html" class="sidebar-link">プラグイン</a>
                 </li>
             
                 <li>
@@ -124,75 +173,181 @@
                 </li>
             
                 <li>
-                    <a href="/guide/extending.html" class="sidebar-link">Vue の拡張</a>
+                    <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
-                <li>
-                    <a href="/guide/best-practices.html" class="sidebar-link new">コツ & ベストプラクティス</a>
-                </li>
-            
-                <li>
-                    <a href="/guide/faq.html" class="sidebar-link">FAQ</a>
-                </li>
-            
-            <li><a href="http://legacy.vuejs.org">0.11 のドキュメントをお探しですか？</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
 
 
 <div class="content guide with-sidebar">
-    <h1>フォームのハンドリング</h1>
+    <h1>フォーム入力バインディング</h1>
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <h2 id="基礎">基礎</h2><p>フォームの input 要素に two way (双方向)バインディングを作成するには、 <code>v-model</code> ディレクティブを使用します。 <code>v-model</code> ディレクティブは、input の type に基づき、要素を更新する正しい方法を自動的に選択します。</p>
-<p><strong>例</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">id</span>=<span class="value">"demo"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- text --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">v-model</span>=<span class="value">"msg"</span>&gt;</span></span><br><span class="line">    &#123;&#123;msg&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- checkbox --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">v-model</span>=<span class="value">"checked"</span>&gt;</span></span><br><span class="line">    &#123;&#123;checked ? "yes" : "no"&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- radio buttons --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"picked"</span> <span class="attribute">value</span>=<span class="value">"one"</span> <span class="attribute">v-model</span>=<span class="value">"picked"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"picked"</span> <span class="attribute">value</span>=<span class="value">"two"</span> <span class="attribute">v-model</span>=<span class="value">"picked"</span>&gt;</span></span><br><span class="line">    &#123;&#123;picked&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- select --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">option</span>&gt;</span>one<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">option</span>&gt;</span>two<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br><span class="line">    &#123;&#123;selected&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- multiple select --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"multiSelect"</span> <span class="attribute">multiple</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">option</span>&gt;</span>one<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">option</span>&gt;</span>two<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">option</span>&gt;</span>three<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br><span class="line">    &#123;&#123;multiSelect&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">pre</span>&gt;</span>data: &#123;&#123;$data | json 2&#125;&#125;<span class="tag">&lt;/<span class="title">pre</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    msg      : <span class="string">'hi!'</span>,</span><br><span class="line">    checked  : <span class="literal">true</span>,</span><br><span class="line">    picked   : <span class="string">'one'</span>,</span><br><span class="line">    selected : <span class="string">'two'</span>,</span><br><span class="line">    multiSelect: [<span class="string">'one'</span>, <span class="string">'three'</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p><strong>結果</strong></p>
-<p><form id="demo"><p><input type="text" v-model="msg"> {&#123;msg&#125;}</p><p><input type="checkbox" v-model="checked"> {&#123;checked ? &quot;yes&quot; : &quot;no&quot;&#125;}</p><p><input type="radio" v-model="picked" name="picked" value="one"><input type="radio" v-model="picked" name="picked" value="two"> {&#123;picked&#125;}</p><p><select v-model="selected"><option>one</option><option>two</option></select> {&#123;selected&#125;}</p><p><select v-model="multiSelect" multiple><option>one</option><option>two</option><option>three</option></select>{&#123;multiSelect&#125;}</p><p>data:<pre style="font-size:13px;background:transparent;line-height:1.5em">{&#123;$data | json 2&#125;}</pre></p></form></p>
+    <h2 id="基本的な使い方">基本的な使い方</h2><p>form の input 要素 で双方向 (two-way) データバインディングを作成するには、<code>v-model</code> ディレクティブを使用することができます。それは、自動的に入力されたタイプに基づいて要素を更新するための正しい方法を選択します。わずかな魔法とはいえ、<code>v-model</code> は本質的にユーザーの入力イベントにおいてデータを更新するための糖衣構文 (syntax sugar) で、そのうえ、いくつかのエッジケースに対して特別な配慮が必要です。</p>
+<h3 id="Text">Text</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>Message is: &#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">v-model</span>=<span class="value">"message"</span> <span class="attribute">placeholder</span>=<span class="value">"edit me"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div id="example-1" class="demo">
+  <span>Message is: {{ message }}</span><br>
+  <input type="text" v-model="message" placeholder="edit me">
+</div>
 <script>
 new Vue({
-  el: '#demo',
+  el: '#example-1',
   data: {
-    msg      : 'hi!',
-    checked  : true,
-    picked   : 'one',
-    selected : 'two',
-    multiSelect: ['one', 'three']
+    message: ''
   }
 })
 </script>
 
-<h2 id="遅延更新">遅延更新</h2><p>デフォルトで、<code>v-model</code> はデータと input を <code>input</code> イベントの直後に同期します。<code>lazy</code> 属性を追加することで、 <code>change</code> イベントの直後に同期させるように、挙動を変更することができます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- "input" の代わりに、"change" の直後に同期する  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"msg"</span> <span class="attribute">lazy</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="値を数値としてキャストする">値を数値としてキャストする</h2><p>もし、ユーザの入力を自動的に数値として永続化したいのであれば、<code>v-model</code> で管理している input に <code>number</code> 属性を追加することができます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"age"</span> <span class="attribute">number</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="動的な選択オプション">動的な選択オプション</h2><p><code>&lt;select&gt;</code> 要素のオプションリストを動的にレンダリングする必要があれば、オプションが動的に変更されるとき、<code>v-model</code> は正しく同期しているため、<code>v-model</code>  と一緒に <code>options</code> 属性を利用することが推奨されています:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span> <span class="attribute">options</span>=<span class="value">"myOptions"</span>&gt;</span><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>あなたの data では、<code>myOptions</code> はオプションとして使いたい配列を指す keypath または expression である必要があります。</p>
-<p>配列はプレーンなテキストまたは <code>{text:&#39;&#39;, value:&#39;&#39;}</code> の形式のオブジェクトを含めることができます。このオブジェクト形式は、値とは異なるオプション文字列を表示することができます:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123; text: <span class="string">'A'</span>, value: <span class="string">'a'</span> &#125;,</span><br><span class="line">  &#123; text: <span class="string">'B'</span>, value: <span class="string">'b'</span> &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>これは下記のようにレンダリングされます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">select</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"a"</span>&gt;</span>A<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"b"</span>&gt;</span>B<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>一方、オブジェクトは <code>{ label:&#39;&#39;, options:[...] }</code> の形式も取ることができます。このケースでは、 <code>&lt;optgroup&gt;</code> としてレンダリングされます:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123; label: <span class="string">'A'</span>, options: [<span class="string">'a'</span>, <span class="string">'b'</span>]&#125;,</span><br><span class="line">  &#123; label: <span class="string">'B'</span>, options: [<span class="string">'c'</span>, <span class="string">'d'</span>]&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>これは下記のようにレンダリングされます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">select</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">optgroup</span> <span class="attribute">label</span>=<span class="value">"A"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"a"</span>&gt;</span>a<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"b"</span>&gt;</span>b<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">optgroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">optgroup</span> <span class="attribute">label</span>=<span class="value">"B"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"c"</span>&gt;</span>c<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"d"</span>&gt;</span>d<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">optgroup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>これは、あなたの元データがこの希望されるフォーマットでない可能性が非常にあり、動的なオプションを生成するためにデータを変換する必要があります。DRY な変換をするために、<code>options</code> パラメータはフィルタをサポートしており、あなたの変換ロジックを再利用可能な<a href="/guide/custom-filter.html">カスタムフィルタ</a>で置き換えることで役に立ちます。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vue.filter(<span class="string">'extract'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value, keyToExtract</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> value.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> item[keyToExtract]</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">select</span></span><br><span class="line">  <span class="attribute">v-model</span>=<span class="value">"selectedUser"</span></span><br><span class="line">  <span class="attribute">options</span>=<span class="value">"users | extract 'name'"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上記フィルタは <code>[{ name: &#39;Bruce&#39; }, { name: &#39;Chuck&#39; }]</code> のようなデータを <code>[&#39;Bruce&#39;, &#39;Chuck&#39;]</code> に変換し、 正しいフォーマットになります。</p>
-<h2 id="入力デバウンス">入力デバウンス</h2><p><code>debounce</code> パラメータは、入力値が Model に同期される前に各キーストローク後の最小遅延の設定を許可します。これは、例えば、先行入力自動補完向けに Ajax リクエストを作成するような、各更新時に高価な操作を実行しているときには便利です。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"msg"</span> <span class="attribute">debounce</span>=<span class="value">"500"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>結果</strong></p>
-<p><div id="debounce-demo" class="demo">{&#123;msg&#125;}<br><input v-model="msg" debounce="500"></div></p>
+<h3 id="Checkbox">Checkbox</h3><p>単体のチェックボックスは、boolean 値です:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"checkbox"</span> <span class="attribute">v-model</span>=<span class="value">"checked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"checkbox"</span>&gt;</span>&#123;&#123; checked &#125;&#125;<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div id="example-2" class="demo">
+  <input type="checkbox" id="checkbox" v-model="checked">
+  <label for="checkbox">{{ checked }}</label>
+</div>
+<script>
+new Vue({
+  el: '#example-2',
+  data: {
+    checked: false
+  }
+})
+</script>
+
+<p>複数のチェックボックスは、同じ配列にバウンドします:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"jack"</span> <span class="attribute">value</span>=<span class="value">"Jack"</span> <span class="attribute">v-model</span>=<span class="value">"checkedNames"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"john"</span> <span class="attribute">value</span>=<span class="value">"John"</span> <span class="attribute">v-model</span>=<span class="value">"checkedNames"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"john"</span>&gt;</span>John<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"mike"</span> <span class="attribute">value</span>=<span class="value">"Mike"</span> <span class="attribute">v-model</span>=<span class="value">"checkedNames"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"mike"</span>&gt;</span>Mike<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>Checked names: &#123;&#123; checkedNames | json &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div id="example-3" class="demo">
+  <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+  <label for="jack">Jack</label>
+  <input type="checkbox" id="john" value="John" v-model="checkedNames">
+  <label for="john">John</label>
+  <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+  <label for="mike">Mike</label>
+  <br>
+  <span>Checked names: {{ checkedNames | json }}</span>
+</div>
+<script>
+new Vue({
+  el: '#example-3',
+  data: {
+    checkedNames: []
+  }
+})
+</script>
+
+<h3 id="Radio">Radio</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">id</span>=<span class="value">"one"</span> <span class="attribute">value</span>=<span class="value">"One"</span> <span class="attribute">v-model</span>=<span class="value">"picked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"one"</span>&gt;</span>One<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">id</span>=<span class="value">"two"</span> <span class="attribute">value</span>=<span class="value">"Two"</span> <span class="attribute">v-model</span>=<span class="value">"picked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"two"</span>&gt;</span>Two<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>Picked: &#123;&#123; picked &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div id="example-4" class="demo">
+  <input type="radio" id="one" value="One" v-model="picked">
+  <label for="one">One</label>
+  <br>
+  <input type="radio" id="two" value="Two" v-model="picked">
+  <label for="two">Two</label>
+  <br>
+  <span>Picked: {{ picked }}</span>
+</div>
+<script>
+new Vue({
+  el: '#example-4',
+  data: {
+    picked: ''
+  }
+})
+</script>
+
+<h3 id="Select">Select</h3><p>単体の選択:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">selected</span>&gt;</span>A<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span>&gt;</span>B<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span>&gt;</span>C<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>Selected: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div id="example-5" class="demo">
+  <select v-model="selected">
+    <option selected>A</option>
+    <option>B</option>
+    <option>C</option>
+  </select>
+  <span>Selected: {{ selected }}</span>
+</div>
+<script>
+new Vue({
+  el: '#example-5',
+  data: {
+    selected: null
+  }
+})
+</script>
+
+<p>複数の選択 (配列にバウンド):</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span> <span class="attribute">multiple</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">selected</span>&gt;</span>A<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span>&gt;</span>B<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span>&gt;</span>C<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>Selected: &#123;&#123; selected | json &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div id="example-6" class="demo">
+  <select v-model="selected" multiple style="width: 50px">
+    <option selected>A</option>
+    <option>B</option>
+    <option>C</option>
+  </select>
+  <br>
+  <span>Selected: {{ selected | json }}</span>
+</div>
+<script>
+new Vue({
+  el: '#example-6',
+  data: {
+    selected: []
+  }
+})
+</script>
+
+<p>動的オプションは <code>v-for</code> でレンダリングできます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">v-for</span>=<span class="value">"option in options"</span> <span class="attribute">v-bind:value</span>=<span class="value">"option.value"</span>&gt;</span></span><br><span class="line">    &#123;&#123; option.text &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>Selected: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'...'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    selected: <span class="string">'A'</span>,</span><br><span class="line">    options: [</span><br><span class="line">      &#123; text: <span class="string">'One'</span>, value: <span class="string">'A'</span> &#125;,</span><br><span class="line">      &#123; text: <span class="string">'Two'</span>, value: <span class="string">'B'</span> &#125;,</span><br><span class="line">      &#123; text: <span class="string">'Three'</span>, value: <span class="string">'C'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<div id="example-7" class="demo">
+  <select v-model="selected">
+    <option v-for="option in options" v-bind:value="option.value">
+      {{ option.text }}
+    </option>
+  </select>
+  <span>Selected: {{ selected }}</span>
+</div>
+<script>
+new Vue({
+  el: '#example-7',
+  data: {
+    selected: 'A',
+    options: [
+      { text: 'One', value: 'A' },
+      { text: 'Two', value: 'B' },
+      { text: 'Three', value: 'C' }
+    ]
+  }
+})
+</script>
+
+<h2 id="値のバインディング">値のバインディング</h2><p>radio、checkbox、そして select オプションは、<code>v-model</code>バインディングの値は通常静的文字列 (または、チェックボックスには boolean )を指定します:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- チェックされたとき、`picked` は文字列"a"になります --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">v-model</span>=<span class="value">"picked"</span> <span class="attribute">value</span>=<span class="value">"a"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- `toggle` は true かまたは false のどちらかです --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">v-model</span>=<span class="value">"toggle"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 選択されたとき、`selected` は文字列"abc"です --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"abc"</span>&gt;</span>ABC<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>しかし、時どき、私達は、Vue インスタンスで動的プロパティに値をバインドしたいかもしれません。私達はそれを達成するために <code>v-bind</code> を使用することができます。 ほかに、<code>v-bind</code> の使用は、私達に文字列ではない値に input 値をバインドします。</p>
+<h3 id="Checkbox-1">Checkbox</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span></span><br><span class="line">  <span class="attribute">type</span>=<span class="value">"checkbox"</span></span><br><span class="line">  <span class="attribute">v-model</span>=<span class="value">"toggle"</span></span><br><span class="line">  <span class="attribute">v-bind:true-value</span>=<span class="value">"a"</span></span><br><span class="line">  <span class="attribute">v-bind:false-value</span>=<span class="value">"b"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// チェックしたとき:</span></span><br><span class="line">vm.toggle === vm.a</span><br><span class="line"><span class="comment">// チェックがはずれされたとき:</span></span><br><span class="line">vm.toggle === vm.b</span><br></pre></td></tr></table></figure>
+<h3 id="Radio-1">Radio</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">v-model</span>=<span class="value">"pick"</span> <span class="attribute">v-bind:value</span>=<span class="value">"a"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// チェックしたとき:</span></span><br><span class="line">vm.pick === vm.a</span><br></pre></td></tr></table></figure>
+<h3 id="Select_Options">Select Options</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- インラインオブジェクトリテラル --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">v-bind:value</span>=<span class="value">"&#123; number: 123 &#125;"</span>&gt;</span>123<span class="tag">&lt;/<span class="title">option</span>&gt;</span>&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 選択したとき</span></span><br><span class="line"><span class="keyword">typeof</span> vm.selected <span class="comment">// -&gt; 'object'</span></span><br><span class="line">vm.selected.number <span class="comment">// -&gt; 123</span></span><br></pre></td></tr></table></figure>
+<h2 id="パラメータ属性">パラメータ属性</h2><h3 id="lazy">lazy</h3><p>デフォルトでは、<code>v-model</code> は各 <code>input</code> イベント後に、データと入力を同期します。<code>change</code> イベント後、同期するための振舞いを変更するために、<code>lazy</code> 属性を追加します:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- "input" の代わりに "change" 後に同期します --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"msg"</span> <span class="attribute">lazy</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="number">number</h3><p>ユーザーの入力において自動的に数値として永続化する場合、<code>v-model</code> を管理された input の値に対して、<code>number</code> 属性を追加することができます。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"age"</span> <span class="attribute">number</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="debounce">debounce</h3><p><code>debounce</code> パラメータは、入力値が Model に同期される前の各キーストローク後の最小遅延の設定を許可します。これは、例えば、先行入力自動補完向けに Ajax リクエストを作成するような、各更新時に高価な操作を実行しているときには便利です。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"msg"</span> <span class="attribute">debounce</span>=<span class="value">"500"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+ 
+<div id="debounce-demo" class="demo">
+  {{ msg }}<br>
+  <input v-model="msg" debounce="500">
+</div>
+
 <script>
 new Vue({
   el:'#debounce-demo',
@@ -200,10 +355,19 @@ new Vue({
 })
 </script>
 
-<p><code>debounce</code> パラメータはユーザーの入力イベントをデバウンスしないことに注意してください: それは基礎となるデータに “書き込み” 操作をデバウンスします。そのため、<code>debounce</code> を使用するときデータ変更に反応するために <code>vm.$watch()</code> を使用する必要があります。</p>
-<p>次: <a href="/guide/computed.html">Computed Properties</a></p>
+<p><code>debounce</code> パラメータはユーザーの入力イベントをデバウンスしないことに注意してください: それは基礎となるデータに “書き込み” 操作をデバウンスします。そのため<code>debounce</code> を使用するときデータ変に対して反応するために <code>vm.$watch()</code> を使用する必要があります。本物の DOM イベントをデバウンスするためには、<a href="/api/#debounce">debounce filter</a> を使います。</p>
 
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/events.html">メソッドとイベントハンドリング</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/transitions.html">トランジション</a> →</span>
+        
+      </div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
 </div>
 
                 

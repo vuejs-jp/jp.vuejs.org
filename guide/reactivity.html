@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>リアクティブの探求 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46852172-1', 'vuejs.org');
+  ga('send', 'pageview');
+</script>
+        <script src="/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        
+            <div id="header">
+    <a id="logo" href="/">
+        <img src="/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">ガイド</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">例</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+</div>
+            <div id="main">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">ガイド</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">例</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <h2>
+        
+        ガイド
+        
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
+        <ul class="menu-root">
+            
+                <li>
+                    <a href="/guide/installation.html" class="sidebar-link">インストール</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link">はじめに</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/overview.html" class="sidebar-link">概要</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue インスタンス</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/syntax.html" class="sidebar-link">データバインディング構文</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/computed.html" class="sidebar-link">算出プロパティ</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">クラスとスタイルのバインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件付きレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">リストレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">メソッドとイベントハンドリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">フォーム入力バインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">トランジション</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">コンポーネント</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link current">リアクティブの探求</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-directive.html" class="sidebar-link">カスタムディレクティブ</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-filter.html" class="sidebar-link">カスタムフィルタ</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/mixins.html" class="sidebar-link">ミックスイン</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/plugins.html" class="sidebar-link">プラグイン</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/application.html" class="sidebar-link">大規模アプリケーションの構築</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar">
+    <h1>リアクティブの探求</h1>
+    <div id="ad">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+    </div>
+    <p>私達は基本のほとんどをカバーしてきました。これからは深いダイビングするための時間です！Vue.js の最も明確な特徴の1つは、控えめなリアクティブシステムです。モデルは単なるプレーンな JavaScript オブジェクトで、それを変更し View を更新します。それは状態管理が非常にシンプルで直感的になりますが、いくつかの一般的な落とし穴を避けるためにそれがどのように動作するか理解することも重要です。このセクションで、私達は Vue.js のリアクティブシステムの低レベルの詳細の一部について掘り下げていきます。</p>
+<h2 id="変更の追跡方法">変更の追跡方法</h2><p>プレーンな JavaScript オブジェクトを <code>data</code> オプションとして Vue インスタンスに渡すとき、Vue.js はその全てのプロパティを渡り歩いて、それらを <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="external">Object.defineProperty</a> を使用して、getter/setter に変換します。これは ES5 だけのシム (shim) ができない機能で、Vue.js が IE8 以下をサポートしない理由です。</p>
+<p>getter/setter はユーザーには見えませんが、内部ではそれらは Vue.js で依存関係の追跡を実行したり、プロパティがアクセスされたまたは変更されたときは、変更通知します。注意事項の1つは、データオブジェクトが記録されたとき、getter/setter のブラウザコンソールのフォーマットが異なるので、よりフレンドリな閲覧出力にするため、<code>vm.$log()</code> インスタンスメソッドを使用してください。</p>
+<p>テンプレートでの全てのディレクティブ/データバインディングは、それが依存関係として評価されている間、全てのプロパティを<strong>触れた (touched)</strong> ものとして記録している<strong>ウオッチャ (watcher)</strong> オブジェクトが存在しています。その後、依存する setter が呼び出されるとき、それは再評価するウオッチャをトリガし、そして関連するディレクティブに DOM の更新する結果につながります。</p>
+<p><img src="/images/data.png" alt="data"></p>
+<h2 id="変更検出の注意事項">変更検出の注意事項</h2><p>ES5 の制限のため、Vue.js は<strong>プロパティの追加または削除を検出できません</strong>。Vue.js はインスタンスの初期化中に、getter/setter 変換処理を実行するため、プロパティは、Vue.js がそれを変換しそしてそれをリアクティブにするために、<code>data</code> オブジェクトに存在しなければなりません。例えば:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; a: <span class="number">1</span> &#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// `vm.a` と `data.a` は今はリアクティブです</span></span><br><span class="line"></span><br><span class="line">vm.b = <span class="number">2</span></span><br><span class="line"><span class="comment">// `vm.b` はリアクティブでは"ありません"</span></span><br><span class="line"></span><br><span class="line">data.b = <span class="number">2</span></span><br><span class="line"><span class="comment">// `data.b` はリアクティブでは"ありません"</span></span><br></pre></td></tr></table></figure>
+<p>しかしながら、インスタンス作成後に、<strong>プロパティを追加してリアクティブにする</strong>方法があります。</p>
+<p>Vue インスタンスに対して、<code>$set(path, value)</code> インスタンスメソッドを使用することができます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$set(<span class="string">'b'</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment">// `vm.b` と `data.b` は今はリアクティブです</span></span><br></pre></td></tr></table></figure>
+<p>プレーンなデータオブジェクトに対しては、グロバール <code>Vue.set(object, key, value)</code> メソッドを使用することができます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.set(data, <span class="string">'c'</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">// `vm.c` と `data.c` は今はリアクティブです</span></span><br></pre></td></tr></table></figure>
+<p><a href="/guide/list.html#Caveats">以前に リストレンダリング のセクションで議論した</a> いくつかの配列に関連した注意事項があります。</p>
+<h2 id="データの初期化">データの初期化</h2><p>Vue.js は動的にその場でリアクティブなプロパティを追加するための API を提供していますが、<code>data</code> オプションで前もって全てのリアクティブなプロパティを宣言することを推奨します。</p>
+<p>以下の代わりに:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  template: <span class="string">'&lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 後で、`msg` を追加する</span></span><br><span class="line">vm.$set(<span class="string">'msg'</span>, <span class="string">'Hello!'</span>)</span><br></pre></td></tr></table></figure>
+<p>以下の方がよいです:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    <span class="comment">// 空の値として msg を宣言する</span></span><br><span class="line">    msg: <span class="string">''</span></span><br><span class="line">  &#125;,</span><br><span class="line">  template: <span class="string">'&lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 後で `msg` を設定する</span></span><br><span class="line">vm.msg = <span class="string">'Hello!'</span></span><br></pre></td></tr></table></figure>
+<p>このパターンに背後に以下の2つの理由があります:</p>
+<ol>
+<li><p><code>data</code> オブジェクトはあなたのコンポーネントの状態に対するスキーマのようなものです。</p>
+</li>
+<li><p>Vue インスタンスでトップレベルのリアクティブなプロパティを追加すると、それは、以前に存在しないそしてウオッチャが依存関係として追跡することができないスコープを再評価するために全てのウオッチャに強制します。</p>
+</li>
+</ol>
+<h2 id="非同期更新キュー">非同期更新キュー</h2><p>デフォルトで、Vue.js は <strong>非同期</strong> に DOM 更新を実行します。データ変更が監視されている限り、Vue はキューをオープンし、同じイベントループで起こる全てのデータ変更をバッファリングします。同じウオッチャが複数回トリガされる場合、一度だけキューに押し込まれます。そして、次のイベントループの “tick” で、Vue はキューをフラッシュし、必要な DOM 更新だけ実行します。内部的には、Vue はもし非同期キューイング向けに <code>MutationObserver</code> が利用可能ならそれを使い、そうでなければ <code>setTimeout(fn, 0)</code> にフォールバックします。</p>
+<p>例として、<code>vm.someData = &#39;new value&#39;</code> をセットした時、DOM はすぐには更新しません。 キューがフラッシュされた時、次の “tick” で更新します。ほとんどの場合、私達はこれについて気にする必要はありませんが、更新した DOM の状態に依存する何かをしたい時、注意が必要です。Vue.js は一般的に”データ駆動”的な流儀で考えることを開発者に奨励していますが、時どき、それはあなたの手を汚し得る必要があるかもしれません。Vue.js でデータの変更後に、DOM の更新が完了するまでに待つためには、データが変更された直後に <code>Vue.nextTick(callback)</code> を使用することができます。コールバックが呼ばれた時、DOM は更新されているでしょう。例えば:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example"</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    msg: <span class="string">'123'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.msg = <span class="string">'new message'</span> <span class="comment">// データを変更する</span></span><br><span class="line">vm.$el.textContent === <span class="string">'new message'</span> <span class="comment">// false</span></span><br><span class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  vm.$el.textContent === <span class="string">'new message'</span> <span class="comment">// true</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>特に便利な内部コンポーネントのインスタンスメソッド <code>vm.$nextTick()</code> もあります。なぜなら、それはグローバルな <code>Vue</code> とそのコールバックの <code>this</code> コンテキストは自動的に現在の Vue インスタンスにバウンドされるからです:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">'example'</span>, &#123;</span><br><span class="line">  template: <span class="string">'&lt;span&gt;&#123;&#123;msg&#125;&#125;&lt;/span&gt;'</span>,</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      msg: <span class="string">'not updated'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    updateMessage: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.msg = <span class="string">'updated'</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.$el.textContent) <span class="comment">// =&gt; 'not updated'</span></span><br><span class="line">      <span class="keyword">this</span>.$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.$el.textContent) <span class="comment">// =&gt; 'updated'</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="算出プロパティの内部">算出プロパティの内部</h2><p>Vue.js の算出プロパティ (computed property) は getter は単純では<strong>ない</strong>ことに注意すべきです。各算出プロパティは独自のリアクティブな依存関係の追跡します。算出プロパティが評価されるとき、Vue.js は依存関係リストを更新し、結果の値をキャッシュします。キャッシュされた値は追跡された依存関係の1つが変更されたときだけ、無効化されます。したがって、依存関係が変更されなかった間ずっと、算出プロパティのアクセスは getter を呼びだす代わりに、直接キャッシュされた値を返します。</p>
+<p>なぜ、私達はキャッシングする必要があるのでしょうか？私達が、巨大な配列をループして計算をたくさんする必要がある、高価な算出プロパティ <strong>A</strong> を持っていると想像してください。その後、私達は <strong>A</strong> に依存する同様の他の算出プロパティを持っているかもしれません。キャッシングがなければ、私達は必要以上 <strong>A</strong> の getter を呼びだすことになるでしょう！</p>
+<p>算出プロパティのキャッシングのために、getter 関数は、算出プロパティにアクセスするとき、常に呼び出されません。次の例を考えてみます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    msg: <span class="string">'hi'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    example: &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Date</span>.now() + <span class="keyword">this</span>.msg</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>算出プロパティ <code>example</code> は、<code>vm.msg</code> という1つだけの依存関係を持っています。<code>Date.now()</code> というタイムスタンプは、Vue のデータ監視システムとは何も関係ないため、リアクティブな依存関係では<strong>ありません</strong>。したがって、プログラムで <code>vm.example</code> にアクセスするとき、<code>vm.msg</code> が再評価をトリガしない限り、同じタイムスタンプを見つけるでしょう。</p>
+<p>いくつかのユースケースでは、単純に再度 getter を呼びだす <code>vm.example</code> にアクセスする度に、簡単な getter のような振舞いを保存したいかもしれません。特定の算出プロパティに対してキャッシュをオフにすることによって、それを行うことができます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  example: &#123;</span><br><span class="line">    cache: <span class="literal">false</span>,</span><br><span class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Date</span>.now() + <span class="keyword">this</span>.msg</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>これにより、<code>vm.example</code> にアクセスする度に、タイムスタンプは最新になるでしょう。<strong>しかしながら、これはプログラム的に JavaScript 内でのアクセスだけ影響することに注意してください。データバインディングはまだ依存関係駆動です。</strong>テンプレートで <code>{{example}}</code> として算出プロパティにバインドするとき、DOM はリアクティブな依存関係が変更されたときにだけ更新されます。</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/components.html">コンポーネント</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/custom-directive.html">カスタムディレクティブ</a> →</span>
+        
+      </div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

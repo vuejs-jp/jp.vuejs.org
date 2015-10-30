@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vue.js 1.0.0 リリースしました - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = ""
+        </script>
+        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46852172-1', 'vuejs.org');
+  ga('send', 'pageview');
+</script>
+        <script src="/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        
+            <div id="header">
+    <a id="logo" href="/">
+        <img src="/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link">ガイド</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">例</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+</div>
+            <div id="main">
+                
+                    <div class="sidebar blog">
+    <ul class="main-menu">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link">ガイド</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">例</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <h2>Recent Posts</h2>
+        <ul>
+        
+            <li>
+                <a href="/2015/10/26/1.0.0-release/" class="sidebar-link current">Vue.js 1.0.0 リリースしました</a>
+            </li>
+        
+            <li>
+                <a href="/2015/06/11/012-release/" class="sidebar-link">Vue.js 0.12 released!</a>
+            </li>
+        
+            <li>
+                <a href="/2014/12/08/011-component/" class="sidebar-link">0.11 Component Tips</a>
+            </li>
+        
+            <li>
+                <a href="/2014/11/09/vue-011-release/" class="sidebar-link">Vue.js 0.11 released!</a>
+            </li>
+        
+            <li>
+                <a href="/2014/07/29/vue-next/" class="sidebar-link">Vue.js 0.10.6, and what's next</a>
+            </li>
+        
+            <li>
+                <a href="/2014/03/22/vuejs-010-release/" class="sidebar-link">Vue.js 0.10 is here!</a>
+            </li>
+        
+        </ul>
+    </div>
+</div>
+<div class="content blog post">
+    <h1>Vue.js 1.0.0 リリースしました</h1>
+    <div id="ad">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+    </div>
+    <h4>Oct 26, 2015</h4>
+    <blockquote>
+<p>こんにちは HN！ Vue.js に精通していない場合は、より高い概要について、この<a href="http://blog.evanyou.me/2015/10/25/vuejs-re-introduction/" target="_blank" rel="external">ブログ記事</a>を読みたいかもしれません。</p>
+</blockquote>
+<p>300 以上のコミットの後に、8 つのアルファ (alpha) バージョン 、4 つのベータ (beta) バージョン 、そして 2 つのリリース候補(RC)バージョン、今日、私は <a href="https://github.com/vuejs/vue/releases/tag/1.0.0" target="_blank" rel="external">Vue.js 1.0.0 エヴァンゲリオン (Evangelion)</a>のリリースを発表するのをとても誇りに思っています！それはコミュニティから全てのフィードバックなしには不可能でした。API の再設計プロセスに参加した全ての人々に感謝します。</p>
+<a id="more"></a>
+<h3 id="テンプレート構文を改善しました">テンプレート構文を改善しました</h3><p>1.0 のテンプレート構文は、多くの微妙な整合性の問題を解決し、Vue のテンプレートをより簡潔で一般的に読みやすくなります。最も注目すべき新機能は、<code>v-on</code> と <code>v-bind</code> に対する省略記法構文です:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- v-bind:href の省略 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">:href</span>=<span class="value">"someURL"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- v-on:click の省略 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> @<span class="attribute">click</span>=<span class="value">"onClick"</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>子コンポーネントで使用したとき、カスタムイベントに対する <code>v-on</code> リッスン、そして <code>v-bind</code> は props をバインドするために使用することができます。省略記法を子コンポーネントで使用することでとても簡潔になります:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">item-list</span></span><br><span class="line">  <span class="attribute">:items</span>=<span class="value">"items"</span></span><br><span class="line">  @<span class="attribute">ready</span>=<span class="value">"onItemsReady"</span></span><br><span class="line">  @<span class="attribute">update</span>=<span class="value">"onItemsUpdate"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">item-list</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="API_を整理しました">API を整理しました</h3><p>Vue.js 1.0 の全体的なゴールは、大規模プロジェクトに適合することです。これは多くの非推奨な API がある理由です。ほとんど使用されているものを除き、非推奨のために最も一般的な理由は、その機能が保守性の損害パターンの結果につながるということです、具体的には、私達が非推奨になる機能を維持するのと、プロジェクトの他の部分に影響を与えることなく、単独でコンポーネントをリファクタリングするのが難しいです。</p>
+<p>例えば、0.12 でのデフォルトアセットの解決は、コンポーネントツリーで親に暗黙的なフォールバックがあります。これは決定論的ではないコンポーネントを利用可能なアセットと、実行時に使用される題目を作ります。1.0 では、全てのアセットは厳密なモード (strict mode) で解決され、そして親への暗黙的なフォールバックはもはやありません。<code>inherit</code> オプションは、それはとにかく密結合されたコンポーネントにつながり、リファクタリングするのが難しいため、削除されます。</p>
+<h3 id="迅速な初期レンダリング">迅速な初期レンダリング</h3><p>1.0 は古い <code>v-repeat</code> ディレクティブを <code>v-for</code> で置き換えます。同じ機能でそしてより直感的なスコープを提供することに加えて、<code>v-for</code> は大きいリストやテーブルをレンダリングするとき、初期レンダリングのパフォーマンス向上を <strong>100%</strong> 提供します！</p>
+<h3 id="より強力なツール">より強力なツール</h3><p>Vue.js のコア以外でエキサイティングなものがあります。<a href="https://github.com/vuejs/vue-loader" target="_blank" rel="external">vue-loader</a> と <a href="https://github.com/vuejs/vueify" target="_blank" rel="external">vueify</a> は以下を含む主要なアップグレードがあります:</p>
+<ul>
+<li><p>ホットコンポーネントローディング。<code>*.vue</code> コンポーネントが編集されるとき、アクティブなインスタンスの全てはページの再読み込みなしでホットに交換されます。これは小さな変更をするときは、例えば、スタイルやテンプレートを調整するとき、あなたのアプリケーションは完全にリロードする必要はありません。アプリケーションの状態が交換されたコンポーネントは、保存することができ、大幅に開発体験を改善できます。</p>
+</li>
+<li><p>Scoped CSS 。単にあなたの <code>*.vue</code> コンポーネントの style タグに <code>scoped</code> 属性を追加することにより、コンポーネントのテンプレートそして最終で生成された CSS は、それ自身の要素にだけ適用されたコンポーネントのスタイルを確保するために魔法的に書き換えられます。最も重要なことは、親コンポーネントで指定されたスタイルは、その中でネストされた子コンポーネントに漏れ落ち<strong>ません</strong>。</p>
+</li>
+<li><p>デフォルト ES2015 。JavaScript は進化しています。最新の構文を使用して、よりクリーンで表現に富んだコードを書くことができます。<code>vue-loader</code> と <code>vueify</code> は、余分なセットアップを必要とせず、形にとらわれないあなたの <code>*.vue</code> コンポーネントで JavaScript にトランスパイルします。今日から未来の JavaScript を書きましょう！</p>
+</li>
+</ul>
+<p><a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">vue-router</a> と組み合わせると、Vue.js はライブラリ以上です。それは、複雑な SPA を構築するための頑固な基盤を提供します。</p>
+<h3 id="次は何をしますか？">次は何をしますか？</h3><p>1.0.0 の一般的な提案として、コア API は近い将来に対して安定版のままで、ライブラリは本番環境で使用するために準備されています。今後の開発は以下に焦点を当てます:</p>
+<ol>
+<li><p><code>vue-router</code> の改善とそれの本番環境向けへの準備</p>
+</li>
+<li><p>開発体験の効率化。例えば、よりよい開発ツールと Vue.js プロジェクトとコンポーネントの scaffolding 向けの CLI</p>
+</li>
+<li><p>チュートリアルのようなより学習リソースの提供と例</p>
+</li>
+</ol>
+
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

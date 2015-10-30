@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>リスト表示 - vue.js</title>
+        <title>リストレンダリング - vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -59,16 +69,31 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
     <div class="list">
+        <h2>
         
-        <h2>ガイド</h2>
+        ガイド
         
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
         <ul class="menu-root">
             
                 <li>
@@ -80,27 +105,51 @@
                 </li>
             
                 <li>
-                    <a href="/guide/directives.html" class="sidebar-link">ディレクティブ</a>
+                    <a href="/guide/overview.html" class="sidebar-link">概要</a>
                 </li>
             
                 <li>
-                    <a href="/guide/filters.html" class="sidebar-link">フィルタ</a>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue インスタンス</a>
                 </li>
             
                 <li>
-                    <a href="/guide/list.html" class="sidebar-link current">リスト表示</a>
+                    <a href="/guide/syntax.html" class="sidebar-link">データバインディング構文</a>
                 </li>
             
                 <li>
-                    <a href="/guide/events.html" class="sidebar-link">イベントのリスニング</a>
+                    <a href="/guide/computed.html" class="sidebar-link">算出プロパティ</a>
                 </li>
             
                 <li>
-                    <a href="/guide/forms.html" class="sidebar-link">フォームのハンドリング</a>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">クラスとスタイルのバインディング</a>
                 </li>
             
                 <li>
-                    <a href="/guide/computed.html" class="sidebar-link">Computed Properties</a>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件付きレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link current">リストレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">メソッドとイベントハンドリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">フォーム入力バインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">トランジション</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">コンポーネント</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">リアクティブの探求</a>
                 </li>
             
                 <li>
@@ -112,11 +161,11 @@
                 </li>
             
                 <li>
-                    <a href="/guide/components.html" class="sidebar-link">コンポーネントシステム</a>
+                    <a href="/guide/mixins.html" class="sidebar-link">ミックスイン</a>
                 </li>
             
                 <li>
-                    <a href="/guide/transitions.html" class="sidebar-link">トランジションシステム</a>
+                    <a href="/guide/plugins.html" class="sidebar-link">プラグイン</a>
                 </li>
             
                 <li>
@@ -124,151 +173,172 @@
                 </li>
             
                 <li>
-                    <a href="/guide/extending.html" class="sidebar-link">Vue の拡張</a>
+                    <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
-                <li>
-                    <a href="/guide/best-practices.html" class="sidebar-link new">コツ & ベストプラクティス</a>
-                </li>
-            
-                <li>
-                    <a href="/guide/faq.html" class="sidebar-link">FAQ</a>
-                </li>
-            
-            <li><a href="http://legacy.vuejs.org">0.11 のドキュメントをお探しですか？</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
 
 
 <div class="content guide with-sidebar">
-    <h1>リスト表示</h1>
+    <h1>リストレンダリング</h1>
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <p>ViewModel 上のオブジェクトの配列に基づき、テンプレート要素を繰り返すために、<code>v-repeat</code> ディレクティブを利用することができます。<code>v-repeat</code> ディレクティブは、配列内の各オブジェクトを <code>$data</code> オブジェクトとして利用し、子の Vue インスタンスを作成します。それらの子インスタンスは親の全データを継承しているので、繰り返された要素内では、繰り返されたインスタンスと親インスタンス双方のプロパティにアクセスできます。加えて、レンダリングされたインスタンスの配列インデックスに対応する <code>$index</code> プロパティにもアクセスすることができます。</p>
+    <h2 id="v-for">v-for</h2><p>私達は配列に基づいて、アイテムのリストをレンダリングするために、<code>v-for</code> ディレクティブを使用することができます。<code>v-for</code> ディレクティブは <code>item in items</code> の形式で特別な構文を要求し、<code>items</code> はソースデータの配列で、<code>item</code> は配列要素がその上で反復されている<strong>エイリアス</strong>です:</p>
 <p><strong>例:</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"demo"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-repeat</span>=<span class="value">"items"</span> <span class="attribute">class</span>=<span class="value">"item-&#123;&#123;$index&#125;&#125;"</span>&gt;</span></span><br><span class="line">    &#123;&#123;$index&#125;&#125; - &#123;&#123;parentMsg&#125;&#125; &#123;&#123;childMsg&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    parentMsg: <span class="string">'Hello'</span>,</span><br><span class="line">    items: [</span><br><span class="line">      &#123; childMsg: <span class="string">'Foo'</span> &#125;,</span><br><span class="line">      &#123; childMsg: <span class="string">'Bar'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"example-1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"item in items"</span>&gt;</span></span><br><span class="line">    &#123;&#123; item.message &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> example1 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-1'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    items: [</span><br><span class="line">      &#123; message: <span class="string">'Foo'</span> &#125;,</span><br><span class="line">      &#123; message: <span class="string">'Bar'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p><strong>結果:</strong></p>
-<p><ul id="demo"><li v-repeat="items" class="item-{&#123;$index&#125;}">{&#123;$index&#125;} - {&#123;parentMsg&#125;} {&#123;childMsg&#125;}</li></ul></p>
+
+<ul id="example-1" class="demo">
+  <li v-for="item in items">
+    {{item.message}}
+  </li>
+</ul>
 <script>
-var demo = new Vue({
-  el: '#demo',
+var example1 = new Vue({
+  el: '#example-1',
   data: {
-    parentMsg: 'Hello',
     items: [
-      { childMsg: 'Foo' },
-      { childMsg: 'Bar' }
+      { message: 'Foo' },
+      { message: 'Bar' }
     ]
-  }
-})
-</script>
-
-<h2 id="ブロックの繰り返し">ブロックの繰り返し</h2><p>ときどき、複数のノードのブロックを繰り返したいかもしれません。そのケースでは、繰り返すブロックをラップするために <code>&lt;template&gt;</code> タグを使うことができます。ここでの <code>&lt;template&gt;</code> タグは、単にセマンティックなラッパ(wrapper)になります。例えば:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">template</span> <span class="attribute">v-repeat</span>=<span class="value">"list"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="プリミティブ値の配列">プリミティブ値の配列</h2><p>プリミティブ値を含む配列では、単純に <code>$value</code> として値にアクセスできます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"tags"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-repeat</span>=<span class="value">"tags"</span>&gt;</span></span><br><span class="line">    &#123;&#123;$value&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#tags'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    tags: [<span class="string">'JavaScript'</span>, <span class="string">'MVVM'</span>, <span class="string">'Vue.js'</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p><strong>結果:</strong></p>
-<p><ul id="tags" class="demo"><li v-repeat="tags">{&#123;$value&#125;}</li></ul></p>
-<script>
-new Vue({
-  el: '#tags',
-  data: {
-    tags: ['JavaScript', 'MVVM', 'Vue.js']
-  }
-})
-</script>
-
-<h2 id="エイリアスの利用">エイリアスの利用</h2><p>親スコープへの不明確なフォールバックよりは、もっと明確に変数を指定したい場合が多々あるでしょう。それを行うには、繰り返されるアイテムのエイリアスとして、 <code>v-repeat</code> にエイリアスを指定して下さい:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"users"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-repeat</span>=<span class="value">"user in users"</span>&gt;</span></span><br><span class="line">    &#123;&#123;user.name&#125;&#125; - &#123;&#123;user.email&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#users'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    users: [</span><br><span class="line">      &#123; name: <span class="string">'Foo Bar'</span>, email: <span class="string">'foo@bar.com'</span> &#125;,</span><br><span class="line">      &#123; name: <span class="string">'John Doh'</span>, email: <span class="string">'john@doh.com'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p><strong>結果:</strong></p>
-<p><ul id="users" class="demo"><li v-repeat="user: users">{&#123;user.name&#125;} - {&#123;user.email&#125;}</li></ul></p>
-<script>
-new Vue({
-  el: '#users',
-  data: {
-    users: [
-      { name: 'Foo Bar', email: 'foo@bar.com' },
-      { name: 'John Doh', email: 'john@doh.com' }
-    ]
-  }
-})
-</script>
-
-<p class="tip"><code>user in users</code> シンタックスは 0.12.8 以降のみ利用可能です。古いバージョンでは、<code>user : users</code> シンタックスを使わなければなりません。</p>
-
-<p class="tip"><code>v-repeat</code> でエイリアス使用すると、一般的な結果として、テンプレートがより読みやすくてわずかに性能がよいです。</p>
-
-<h2 id="変更メソッド">変更メソッド</h2><p>内部的に、Vue.js は監視対象の配列の変更メソッド (<code>push()</code>, <code>pop()</code>, <code>shift()</code>, <code>unshift()</code>, <code>splice()</code>, <code>sort()</code> 及び <code>reverse()</code>) を横取りし、View の更新を引き起こします。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// この結果、DOM が更新される</span></span><br><span class="line">demo.items.unshift(&#123; childMsg: <span class="string">'Baz'</span> &#125;)</span><br><span class="line">demo.items.pop()</span><br></pre></td></tr></table></figure>
-<h2 id="拡張メソッド">拡張メソッド</h2><p>Vue.js は配列の監視を、 <code>$set()</code> と <code>$remove()</code> の2つの便利なメソッドで補います。</p>
-<p>データバインドされた配列に対して、直接インデックスを指定して要素を設定するのは避けて下さい。これは、 Vue.js によって変更を感知できなくなってしまうためです。代わりに、拡張メソッドの <code>$set()</code> を利用して下さい:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// `demo.items[0] = ...` と同様だが、View の更新が実行される</span></span><br><span class="line">demo.items.$set(<span class="number">0</span>, &#123; childMsg: <span class="string">'Changed!'</span>&#125;)</span><br></pre></td></tr></table></figure>
-<p><code>$remove()</code> は単なる <code>splice()</code> へのシンタックスシュガーです。引数で指定されたインデックスの要素を削除します。引数が数値でない場合、 <code>$remove()</code> は配列内をその値で検索し、最初に見つかった要素を削除します。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// インデックスが0のアイテムを削除</span></span><br><span class="line">demo.items.$remove(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="配列の置き換え">配列の置き換え</h2><p>無変更メソッド (例:<code>filter()</code>, <code>concat()</code> または <code>slice()</code>) を使う場合、返却される配列は異なるインスタンスになります。このケースでは、古い配列を新しいものと置き換えることが出来ます:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">demo.items = demo.items.filter(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> item.childMsg.match(<span class="regexp">/Hello/</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>この操作により、既存の DOM を消し飛ばし、すべてが再構築されてしまうのではないかと思うかもしれませんが、その心配はありません。Vue.js は、既に配列に関連付けられた Vue インスタンスがあれば認識し、それらのインスタンスを可能な限り再利用します。</p>
-<h2 id="track-by_の利用"><code>track-by</code> の利用</h2><p>いくつかのケースで、完全に新しいオブジェクトで配列を置き換える必要があるかもしれません（例えば、API コールから返されたオブジェクトなど）。デフォルトでは、<code>v-repeat</code> は既存の子インスタンスとそのデータオブジェクトの識別情報を追跡することによって、DOM ノードの再利用性を決定するので、リスト全体が再レンダリングされる可能性があります。しかしながら、もし、各データオブジェクトがユニークな ID プロパティを持っているのであれば、できるだけ多くのインスタンスを再利用するための Vue.js へのヒントとして、<code>track-by</code> パラメータを利用することができます。</p>
-<p>例として、もし data がこのようであるならば:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  items: [</span><br><span class="line">    &#123; _uid: <span class="string">'88f869d'</span>, ... &#125;,</span><br><span class="line">    &#123; _uid: <span class="string">'7496c10'</span>, ... &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>このようにヒントを与えることができます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-repeat</span>=<span class="value">"items"</span> <span class="attribute">track-by</span>=<span class="value">"_uid"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>後で、<code>items</code> 配列を置き換え、そして Vue.js は <code>_uid: &#39;88f869d&#39;</code> を持つ新しいオブジェクトを検出するとき、同じ <code>_uid</code> で既存インスタンス再利用することができます。もし、追跡する一意なキーを持っていない場合、<code>track-by=$index</code> を使用することができます。しかしながら、これを用心深く使用するために確認してください。なぜなら、<code>$index</code> で追跡しているとき、子インスタンスと DOM ノードを移動する代わりに、Vue は単にそれらが最初に作成された順序でそれらの場所に再利用します。<code>track-by=&quot;$index&quot;</code> は2つの状況で使用を回避してください。繰り返されたブロックにリストを再描画するために使用することができる form の input を含んでいるとき、または、繰り返されるデータがそれに割り当てられる他に、可変な状態でをコンポーネントを繰り返しているときです。</p>
-<p class="tip"><code>track-by</code> 属性は使用すると、完全に新しいデータを使用して大きい<code>v-repeat</code>リストを再描画するときに、性能を大いによくすることができます。</p>
-
-<h2 id="オブジェクトの反復処理">オブジェクトの反復処理</h2><p>オブジェクトのプロパティに対して、 <code>v-repeat</code> を使って反復処理することができます。それぞれの繰り返されたインスタンスは <code>$key</code> という特別なプロパティを持ちます。また、プリミティブ値に対しては、配列と同様に、<code>$value</code> を取得することができます。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"repeat-object"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-repeat</span>=<span class="value">"primitiveValues"</span>&gt;</span>&#123;&#123;$key&#125;&#125; : &#123;&#123;$value&#125;&#125;<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>===<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-repeat</span>=<span class="value">"objectValues"</span>&gt;</span>&#123;&#123;$key&#125;&#125; : &#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#repeat-object'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    primitiveValues: &#123;</span><br><span class="line">      FirstName: <span class="string">'John'</span>,</span><br><span class="line">      LastName: <span class="string">'Doe'</span>,</span><br><span class="line">      Age: <span class="number">30</span></span><br><span class="line">    &#125;,</span><br><span class="line">    objectValues: &#123;</span><br><span class="line">      one: &#123;</span><br><span class="line">        msg: <span class="string">'Hello'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      two: &#123;</span><br><span class="line">        msg: <span class="string">'Bye'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p><strong>結果:</strong></p>
-<p><ul id="repeat-object" class="demo"><li v-repeat="primitiveValues">{&#123;$key&#125;} : {&#123;$value&#125;}</li><li>===</li><li v-repeat="objectValues">{&#123;$key&#125;} : {&#123;msg&#125;}</li></ul></p>
-<script>
-new Vue({
-  el: '#repeat-object',
-  data: {
-    primitiveValues: {
-      FirstName: 'John',
-      LastName: 'Doe',
-      Age: 30
-    },
-    objectValues: {
-      one: {
-        msg: 'Hello'
-      },
-      two: {
-        msg: 'Bye'
-      }
+  },
+  watch: {
+    items: function () {
+      smoothScroll.animateScroll(null, '#example-1')
     }
   }
 })
 </script>
 
-<p class="tip">ECMAScript 5 では、オブジェクトに対して新たなプロパティが追加もしくは削除されたことを感知する方法がありません。これに対処する為、監視対象のオブジェクトを <code>$add(key, value)</code> 、<code>$set(key, value)</code> そして <code>$delete(key)</code> の3つのメソッドを使って補います。期待したビューの更新を実行しつつ、監視対象のオブジェクトのプロパティを追加・削除するために、これらのメソッドを利用することが出来ます。<code>$add</code> と <code>$set</code> との違いは、<code>$add</code> はもしオブジェクトにキーが既に存在している場合は、すぐにリターンして、<code>obj.$add(key)</code> を呼び出してだけでは、<code>undefined</code> で既存の値を上書きをしません。<br></p>
-
-<h2 id="範囲の反復処理">範囲の反復処理</h2><p><code>v-repeat</code> は整数値を取ることも出来ます。このケースでは、指定された数だけテンプレートが繰り返されます。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"range"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-repeat</span>=<span class="value">"val"</span>&gt;</span>Hi! &#123;&#123;$index&#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#range'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    val: <span class="number">3</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>v-for</code> ブロック内では、私達が親スコープのプロパティへ完全なアクセスに加えて、恐らく推測しているとおり、現在のアイテムに対する配列のインデックスである特別な変数 <code>$index</code> を持っています:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"example-2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"item in items"</span>&gt;</span></span><br><span class="line">    &#123;&#123; parentMessage &#125;&#125; &#123;&#123; $index &#125;&#125; &#123;&#123; item.message &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> example2 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-2'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    parentMessage: <span class="string">'Parent'</span>,</span><br><span class="line">    items: [</span><br><span class="line">      &#123; message: <span class="string">'Foo'</span> &#125;,</span><br><span class="line">      &#123; message: <span class="string">'Bar'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p><strong>結果:</strong></p>
-<p><ul id="range" class="demo"><li v-repeat="val">Hi! {&#123;$index&#125;}</li></ul></p>
+
+<ul id="example-2" class="demo">
+  <li v-for="item in items">
+    {{ parentMessage }} - {{ $index }} - {{ item.message }}
+  </li>
+</ul>
+
 <script>
-new Vue({
-  el: '#range',
-  data: { val: 3 }
-});
+var example2 = new Vue({
+  el: '#example-2',
+  data: {
+    parentMessage: 'Parent',
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  },
+  watch: {
+    items: function () {
+      smoothScroll.animateScroll(null, '#example-2')
+    }
+  }
+})
 </script>
 
-<h2 id="配列のフィルタ">配列のフィルタ</h2><p>オリジナルのデータに対して変更やリセットをせずに、フィルタリングやソートされた配列を表示のみ行いたい場合が時々あります。Vue は、そのような用途でシンプルに使えるよう、<code>filterBy</code> と <code>orderBy</code> という組み込みのフィルタを提供しています。詳しくはそれらの<a href="/api/filters.html#filterBy">ドキュメント</a>を参照してください。</p>
-<p>次: <a href="/guide/events.html">イベントのリスニング</a></p>
+<p>あるいは、インデックス(または、オブジェクト使用されている場合はキー)に対してエイリアスを指定することもできます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"(index, item) in items"</span>&gt;</span></span><br><span class="line">  &#123;&#123; index &#125;&#125; &#123;&#123; item.message &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="テンプレートでの_v-for">テンプレートでの v-for</h2><p>テンプレート <code>v-if</code> と同様、複数の要素のブロックをレンダリングするために <code>v-for</code> で <code>&lt;template&gt;</code> タグも使用することができます。例えば:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">template</span> <span class="attribute">v-for</span>=<span class="value">"item in items"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span>&gt;</span>&#123;&#123; item.msg &#125;&#125;<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="配列の変化を検出">配列の変化を検出</h2><h3 id="変更メソッド">変更メソッド</h3><p>Vue.js は View の更新もトリガするために、監視された配列の変更メソッドをラップ (wrap) します。ラップされたメソッドは次のとおりです:</p>
+<ul>
+<li><code>push()</code></li>
+<li><code>pop()</code></li>
+<li><code>shift()</code></li>
+<li><code>unshift()</code></li>
+<li><code>splice()</code></li>
+<li><code>sort()</code></li>
+<li><code>reverse()</code></li>
+</ul>
+<p>コンソールを開いて前の <code>items</code> 配列の例で変更メソッドを呼び出して遊んでみてください。例えば <code>example1.items.push({ message: &#39;Baz&#39; })</code> のようにしてみましょう。</p>
+<h3 id="配列の置き換え">配列の置き換え</h3><p>変更メソッドは、名前が示唆するように、それらが呼ばれると元の配列を変更します。変更しないメソッドもあります。例えば、<code>filter()</code>、<code>concat()</code>、そして<code>slice()</code> のような、元の配列を変更しませんが、<strong>常に新しい配列を返します</strong>。変更しないメソッドで動作するとき、新しいもので古い配列を置き換えます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">example1.items = example1.items.filter(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> item.message.match(<span class="regexp">/Foo/</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>これは、Vue.js が既存の DOM を捨てて、リスト全体を再レンダリングの原因になると思うかもしれません。幸いにもそれはそうではありません。Vue.js は DOM 要素の再利用を最大化するためにいくつかのスマートなヒューリスティックを実装しているので、重複するオブジェクトを含んでいる他の配列を配列で置き換えることは、とても効率的な作業です。</p>
+<h3 id="track-by">track-by</h3><p>いくつかのケースで、完全に新しいオブジェクトで配列を置き換える必要があるかもしれません（例えば、API コールから作成されたオブジェクトなど）。デフォルトでは、<code>v-for</code> は既存のスコープとそのデータオブジェクトの識別情報を追跡することによって、DOM 要素の再利用性を決定するので、リスト全体が再レンダリングされる可能性があります。しかしながら、もし、各データオブジェクトがユニークな ID プロパティを持っているのであれば、できるだけ多くのインスタンスを再利用するための Vue.js へのヒントとして、<code>track-by</code> 特別な属性を利用することができます。</p>
+<p>例として、もし data がこのようであるならば:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  items: [</span><br><span class="line">    &#123; _uid: <span class="string">'88f869d'</span>, ... &#125;,</span><br><span class="line">    &#123; _uid: <span class="string">'7496c10'</span>, ... &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>このようにヒントを与えることができます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"item in items"</span> <span class="attribute">track-by</span>=<span class="value">"_uid"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- content --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>後で、<code>items</code> 配列を置き換え、そして Vue.js は <code>_uid: &#39;88f869d&#39;</code> を持つ新しいオブジェクトを検出するとき、同じ <code>_uid</code> と関連する既存スコープと DOM 要素を再利用することができます。</p>
+<h3 id="track-by_$index">track-by $index</h3><p>追跡するためにユニークなキーを持っていない場合、<code>track-by=&quot;$index&quot;</code> も利用できます。これは、<code>v-for</code> を in-place 更新モードに強制します。フラグメントはもはや並べ替えておらず、それらは単純に対応するインデックスに新しい値でフラッシュして取得します。このモードはソースとなる配列に重複する値を扱うことができます。</p>
+<p>これは配列の置き換えは非常に効率的にできますが、トレードオフもあります。なぜなら、DOM ノードはもはや順序の変更を反映するように移動されていないため、DOM 入力値とコンポーネントのプライベートな状態のような一時的な状態は同期できないです。このため、<code>v-for</code> ブロックが input 要素または子コンポーネントから含まれている場合は、<code>track-by=&quot;$index&quot;</code> を使用するとき注意してください。</p>
+<h3 id="注意事項">注意事項</h3><p>JavaScript の制限のため、Vue.js は配列で以下の変更を検出することは<strong>できません</strong>:</p>
+<ol>
+<li>インデックスでアイテムを直接設定するとき。例: <code>vm.items[0] = {}</code></li>
+<li>配列の長さを変更するとき。例: <code>vm.items.length = 0</code></li>
+</ol>
+<p>上記の注意事項 (1) に対処するため、Vue.js は監視された配列を <code>$set()</code> メソッドで拡張します:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// `example1.items[0] ...` と同じであるが、View の更新をトリガする</span></span><br><span class="line">example1.items.$set(<span class="number">0</span>, &#123; childMsg: <span class="string">'Changed!'</span>&#125;)</span><br></pre></td></tr></table></figure>
+<p>上記の注意事項 (2) に対処するため、代わりに空の配列で <code>items</code> を置き換えてください。</p>
+<p><code>$set()</code> に加えて、Vue.js は配列を便利なメソッド <code>$remove()</code> で拡張し、そのメソッドは、検索し、そして内部では <code>splice()</code> を呼びだすことによって対象の配列からアイテムを削除します。そういうわけで代わりは:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> index = <span class="keyword">this</span>.items.indexOf(item)</span><br><span class="line"><span class="keyword">if</span> (index !== -<span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">this</span>.items.splice(index, <span class="number">1</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>というようになり、これと同じことをこのように行うことができます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.items.$remove(item)</span><br></pre></td></tr></table></figure>
+<h2 id="オブジェクトの_v-for">オブジェクトの v-for</h2><p>オブジェクトのプロパティに対して、<code>v-for</code> を使って反復処理することができます。<code>$index</code> に加えて、それぞれのスコープは <code>$key</code> という特別なプロパティにアクセスします。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"repeat-object"</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"value in object"</span>&gt;</span></span><br><span class="line">    &#123;&#123; $key &#125;&#125; : &#123;&#123; value &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#repeat-object'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    object: &#123;</span><br><span class="line">      FirstName: <span class="string">'John'</span>,</span><br><span class="line">      LastName: <span class="string">'Doe'</span>,</span><br><span class="line">      Age: <span class="number">30</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>結果:</strong></p>
 
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+<ul id="repeat-object" class="demo">
+  <li v-for="value in object">
+    {{ $key }} : {{ value }}
+  </li>
+</ul>
+
+<script>
+new Vue({
+  el: '#repeat-object',
+  data: {
+    object: {
+      FirstName: 'John',
+      LastName: 'Doe',
+      Age: 30
+    }
+  }
+})
+</script>
+
+<p>キーに対してエイリアスも提供できます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"(key, val) in object"</span>&gt;</span></span><br><span class="line">  &#123;&#123; key &#125;&#125; &#123;&#123; val &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p class="tip">オブジェクトを反復処理するとき、順序は <code>Object.keys()</code> の列挙順のキーに基づいており、全ての JavaScript エンジンの実装で一貫性が保証されて<strong>いません</strong>。</p>
+
+<h2 id="範囲の_v-for">範囲の v-for</h2><p><code>v-for</code> は整数値を取ることも出来ます。このケースでは、指定された数だけテンプレートが繰り返されます。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">v-for</span>=<span class="value">"n in 10"</span>&gt;</span>&#123;&#123; n &#125;&#125; <span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>結果:</p>
+
+<div id="range" class="demo">
+  <span v-for="n in 10">{{ n }} </span>
+</div>
+
+<script>
+new Vue({ el: '#range' })
+</script>
+
+<h2 id="フィルタ/ソートされた結果の表示">フィルタ/ソートされた結果の表示</h2><p>時どき、私達は実際に変更するかまたは元のデータをリセットせずに配列フィルタリングやソートされたバージョンの配列を表示する必要があります。これを達成するに2つのオプションがあります:</p>
+<ol>
+<li>フィルタまたはソートされた配列を返す算出プロパティを作成する</li>
+<li>組み込み <code>filterBy</code> そして <code>orderBy</code> されたフィルタを使用する</li>
+</ol>
+<p>それは完全な JavaScript であるため、算出プロパティはあなたにより細かい制御と柔軟性を与えますが、フィルタは共通ユースケースに対してより便利にすることができます。配列フィルタの詳細な使用方法については、それらの<a href="/api/#filterBy">ドキュメント</a>をチェックしてください。</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/conditional.html">条件付きレンダリング</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/events.html">メソッドとイベントハンドリング</a> →</span>
+        
+      </div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
 </div>
 
                 

@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Computed Properties - vue.js</title>
+        <title>算出プロパティ - vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -59,16 +69,31 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
     <div class="list">
+        <h2>
         
-        <h2>ガイド</h2>
+        ガイド
         
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
         <ul class="menu-root">
             
                 <li>
@@ -80,27 +105,51 @@
                 </li>
             
                 <li>
-                    <a href="/guide/directives.html" class="sidebar-link">ディレクティブ</a>
+                    <a href="/guide/overview.html" class="sidebar-link">概要</a>
                 </li>
             
                 <li>
-                    <a href="/guide/filters.html" class="sidebar-link">フィルタ</a>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue インスタンス</a>
                 </li>
             
                 <li>
-                    <a href="/guide/list.html" class="sidebar-link">リスト表示</a>
+                    <a href="/guide/syntax.html" class="sidebar-link">データバインディング構文</a>
                 </li>
             
                 <li>
-                    <a href="/guide/events.html" class="sidebar-link">イベントのリスニング</a>
+                    <a href="/guide/computed.html" class="sidebar-link current">算出プロパティ</a>
                 </li>
             
                 <li>
-                    <a href="/guide/forms.html" class="sidebar-link">フォームのハンドリング</a>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">クラスとスタイルのバインディング</a>
                 </li>
             
                 <li>
-                    <a href="/guide/computed.html" class="sidebar-link current">Computed Properties</a>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件付きレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">リストレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">メソッドとイベントハンドリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">フォーム入力バインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">トランジション</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">コンポーネント</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">リアクティブの探求</a>
                 </li>
             
                 <li>
@@ -112,11 +161,11 @@
                 </li>
             
                 <li>
-                    <a href="/guide/components.html" class="sidebar-link">コンポーネントシステム</a>
+                    <a href="/guide/mixins.html" class="sidebar-link">ミックスイン</a>
                 </li>
             
                 <li>
-                    <a href="/guide/transitions.html" class="sidebar-link">トランジションシステム</a>
+                    <a href="/guide/plugins.html" class="sidebar-link">プラグイン</a>
                 </li>
             
                 <li>
@@ -124,45 +173,67 @@
                 </li>
             
                 <li>
-                    <a href="/guide/extending.html" class="sidebar-link">Vue の拡張</a>
+                    <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
-                <li>
-                    <a href="/guide/best-practices.html" class="sidebar-link new">コツ & ベストプラクティス</a>
-                </li>
-            
-                <li>
-                    <a href="/guide/faq.html" class="sidebar-link">FAQ</a>
-                </li>
-            
-            <li><a href="http://legacy.vuejs.org">0.11 のドキュメントをお探しですか？</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
 
 
 <div class="content guide with-sidebar">
-    <h1>Computed Properties</h1>
+    <h1>算出プロパティ</h1>
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <p>Vue.js のインライン expression は非常に便利ですが、最良のユースケースはシンプルな boolean 演算や文字列の連結を使用したものです。より複雑なロジックに関しては、 <strong>computed properties</strong> を活用しましょう。</p>
-<p>Vue.js では <code>computed</code> オプションを使って computed properties を定義します。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Foo'</span>,</span><br><span class="line">    lastName: <span class="string">'Bar'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    fullName: &#123;</span><br><span class="line">      <span class="comment">// getter で望む値を返します</span></span><br><span class="line">      get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">// setter は任意です</span></span><br><span class="line">      set: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> names = newValue.split(<span class="string">' '</span>)</span><br><span class="line">        <span class="keyword">this</span>.firstName = names[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">this</span>.lastName = names[names.length - <span class="number">1</span>]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">demo.fullName <span class="comment">// 'Foo Bar'</span></span><br></pre></td></tr></table></figure>
-<p>getter のみしか必要がない場合は、オブジェクトの代わりに関数を一つ渡すこともできます:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">computed: &#123;</span><br><span class="line">  fullName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName </span><br><span class="line">  &#125;    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
-<p>要するに computed property は getter/setter 関数を定義したプロパティです。あたかも通常のプロパティとして使用することができますが、実際にアクセスした時は getter 関数によって値が返されます。また、値を変更した時は、その新しい値を引数として setter 関数をトリガします。</p>
-<p>0.12.8 より前は、computed properties は getter のように振舞います。それにアクセスするたびに、getter 関数は再評価されます。0.12.8 ではこれは改善されました。computed properties はキャッシュされ、必要なときにだけ、lazily に再評価されます。</p>
-<p class="tip">Vue.js 0.11 以前では、条件付きのステートメントが呼び出される際に、ユーザーが明示的に依存性を列挙する必要性がありました。0.11 以降ではその必要はありません。</p>
+    <p>テンプレート内での式はとても便利ですが、それらは実際には簡単な操作のためのものです。テンプレートはあなたの View の構造を記述することを意味しています。あなたのテンプレートに中にあまりにも多くのロジックを置きすぎるとそれらは肥大化し、維持するのが難しいです。Vue.js がバインディング式を1つの式だけに制限するのはこのためです。複数の式を要求する任意のロジックでは、<strong>算出プロパティ (computed property)</strong> を使用する必要があります。</p>
+<h3 id="基本の例">基本の例</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example"</span>&gt;</span></span><br><span class="line">  a=&#123;&#123; a &#125;&#125;, b=&#123;&#123; b &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    <span class="comment">// 算出 getter 関数</span></span><br><span class="line">    b: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// `this` は vm インスタンスを指します</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>結果:</p>
 
-<p>次: <a href="/guide/custom-directive.html">カスタムディレクティブ</a></p>
+<div id="example" class="demo">
+  a={{ a }}, b={{ b }}
+</div>
+<script>
+var vm = new Vue({
+  el: '#example',
+  data: {
+    a: 1
+  },
+  computed: {
+    b: function () {
+      return this.a + 1
+    }
+  }
+})
+</script>
 
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+<p>ここでは、算出プロパティ <code>b</code> を宣言しました。私達が提供する機能は、私達がプロパティ <code>vm.b</code> に対して getter 関数として使用されます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(vm.b) <span class="comment">// -&gt; 2</span></span><br><span class="line">vm.a = <span class="number">2</span></span><br><span class="line"><span class="built_in">console</span>.log(vm.b) <span class="comment">// -&gt; 3</span></span><br></pre></td></tr></table></figure>
+<p>コンソールを開いて、例の vm をあなた自身で遊ぶことができます。<code>vm.b</code> の値は、常に <code>vm.a</code> の値に依存しています。</p>
+<p>通常のプロパティのようにテンプレートで算出プロパティにデータバインドすることができます。Vue は <code>vm.b</code> が <code>vm.a</code> に依存していることに気づいており、Vue は <code>vm.a</code> が変化するとき <code>vm.b</code> に依存する任意のバインディングを更新します。そして、最良の部分は、私達がこの依存関係を宣言的に作成したことです。算出 getter 関数は純粋でありそして副作用がないので、それは簡単にテストしたりそしてほぼ理由になります。</p>
+<h3 id="算出プロパティ_対_$watch">算出プロパティ 対 $watch</h3><p>Vue.js は Vue インスタンスでデータ変更を監視することを可能にする <code>$watch</code> と呼ばれる API メソッドを提供しています。いくつかの他のデータに基づいて変更する必要があるいくつかのデータを持っているとき、それは、特に、AngularJS のバックグラウンドからやってきている場合は、<code>$watch</code> を使用するのが魅力的です。しかしながら、それはしばしば、命令的な <code>$watch</code> コールバックよりもむしろ算出プロパティを使用するのがいっそうよいアイディアです。この例を考えてみます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"demo"</span>&gt;</span>&#123;&#123;fullName&#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Foo'</span>,</span><br><span class="line">    lastName: <span class="string">'Bar'</span>,</span><br><span class="line">    fullName: <span class="string">'Foo Bar'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.$watch(<span class="string">'firstName'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.fullName = val + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.$watch(<span class="string">'lastName'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.fullName = <span class="keyword">this</span>.firstName + <span class="string">' '</span> + val</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>上記コードは命令的でくどいです。算出プロパティのバージョンでそれを比較します:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Foo'</span>,</span><br><span class="line">    lastName: <span class="string">'Bar'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    fullName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>こちらの方が、はるかによいではありませんか？</p>
+<h3 id="算出_Setter_関数">算出 Setter 関数</h3><p>算出プロパティはデフォルトでは getter 関数のみだけですが、必要なとき setter 関数も提供することができます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">computed: &#123;</span><br><span class="line">  fullName: &#123;</span><br><span class="line">    <span class="comment">// getter 関数</span></span><br><span class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// setter 関数</span></span><br><span class="line">    set: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> names = newValue.split(<span class="string">' '</span>)</span><br><span class="line">      <span class="keyword">this</span>.firstName = names[<span class="number">0</span>]</span><br><span class="line">      <span class="keyword">this</span>.lastName = names[names.length - <span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<p>今、<code>vm.fullname = &#39;John Doe&#39;</code> を呼ぶとき、setter が呼び出され、<code>vm.firstName</code> と <code>vm.lastName</code> は適宜更新します。</p>
+<p>技術的な詳細はリアクティブシステム専用の <a href="reactivity.html#Inside_Computed_Properties">別のセクション</a> で、どうやって算出プロパティが更新されるか、説明されています。</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/syntax.html">データバインディング構文</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/class-and-style.html">クラスとスタイルのバインディング</a> →</span>
+        
+      </div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
 </div>
 
                 

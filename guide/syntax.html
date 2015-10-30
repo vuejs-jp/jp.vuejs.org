@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>データバインディング構文 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46852172-1', 'vuejs.org');
+  ga('send', 'pageview');
+</script>
+        <script src="/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        
+            <div id="header">
+    <a id="logo" href="/">
+        <img src="/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">ガイド</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">例</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+</div>
+            <div id="main">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">ガイド</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">例</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <h2>
+        
+        ガイド
+        
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
+        <ul class="menu-root">
+            
+                <li>
+                    <a href="/guide/installation.html" class="sidebar-link">インストール</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link">はじめに</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/overview.html" class="sidebar-link">概要</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue インスタンス</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/syntax.html" class="sidebar-link current">データバインディング構文</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/computed.html" class="sidebar-link">算出プロパティ</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">クラスとスタイルのバインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件付きレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">リストレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">メソッドとイベントハンドリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">フォーム入力バインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">トランジション</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">コンポーネント</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">リアクティブの探求</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-directive.html" class="sidebar-link">カスタムディレクティブ</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-filter.html" class="sidebar-link">カスタムフィルタ</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/mixins.html" class="sidebar-link">ミックスイン</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/plugins.html" class="sidebar-link">プラグイン</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/application.html" class="sidebar-link">大規模アプリケーションの構築</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar">
+    <h1>データバインディング構文</h1>
+    <div id="ad">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+    </div>
+    <p>Vue.js は DOM ベースのテンプレートの実装を使用しています。これは、全ての Vue.js テンプレートは本質的に有効で、いくつかの特別な属性で充実させた HTML は解析可能であるということを意味します。これは、Vue のテンプレートは根本的に文字列ベースのテンプレートとは異なるということを念頭においてください。</p>
+<h2 id="展開">展開</h2><h3 id="テキスト">テキスト</h3><p>データバインディングの最も基本的な形式は、”Mustache” 構文(2 重中括弧)を使用するテキスト展開です:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>Message: &#123;&#123; msg &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>mustache タグは対応するデータオブジェクトでの <code>msg</code> プロパティの値で置き換えられます。またいつでも、データオブジェクトの <code>msg</code> プロパティ変更は更新されます。</p>
+<p>データ変更が更新されない一度だけ (one-time) の展開を実行できます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span>This will never change: &#123;&#123;* msg &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="生の_HTML">生の HTML</h3><p>2重中括弧の mustache は HTML ではなく、プレーンなテキストとしてデータを解釈します。リアルな HTML を出力するためには、3重中括弧の mustache を使用する必要があります:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>&#123;&#123;&#123; raw_html &#125;&#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>コンテンツは、プレーンな HTML として挿入されます。データバインディングは無視されます。テンプレートの部品の再利用が必要な場合、<a href="/api/#partial">partials</a> を使用すべきです。</p>
+<p class="tip">web サイトで動的に任意の HTML をレンダリングすることは、簡単に <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="external">XSS 攻撃</a>につながるので非常に危険なことができます。信頼されたコンテンツにだけ HTML 展開を使用してください。決して、ユーザーによって提供されたコンテンツでは<strong>決して</strong>使用してはいけません。</p>
+
+<h3 id="属性">属性</h3><p>Mustache は HTML 属性内部でも使用することができます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"item-&#123;&#123; id &#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>属性の展開が Vue.js ディレクティブと特別な属性では許可されていないということに注意してください。心配しないてください、Vue.js は mustache は間違った場所で使用されているとき、あなたに警告を発生させるでしょう。</p>
+<h2 id="バインディング式">バインディング式</h2><p>mustache タグ内部に入れたテキストは <strong>バインディング式</strong> と呼ばれています。Vue.js では、バインディング式は、必要に応じて、1つ、または複数のフィルタに続いた、単一の JavaScript 式から構成されています。</p>
+<h3 id="JavaScript_式">JavaScript 式</h3><p>これまでは、私達のテンプレートでは単純なプロパティキーにバインディングしていました。しかし、Vue.js は実際にはデータバインディング内部の JavaScript 式の完全にサポートします:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; number + 1 &#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123; ok ? 'YES' : 'NO' &#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123; message.split('').reverse().join('') &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>これらの式は、Vue インスタンスのオーナーのデータスコープで評価されます。1つ制限として、各バインディングは<strong>単一式</strong>のみ含むことができるということです。なので、以下は動作<strong>しません</strong>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- これは文、式ではありません: --&gt;</span></span><br><span class="line">&#123;&#123; var a = 1 &#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- フロー制御はどちらも動作しません、三項演算子式を使用します --&gt;</span></span><br><span class="line">&#123;&#123; if (ok) &#123; return message &#125; &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="フィルタ">フィルタ</h3><p>Vue.js は式の終わりに任意で”フィルタ”を追加することができ、”パイプ(‘|’)” シンボルで示します:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; message | capitalize &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>ここでは、実際に大文字の値を返すだけの JavaScript 関数である組み込み <code>capitalize</code> フィルタを通して、<code>message</code> 式の値をパイプしています。Vue.js はいくつかの組み込みフィルタを提供し、後で独自のフィルタを作成する方法について話します。</p>
+<p>パイプ構文は JavaScript 構文の一部ではないことに注意してください。したがって、式内部にフィルタを混ぜることはできません。式の終わりにだけ追加することができます。</p>
+<p>フィルタはつなぎ合わせることができます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; message | filterA | filterB &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>フィルタはまた引数を取得できます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;&#123; message | filterA 'arg1' arg2 &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>フィルタ関数は常に最初の引数として式の値を受け取ります。クォートされないものは式として評価される一方、クォートされた引数はプレーンな文字列として解釈されます。ここでは、プレーンな文字列 <code>&#39;arg1&#39;</code> は第2引数としてフィルタに渡され、式 <code>arg2</code> の値は評価されて、第3引数として渡されます。</p>
+<h2 id="ディレクティブ">ディレクティブ</h2><p>ディレクティブは <code>v-</code> 接頭辞による特別な属性です。ディレクティブ属性の値は<strong>バインディング式</strong>であることが期待されるので、JavaScript 式とフィルタで上記で言及したルールについては、ここでも同様に適用されます。ディレクティブの役割は、その式の値が変更するとき、リアクティブに DOM に特殊な動作を適用することです。イントロダクションで見てきた例を検討してみましょう:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">v-if</span>=<span class="value">"greeting"</span>&gt;</span>Hello!<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>ここでは、<code>v-if</code> ディレクティブは 式 <code>greeting</code> の値が真となるような値に基づいて、<code>&lt;p&gt;</code> 要素を削除/挿入します。</p>
+<h3 id="引数">引数</h3><p>いくつかのディレクティブは、ディレクティブ名の後に、コロン (:) によって示されることで、”引数”を取得することができます。例えば、<code>v-bind</code> ディレクティブは HTML 属性をリアクティブに更新するために使用されます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">v-bind:href</span>=<span class="value">"url"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>ここでは、<code>href</code> は、<code>v-bind</code> ディレクティブに式 <code>url</code> の値に要素の <code>href</code> 属性をバインドするように伝える引数です。<code>href="{{url}}"</code> を使用して属性の展開と同様の結果になることを気づいたかもしれません。これは正しいです。実際には、属性の展開は内部では <code>v-bind</code> バインディングに翻訳されています。</p>
+<p>他の例は DOM イベントをリッスンする <code>v-on</code> ディレクティブです:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">v-on:click</span>=<span class="value">"doSomething"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>ここでの引数は、DOM イベントをリッスンするためにイベント名です。私達はイベントハンドリングついて、詳細でも話します。</p>
+<h3 id="修飾子">修飾子</h3><p>修飾子 (Modifier) はドット(.)によって表記された特別な接尾辞で、ディレクティブがいくつかの特別な方法でバインドされるべきということを示します。例えば、<code>.literal</code> 修飾子はディレクティブに式よりもむしろリテラル文字列として属性値が解釈されるよう伝えます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">v-bind:href.literal</span>=<span class="value">"/a/b/c"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>もちろん、この例は、ディレクティブを使用する代わりに <code>href=&quot;a/b/c&quot;</code> で同じことができるため、無意味に思われます。ここでの例は、構文をデモするためです。後で修飾子のより実用的な用途を確認します。</p>
+<h2 id="省略記法">省略記法</h2><p><code>v-</code> 接頭辞はテンプレートにおいて Vue 固有の属性を識別するための視覚的な手がかりとして役にたちます。これは、Vue.js を使用していくつかの既存のマークアップに動的な振舞いを適用するときは便利ですが、いくつか頻繁に使用されるディレクティブに対しては冗長であると感じることができます。同時に、<code>v-</code> 接頭辞の必要性は、Vue.js が全てのテンプレートを管理する SPA を構築するとき、大変重要となってきます。したがって、Vue.js は最も頻繁に使用されるディレクティブ <code>v-bind</code> と <code>v-on</code> の2つに対して、特別な省略記法を提供します:</p>
+<h3 id="v-bind_省略記法"><code>v-bind</code> 省略記法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 完全な構文 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">v-bind:href</span>=<span class="value">"url"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">:href</span>=<span class="value">"url"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="v-on_省略記法"><code>v-on</code> 省略記法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 完全な構文 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">v-on:click</span>=<span class="value">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a</span> @<span class="attribute">click</span>=<span class="value">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>それら省略記法は、”valid” な HTML から見るとわずかに異なって見えるかもしれませんが、全ての Vue.js は、ブラウザがそれを正しく解析することをサポートし、そして最終的にレンダリングされたマークアップには表示されません。省略記法は一向に任意ですが、後でその使用方法について詳細を学習するとき、恐らくそれに感謝するでしょう。</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/instance.html">Vue インスタンス</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/computed.html">算出プロパティ</a> →</span>
+        
+      </div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

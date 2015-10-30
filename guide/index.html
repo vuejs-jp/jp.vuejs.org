@@ -6,7 +6,8 @@
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -59,16 +69,31 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
     <div class="list">
+        <h2>
         
-        <h2>ガイド</h2>
+        ガイド
         
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
         <ul class="menu-root">
             
                 <li>
@@ -80,27 +105,51 @@
                 </li>
             
                 <li>
-                    <a href="/guide/directives.html" class="sidebar-link">ディレクティブ</a>
+                    <a href="/guide/overview.html" class="sidebar-link">概要</a>
                 </li>
             
                 <li>
-                    <a href="/guide/filters.html" class="sidebar-link">フィルタ</a>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue インスタンス</a>
                 </li>
             
                 <li>
-                    <a href="/guide/list.html" class="sidebar-link">リスト表示</a>
+                    <a href="/guide/syntax.html" class="sidebar-link">データバインディング構文</a>
                 </li>
             
                 <li>
-                    <a href="/guide/events.html" class="sidebar-link">イベントのリスニング</a>
+                    <a href="/guide/computed.html" class="sidebar-link">算出プロパティ</a>
                 </li>
             
                 <li>
-                    <a href="/guide/forms.html" class="sidebar-link">フォームのハンドリング</a>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">クラスとスタイルのバインディング</a>
                 </li>
             
                 <li>
-                    <a href="/guide/computed.html" class="sidebar-link">Computed Properties</a>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件付きレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">リストレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">メソッドとイベントハンドリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">フォーム入力バインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">トランジション</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">コンポーネント</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">リアクティブの探求</a>
                 </li>
             
                 <li>
@@ -112,11 +161,11 @@
                 </li>
             
                 <li>
-                    <a href="/guide/components.html" class="sidebar-link">コンポーネントシステム</a>
+                    <a href="/guide/mixins.html" class="sidebar-link">ミックスイン</a>
                 </li>
             
                 <li>
-                    <a href="/guide/transitions.html" class="sidebar-link">トランジションシステム</a>
+                    <a href="/guide/plugins.html" class="sidebar-link">プラグイン</a>
                 </li>
             
                 <li>
@@ -124,23 +173,9 @@
                 </li>
             
                 <li>
-                    <a href="/guide/extending.html" class="sidebar-link">Vue の拡張</a>
+                    <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
-                <li>
-                    <a href="/guide/best-practices.html" class="sidebar-link new">コツ & ベストプラクティス</a>
-                </li>
-            
-                <li>
-                    <a href="/guide/faq.html" class="sidebar-link">FAQ</a>
-                </li>
-            
-            <li><a href="http://legacy.vuejs.org">0.11 のドキュメントをお探しですか？</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
@@ -151,79 +186,131 @@
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <h2 id="序論">序論</h2><p>Vue.js はインタラクティブな Web インターフェイスを作るためのライブラリです。</p>
-<p>技術的に、Vue.js は MVVM パターンの <a href="#ViewModel">ViewModel</a> レイヤに注目しています。それは two way (双方向)バインディングによって <a href="#View">View</a> と <a href="#Model">Model</a> を接続します。実際の DOM 操作と出力の形式は<a href="#ディレクティブ">ディレクティブ</a>と<a href="#フィルタ">フィルタ</a>によって抽象化されています。</p>
-<p>Vue.js の哲学的なゴールは、可能な限り簡単な API を通じて、反応性の良いデータバインディングの利点と構成可能な View のコンポーネントを提供することです。Vue.js は万能なフレームワークではありません。 Vue.js は単純かつ自由自在な View レイヤになるようにデザインされています。Vue.js を単体でラピッドプロトタイピングができます。特別なフロントエンドスタック用のライブラリ達と一緒に使ったり組み合わせたりもできます。Vue.js は Firebase のようなバックエンドがないサービスとも合性が良いです。</p>
-<p>Vue.js の API は <a href="http://angularjs.org" target="_blank" rel="external">AngularJS</a>、<a href="http://knockoutjs.com" target="_blank" rel="external">KnockoutJS</a>、<a href="http://ractivejs.org" target="_blank" rel="external">Ractive.js</a>、 <a href="http://www.rivetsjs.com" target="_blank" rel="external">Rivets.js</a>に強く影響を受けています。それらと似てはいますが、単純さと機能性のちょうど良いスィートスポットを見つけることによって、Vue.js はそれらのライブラリに対して価値ある代変手段になりうると私は信じています。</p>
-<p>その他のライブラリの表現に既に慣れているかもしれませんが、それらの表現の記法が Vue.js のコンテキストにおいて意味するところとは違っているかもしれませんので、以下に示すコンセプトの全体像に目を通してみてください。</p>
-<h2 id="コンセプト概要">コンセプト概要</h2><p><img src="/images/mvvm.png" alt="MVVM"></p>
-<h3 id="ViewModel">ViewModel</h3><p>Model と View を同期するオブジェクトです。 Vue.js において, 全ての Vue インスタンスは ViewModel です。 それらは <code>Vue</code> コンストラクタかそのサブクラスでインスタンス化されます:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123; <span class="comment">/* options */</span> &#125;)</span><br></pre></td></tr></table></figure>
-<p>これは Vue.js をつかって開発するときに初めて出会うオブジェクトです。詳細は <a href="/api/">Vue コンストラクタ</a> を参照してください。</p>
-<h3 id="View">View</h3><p>Vue インスタンスによって管理される実際の DOM です。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vm.$el <span class="comment">// The View</span></span><br></pre></td></tr></table></figure>
-<p>Vue.js は DOM ベースのテンプレーティングを使います。各々の Vue インスタンスは対応する DOM 要素と関連づいています。Vue インスタンスが作られると、必要なデータバインディングを設定している間、Vue インスタンスはその親要素の全ての子ノードを再帰的に巡回します。</p>
-<p>Vue.js を使っているときに、あなた自身で DOM に触れることはカスタムディレクティブ(後述)を除いてほとんどありません。 View の更新はデータが変わったときに自動的に行われます。これらの View の更新は、textNode に至る精度を持った高い粒度で行われます。 これらは高性能化のために、バッチ化されて非同期実行されています。</p>
-<h3 id="Model">Model</h3><p>若干修正されたプレーンな JavaScript オブジェクトです。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vm.$data <span class="comment">// The Model</span></span><br></pre></td></tr></table></figure>
-<p>Vue.js において、Model は単純にプレーンな JavaScript オブジェクトか<strong>データオブジェクト</strong>です。一度、オブジェクトが Vue インスタンス内部でデータとして利用されると、それは<strong>リアクティブ</strong>になります。それらのプロパティと、それらが変更されるかを監視している Vue インスタンスを操作できます。Vue.js はデータオブジェクトのプロパティを ES5 getter/setters に変換することによって、透明性のある反応を実現します。 ダーティーチェックは必要ありませんし、View を更新するために、明示的なシグナルを Vue に送る必要もありません。 データが変更されたときはいつでも、次のフレームで View は更新されます。</p>
-<p>Vue インスタンスは、それらが監視しているデータオブジェクトの全てのプロパティをプロキシしています。 そのため、一度オブジェクト <code>{ a: 1 }</code> が監視されれば、 <code>vm.$data.a</code> と<code>vm.a</code> の両方が同じ値を返します。また、<code>vm.a = 2</code> に設定すると <code>vm.$data</code> が変わります.</p>
-<p>データオブジェクトは適当な位置で変化します。そのため、参照によってそれらを変更することは、<code>vm.$data</code> を変更することと同じ効果を持っています. この事が、複数の Vue インスタンスがデータの同じ部分を監視することを可能にしています。より広い応用としては、 Vue インスタンスは純粋な view として使われ、そして、より分離したストアレイヤにデータ操作ロジックを外面化します。</p>
-<p>ここでの問題は、一度監視が始まったら、Vue.js はプロパティの新規追加と削除を検出できないことです。<br>この問題を避けるために、監視されたオブジェクトは <code>$add</code> 、<code>$set</code> そして <code>$delete</code> メソッドで追加削除されます。</p>
-<p>以下は Vue.js でどのようにリアクティブな更新が実装されているか、高レベルな概要です:</p>
-<p><img src="/images/data.png" alt="データ監視"></p>
-<h3 id="ディレクティブ">ディレクティブ</h3><p>Vue.js が DOM 要素についての何かをすることを伝えているプレフィックスのついた HTML 属性です。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-text</span>=<span class="value">"message"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>ここでは div 要素は値が <code>message</code> でディレクティブ <code>v-text</code> を持っています。 これは Vue.js が、div の textContent が Vue インスタンスの <code>message</code> プロパティと同期していることを、保っていることを伝えています。</p>
-<p>ディレクティブは任意の DOM 操作をカプセル化できます。例えば、<code>v-attr</code> は要素の属性を操作し、<code>v-repeat</code> は配列に基づいて要素をクローンし、 <code>v-on</code> はイベントリスナを随行します。これらは後にまとめます。</p>
-<h3 id="Mustache_バインディング">Mustache バインディング</h3><p>テキストと属性の両方において mustache なスタイルのバインディングを使うこともできます。それらは内部で、<code>v-text</code> ディレクティブ と <code>v-attr</code> ディレクティブに翻訳されます。例えば:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"person-&#123;&#123;id&#125;&#125;"</span>&gt;</span>Hello &#123;&#123;name&#125;&#125;!<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>この書き方は便利ですが、いくつか注意しなければならないことがあります:</p>
-<p class="tip"> <code>&lt;image&gt;</code> 要素の <code>src</code> 属性は、値が設定されたときに HTTP リクエストを作成します。そのため、テンプレートが初めに解析されたときに、404 の結果が返ってきます. この場合は、<code>v-attr</code> を使うのが良いです。</p>
+    <p>Vue.js を試すには、<a href="https://jsfiddle.net/yyx990803/okv0rgrk/" target="_blank" rel="external">JSFiddle Hello World example</a> が最も簡単です。自由に他のタブを開いて、基本的な例を試してみましょう。もしパッケージマネージャからダウンロード/インストールする方を好むなら、<a href="/guide/installation.html">インストール</a>のページをチェックしてください。</p>
+<h3 id="Hello_World">Hello World</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"app"</span>&gt;</span></span><br><span class="line">  &#123;&#123; message &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: <span class="string">'Hello Vue.js!'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p class="tip">Internet Explorer (IE) は、HTML を解析しているときに、<code>style</code> 属性の無効なインラインを削除します。 そのため IE をサポートしたい場合、 インライン CSS をバインディングするときにはいつも <code>v-style</code> を使ってください。</p>
-
-<p>エスケープされていない HTML に対して3重の mustache を使うことができ、それは内部で <code>v-html</code> に翻訳されます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&#123; safeHTMLString &#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>しかしながら、これは潜在的な XSS 攻撃の窓を開けてしまいます。それゆえ、データソースのセキュリティが絶対に確かなときか、信頼できない HTML を削除するカスタムフィルタを通じてパイプしたときのみ、3重の mustaches を使うことがよいでしょう。</p>
-<p>最後に、一度だけの挿入を示すために、mustache バインディングに <code>*</code> を追加することもできます。これはデータ変更には反応しません:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;* onlyOnce &#125;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="フィルタ">フィルタ</h3><p>フィルタは View を更新する前の生の値を処理するために使われる関数です。これらは、 ディレクティブかバインディングの中の”パイプ(<code>|</code>)”によって示されます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>&#123;&#123;message | capitalize&#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>div の textContent が更新されたときに、<code>message</code> の値は <code>capitalize</code> 関数を通じて初めて解析されます。詳細は<a href="/guide/filters.html">フィルタ</a> を参照してください。</p>
-<h3 id="コンポーネント">コンポーネント</h3><p><img src="/images/components.png" alt="コンポーネントのツリー"></p>
-<p>Vue.js では、全ての要素は単に Vue インスタンスです。コンポーネントは、アプリケーションインターフェイスを表現するネストされたツリーのような階層構造を形作ります。これらは <code>Vue.extend</code> から返ってきたカスタムコンストラクタによって初期化されます。しかし、より宣言的なアプローチはそれらを <code>Vue.component(id, constructor)</code> で登録することです。 一度登録されれば、カスタム要素のフォームで、他の Vue インスタンスのテンプレートに宣言的にネストされます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">my-component</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- internals handled by my-component --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>この簡単な機構は、宣言の再利用と <a href="http://www.w3.org/TR/components-intro/" target="_blank" rel="external">Web Components</a> と似た方法での Vue インスタンスの構成を可能にします。最新ブラウザや重い polyfills は必要ありません。アプリケーションをより小さなコンポーネントに分割することにより、結果は高度に分離され、メンテナンスしやすいコードベースになります。 詳細は<a href="/guide/components.html">コンポーネントシステム</a>を参照してください。</p>
-<h2 id="クイックな例">クイックな例</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"demo"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h1</span>&gt;</span>&#123;&#123;title | uppercase&#125;&#125;<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span></span><br><span class="line">      <span class="attribute">v-repeat</span>=<span class="value">"todos"</span></span><br><span class="line">      <span class="attribute">v-on</span>=<span class="value">"click: done = !done"</span></span><br><span class="line">      <span class="attribute">class</span>=<span class="value">"&#123;&#123;done ? 'done' : ''&#125;&#125;"</span>&gt;</span></span><br><span class="line">      &#123;&#123;content&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    title: <span class="string">'todos'</span>,</span><br><span class="line">    todos: [</span><br><span class="line">      &#123;</span><br><span class="line">        done: <span class="literal">true</span>,</span><br><span class="line">        content: <span class="string">'Learn JavaScript'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        done: <span class="literal">false</span>,</span><br><span class="line">        content: <span class="string">'Learn Vue.js'</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p><strong>結果</strong></p>
-<p><div id="demo"><h1>&#123;&#123;title | uppercase&#125;&#125;</h1><ul><li v-repeat="todos" v-on="click: done = !done" class="&#123;&#123;done ? 'done' : ''&#125;&#125;">&#123;&#123;content&#125;&#125;</li></ul></div></p>
+<div id="app" class="demo">
+  {{ message }}
+</div>
 <script>
-var demo = new Vue({
-  el: '#demo',
+new Vue({
+  el: '#app',
   data: {
-    title: 'todos',
+    message: 'Hello Vue.js!'
+  }
+})
+</script>
+
+<h3 id="双方向_(Two-way)_バインディング">双方向 (Two-way) バインディング</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"message"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: <span class="string">'Hello Vue.js!'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<div id="app2" class="demo">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+<script>
+new Vue({
+  el: '#app2',
+  data: {
+    message: 'Hello Vue.js!'
+  }
+})
+</script>
+
+<h3 id="リストのレンダリング">リストのレンダリング</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"todo in todos"</span>&gt;</span></span><br><span class="line">      &#123;&#123; todo.text &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    todos: [</span><br><span class="line">      &#123; text: <span class="string">'Learn JavaScript'</span> &#125;,</span><br><span class="line">      &#123; text: <span class="string">'Learn Vue.js'</span> &#125;,</span><br><span class="line">      &#123; text: <span class="string">'Build Something Awesome'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<div id="app3" class="demo">
+  <ul>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ul>
+</div>
+<script>
+new Vue({
+  el: '#app3',
+  data: {
     todos: [
-      {
-        done: true,
-        content: 'Learn JavaScript'
-      },
-      {
-        done: false,
-        content: 'Learn Vue.js'
-      }
+      { text: 'Learn JavaScript' },
+      { text: 'Learn Vue.js' },
+      { text: 'Build Something Awesome' }
     ]
   }
 })
 </script>
 
-<p><a href="http://jsfiddle.net/yyx990803/yMv7y/" target="_blank" rel="external">jsfiddle</a>も利用できます.</p>
-<p>todo をクリックして toggle したり、 ブラウザのコンソールを開いて <code>demo</code> オブジェクトで遊んでみることも可能です。例えば、<code>demo.title</code> を変更して、<code>demo.todos</code> に新しいオブジェクトを追加したり、 todo の<code>done</code> 状態をトグルしてみたりしてみて下さい。</p>
-<p>多分、いくつかの疑問が心に浮かんできたでしょう。しかし心配ありません。我々はそれらの疑問をすぐに解決します。</p>
-<p>次の<a href="/guide/directives.html">ディレクティブ</a>に進みましょう。</p>
+<h3 id="ユーザー入力のハンドリング">ユーザー入力のハンドリング</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"reverseMessage"</span>&gt;</span>Reverse Message<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: <span class="string">'Hello Vue.js!'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    reverseMessage: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.message = <span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+<div id="app4" class="demo">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+<script>
+new Vue({
+  el: '#app4',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+})
+</script>
+
+<h3 id="All_Together_Now_(TODO_アプリケーション)">All Together Now (TODO アプリケーション)</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"newTodo"</span> <span class="attribute">v-on:keyup.enter</span>=<span class="value">"addTodo"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"todo in todos"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">span</span>&gt;</span>&#123;&#123; todo.text &#125;&#125;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"removeTodo($index)"</span>&gt;</span>X<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    newTodo: <span class="string">''</span>,</span><br><span class="line">    todos: [</span><br><span class="line">      &#123; text: <span class="string">'Add some todos'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    addTodo: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> text = <span class="keyword">this</span>.newTodo.trim()</span><br><span class="line">      <span class="keyword">if</span> (text) &#123;</span><br><span class="line">        <span class="keyword">this</span>.todos.push(&#123; text: text &#125;)</span><br><span class="line">        <span class="keyword">this</span>.newTodo = <span class="string">''</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    removeTodo: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.todos.splice(index, <span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<div id="app5" class="demo">
+  <input v-model="newTodo" v-on:keyup.enter="addTodo">
+  <ul>
+    <li v-for="todo in todos">
+      <span>{{ todo.text }}</span>
+      <button v-on:click="removeTodo($index)">X</button>
+    </li>
+  </ul>
+</div>
+<script>
+new Vue({
+  el: '#app5',
+  data: {
+    newTodo: '',
+    todos: [
+      { text: 'Add some todos' }
+    ]
+  },
+  methods: {
+    addTodo: function () {
+      var text = this.newTodo.trim()
+      if (text) {
+        this.todos.push({ text: text })
+        this.newTodo = ''
+      }
+    },
+    removeTodo: function (index) {
+      this.todos.splice(index, 1)
+    }
+  }
+})
+</script>
+
+<p>この例で Vue.js の動作についての基本概念がわかっていただけると幸いです。また多くの疑問も生まれたと思います。残りのガイドを読んでその疑問を解消してください。</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/installation.html">インストール</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/overview.html">概要</a> →</span>
+        
+      </div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
 </div>
 
                 

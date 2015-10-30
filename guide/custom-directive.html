@@ -6,7 +6,8 @@
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
@@ -41,10 +42,19 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
 </div>
@@ -59,16 +69,31 @@
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
-<li><a href="/api/" class="nav-link">API リファレンス</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">例</a></li>
-<li><a href="/blog/" class="nav-link">ブログ(英語)</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="/blog/" class="nav-link">ブログ</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
 
     </ul>
     <div class="list">
+        <h2>
         
-        <h2>ガイド</h2>
+        ガイド
         
+        <select class="version-select">
+            <option selected>1.0</option>
+            <option>0.12</option>
+        </select>
+        </h2>
         <ul class="menu-root">
             
                 <li>
@@ -80,27 +105,51 @@
                 </li>
             
                 <li>
-                    <a href="/guide/directives.html" class="sidebar-link">ディレクティブ</a>
+                    <a href="/guide/overview.html" class="sidebar-link">概要</a>
                 </li>
             
                 <li>
-                    <a href="/guide/filters.html" class="sidebar-link">フィルタ</a>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue インスタンス</a>
                 </li>
             
                 <li>
-                    <a href="/guide/list.html" class="sidebar-link">リスト表示</a>
+                    <a href="/guide/syntax.html" class="sidebar-link">データバインディング構文</a>
                 </li>
             
                 <li>
-                    <a href="/guide/events.html" class="sidebar-link">イベントのリスニング</a>
+                    <a href="/guide/computed.html" class="sidebar-link">算出プロパティ</a>
                 </li>
             
                 <li>
-                    <a href="/guide/forms.html" class="sidebar-link">フォームのハンドリング</a>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">クラスとスタイルのバインディング</a>
                 </li>
             
                 <li>
-                    <a href="/guide/computed.html" class="sidebar-link">Computed Properties</a>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件付きレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">リストレンダリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">メソッドとイベントハンドリング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">フォーム入力バインディング</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">トランジション</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">コンポーネント</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">リアクティブの探求</a>
                 </li>
             
                 <li>
@@ -112,11 +161,11 @@
                 </li>
             
                 <li>
-                    <a href="/guide/components.html" class="sidebar-link">コンポーネントシステム</a>
+                    <a href="/guide/mixins.html" class="sidebar-link">ミックスイン</a>
                 </li>
             
                 <li>
-                    <a href="/guide/transitions.html" class="sidebar-link">トランジションシステム</a>
+                    <a href="/guide/plugins.html" class="sidebar-link">プラグイン</a>
                 </li>
             
                 <li>
@@ -124,23 +173,9 @@
                 </li>
             
                 <li>
-                    <a href="/guide/extending.html" class="sidebar-link">Vue の拡張</a>
+                    <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
-                <li>
-                    <a href="/guide/best-practices.html" class="sidebar-link new">コツ & ベストプラクティス</a>
-                </li>
-            
-                <li>
-                    <a href="/guide/faq.html" class="sidebar-link">FAQ</a>
-                </li>
-            
-            <li><a href="http://legacy.vuejs.org">0.11 のドキュメントをお探しですか？</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
@@ -151,97 +186,106 @@
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <h2 id="基本">基本</h2><p>Vue.js ではカスタムディレクティブを登録する仕組みが用意されています。カスタムディレクティブはデータの変更に伴い DOM がどのように変更されるかを定義することができる仕組みです。<strong>directive id</strong> とそれに続く <strong>definition object</strong> を<code>Vue.directive(id, definition)</code> メソッドに渡して、グローバルにカスタムディレクティブを登録することができます。この definition object はいくつかの hook 関数(全て任意)を提供します:</p>
+    <h2 id="基本">基本</h2><p>コアで出荷されたディレクティブのデフォルトセットに加えて、カスタムディレクティブ (custom directive) を登録することができます。カスタムディレクティブは任意の DOM の振舞いへのマッピングデータを変更するためのメカニズムを提供します。</p>
+<p><code>Vue.directive(id, definition)</code> メソッドで、<strong>directive id</strong> と <strong>definition object</strong> を続けて渡して、グローバルカスタムディレクティブに登録できます。それをコンポーネントの <code>directives</code> オプションによってローカルカスタムディレクティブに登録することもできます。</p>
+<h3 id="フック関数">フック関数</h3><p>definition object はいくつかのフック関数(全て任意)を提供します:</p>
 <ul>
-<li><strong>bind</strong>: ディレクティブが初めて対象のエレメントに紐付いた時に一度だけ呼ばれます。</li>
-<li><strong>update</strong>: 初めの一度は bind の直後に初期値とともに呼ばれ、以降、バインディングされている値が変更される度に呼ばれます。引数には新しい値と以前の値が渡されます。</li>
-<li><strong>unbind</strong>: ディレクティブが紐付いているエレメントから取り除かれた時に一度だけ呼ばれます。</li>
+<li><p><strong>bind</strong>: ディレクティブが初めて対象の要素にひも付いた時に一度だけ呼ばれます。</p>
+</li>
+<li><p><strong>update</strong>: 初めの一度は bind の直後に初期値とともに呼ばれ、以降、バインディングされている値が変更される度に呼ばれます。引数には新しい値と以前の値が渡されます。</p>
+</li>
+<li><p><strong>unbind</strong>: ディレクティブがひも付いている要素から取り除かれた時に一度だけ呼ばれます。</p>
+</li>
 </ul>
 <p><strong>例</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 準備のための作業をします</span></span><br><span class="line">    <span class="comment">// e.g. イベントリスナを追加したり、一回だけ実行が必要なコストのかかる処理を行う</span></span><br><span class="line">  &#125;,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 更新された値に何か処理をします</span></span><br><span class="line">    <span class="comment">// この部分は初期値に対しても呼ばれます</span></span><br><span class="line">  &#125;,</span><br><span class="line">  unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// クリーンアップのための処理を行います</span></span><br><span class="line">    <span class="comment">// e.g. bind()の中で追加されたイベントリスナの削除</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>一度登録された後は、以下のように Vue.js のテンプレート内で使用することができます (Vue.js の prefix が必要です):</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-my-directive</span>=<span class="value">"someValue"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><code>update</code> 関数のみが必要な場合は、definition object の代わりに関数を一つ渡すこともできます:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// この関数は update() として使用される</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>全ての hook 関数は実際の <strong>directive object</strong> にコピーされます。directive object は hook 関数の内側で <code>this</code> のコンテキストとしてアクセスすることができます。この directive object はいくつかの便利なプロパティを持っています:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 準備のための作業をします</span></span><br><span class="line">    <span class="comment">// e.g. イベントリスナを追加したり、一回だけ実行が必要なコストのかかる処理を行う</span></span><br><span class="line">  &#125;,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 更新された値に何か処理をします</span></span><br><span class="line">    <span class="comment">// この部分は初期値に対しても呼ばれます</span></span><br><span class="line">  &#125;,</span><br><span class="line">  unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// クリーンアップのための処理を行います</span></span><br><span class="line">    <span class="comment">// e.g. bind()の中で追加されたイベントリスナの削除</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>一度登録された後は、以下のように Vue.js のテンプレート内で使用することができます (<code>v-</code> の接頭辞を追加するのを忘れないでください):</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-my-directive</span>=<span class="value">"someValue"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>update</code> 関数のみが必要な場合は、definition object の代わりに関数を1つ渡すこともできます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// この関数は update() として使用される</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="ディレクティブインスタンスのプロパティ">ディレクティブインスタンスのプロパティ</h3><p>全てのフック関数は実際に <strong>ディレクティブオブジェクト (directive object)</strong> にコピーされます。ディレクティブオブジェクトはフック関数の内側で <code>this</code> のコンテキストとしてアクセスすることができます。このディレクティブオブジェクトはいくつかの便利なプロパティを持っています:</p>
 <ul>
-<li><strong>el</strong>: ディレクティブが紐づく要素</li>
+<li><strong>el</strong>: ディレクティブがひも付く要素</li>
 <li><strong>vm</strong>: このディレクティブを所有する ViewModel</li>
-<li><strong>expression</strong>: 引数とフィルタ以外のバインディングの expression</li>
+<li><strong>expression</strong>: 引数とフィルタ以外のバインディング式</li>
 <li><strong>arg</strong>: 引数(もしある場合)</li>
-<li><strong>raw</strong>: 元のパースされる前の expression</li>
-<li><strong>name</strong>: prefix 無しのディレクティブの名前</li>
+<li><strong>name</strong>: 接頭辞 (prefix) 無しのディレクティブの名前</li>
+<li><strong>modifiers</strong>: もしあれば、修飾子 (modifier) を含んでいるオブジェクト</li>
+<li><strong>descriptor</strong>: 全体のディレクティブの解析結果を含むオブジェクト</li>
+<li><strong>params</strong>: params 属性を含んでいるオブジェクト。<a href="#params">以下で説明します</a></li>
 </ul>
-<p class="tip">これらの全てのプロパティは read-only で変更しないものとして扱わなくてはいけません。カスタムプロパティを directive object に追加することができますが、意図せずに既存の内部プロパティを上書きしないように注意が必要です。</p>
+<p class="tip">これらの全てのプロパティは読み込みのみ (read-only) で変更しないものとして扱わなくてはいけません。カスタムプロパティをディレクティブオブジェクトに追加することができますが、意図せずに既存の内部プロパティを上書きしないように注意が必要です。</p>
 
 <p>いくつかのプロパティを使用したカスタムディレクティブの例:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"demo"</span> <span class="attribute">v-demo</span>=<span class="value">"LightSlateGray : msg"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'demo'</span>, &#123;</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.el.style.color = <span class="string">'#fff'</span></span><br><span class="line">    <span class="keyword">this</span>.el.style.backgroundColor = <span class="keyword">this</span>.arg</span><br><span class="line">  &#125;,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.el.innerHTML =</span><br><span class="line">      <span class="string">'name - '</span>       + <span class="keyword">this</span>.name + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'raw - '</span>        + <span class="keyword">this</span>.raw + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'expression - '</span> + <span class="keyword">this</span>.expression + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'argument - '</span>   + <span class="keyword">this</span>.arg + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'value - '</span>      + value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    msg: <span class="string">'hello!'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"demo"</span> <span class="attribute">v-demo:hello.a.b</span>=<span class="value">"msg"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'demo'</span>, &#123;</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.el.style.color = <span class="string">'#fff'</span></span><br><span class="line">    <span class="keyword">this</span>.el.style.backgroundColor = <span class="keyword">this</span>.arg</span><br><span class="line">  &#125;,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.el.innerHTML =</span><br><span class="line">      <span class="string">'name - '</span>       + <span class="keyword">this</span>.name + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'expression - '</span> + <span class="keyword">this</span>.expression + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'argument - '</span>   + <span class="keyword">this</span>.arg + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'modifiers - '</span>  + <span class="built_in">JSON</span>.stringify(<span class="keyword">this</span>.modifiers) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'value - '</span>      + value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    msg: <span class="string">'hello!'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p><strong>結果</strong></p>
-<p><div id="demo" v-demo="LightSlateGray : msg"></div></p>
+<p><div id="demo" v-demo:hello.a.b="msg"></div></p>
 <script>
 Vue.directive('demo', {
   bind: function () {
-    this.el.style.color = '#fff'
-    this.el.style.backgroundColor = this.arg
+    console.log('demo bound!')
   },
   update: function (value) {
     this.el.innerHTML =
       'name - ' + this.name + '<br>' +
-      'raw - ' + this.raw + '<br>' +
       'expression - ' + this.expression + '<br>' +
       'argument - ' + this.arg + '<br>' +
+      'modifiers - '  + JSON.stringify(this.modifiers) + '<br>' +
       'value - ' + value
   }
 })
 var demo = new Vue({
   el: '#demo',
   data: {
-    msg: 'hello!'
+    msg: 'world!'
   }
 })
 </script>
 
-<h3 id="複数の節">複数の節</h3><p>コンマで区切られた引数は、複数のディレクティブインスタンスとしてバウンドされます。以下の例は、ディレクティブメソッドが2回呼ばれます。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-demo</span>=<span class="value">"color: 'white', text: 'hello!'"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>オブジェクトリテラルで値を閉じることにより、すべての引数で単一のバインディングを成し遂げることができます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-demo</span>=<span class="value">"&#123;color: 'white', text: 'hello!'&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'demo'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value) <span class="comment">// Object &#123;color: 'white', text: 'hello!'&#125;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="リテラルディレクティブ">リテラルディレクティブ</h2><p>もしカスタムディレクティブを作成するときに <code>isLiteral: true</code> を渡した場合は、その属性値は文字列 string として扱われ、そのディレクティブの <code>expression</code> として割り当てられます。リテラルディレクティブはデータの監視の準備はしません。</p>
-<p>例:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-literal-dir</span>=<span class="value">"foo"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'literal-dir'</span>, &#123;</span><br><span class="line">  isLiteral: <span class="literal">true</span>,</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.expression) <span class="comment">// 'foo'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="動的リテラル">動的リテラル</h3><p>しかし、リテラルディレクティブに mustache タグを含んでいる場合は、以下のような挙動になります: </p>
-<ul>
-<li><p>ディレクティブインスタンスは <code>this._isDynamicLiteral</code> というフラグを <code>true</code> にセットします。</p>
-</li>
-<li><p>もし <code>update</code> function が提供されていない場合、 mustache 表現は一度だけ評価され、 <code>this.expression</code> に割り当てられます。データ監視は行われません。</p>
-</li>
-<li><p>もし <code>update</code> function が提供される場合、ディレクティブはその expression に対するデータ監視をセットアップし、評価された結果が変更される度に <code>update</code> が呼ばれます。</p>
-</li>
-</ul>
-<h2 id="Two-way_ディレクティブ">Two-way ディレクティブ</h2><p>もしディレクティブが受け取ったデータを Vue インスタンスに書き戻したい場合は <code>twoWay: true</code> を渡す必要があります。このオプションはディレクティブの <code>this.set(value)</code> で使用することができます。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'example'</span>, &#123;</span><br><span class="line">  twoWay: <span class="literal">true</span>,</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.handler = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// vm にデータをセットします</span></span><br><span class="line">      <span class="comment">// もしディレクティブが v-example="a.b.c" と紐付いている場合,</span></span><br><span class="line">      <span class="comment">// 与えられた値を `vm.a.b.c` に</span></span><br><span class="line">      <span class="comment">// セットしようと試みます</span></span><br><span class="line">      <span class="keyword">this</span>.set(<span class="keyword">this</span>.el.value)</span><br><span class="line">    &#125;.bind(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">this</span>.el.addEventListener(<span class="string">'input'</span>, <span class="keyword">this</span>.handler)</span><br><span class="line">  &#125;,</span><br><span class="line">  unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.el.removeEventListener(<span class="string">'input'</span>, <span class="keyword">this</span>.handler)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="インラインステートメント">インラインステートメント</h2><p> <code>acceptStatement:true</code> を渡すことでカスタムディレクティブが <code>v-on</code> が行っているようなインラインステートメントを使用できるようになります: </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-my-directive</span>=<span class="value">"a++"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  acceptStatement: <span class="literal">true</span>,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 呼び出される際に渡される値は function です</span></span><br><span class="line">    <span class="comment">// function は "a++" ステートメントを</span></span><br><span class="line">    <span class="comment">// 所有者の vm　のスコープで実行します</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>ただし、テンプレート内のサイドエフェクトを避けるためにも、賢く使いましょう。</p>
-<h2 id="ディープな監視">ディープな監視</h2><p>もしカスタムディレクティブでオブジェクトを扱いたい場合で、オブジェクトの内側のネストされたプロパティが変更された時に <code>update</code> をトリガしたい場合は、ディレクティブの定義に <code>deep: true</code> を渡す必要があります。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-my-directive</span>=<span class="value">"obj"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  deep: <span class="literal">true</span>,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// `obj` の中のネストされたプロパティが</span></span><br><span class="line">    <span class="comment">// 変更された時に呼ばれる</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="ディレクティブの優先度">ディレクティブの優先度</h2><p>ディレクティブには任意で優先度の数値 (デフォルトは0) を与えることができます。同じ要素上で高い優先度をもつディレクティブは他のディレクティブより早く処理されます。同じ優先度をもつディレクティブは要素上の属性のリストに出現する順番で処理されますが、ブラウザが異なる場合、一貫した順番になることは保証されません。</p>
-<p>いくつかのビルトインディレクティブに関する優先度は <a href="/api/directives.html">API リファレンス</a> で確認できます。さらに ロジック制御する <code>v-repeat</code> と <code>v-if</code> は “ターミナルディレクティブ” として扱われ、コンパイル処理の中で常に最も高い優先度を持ちます。</p>
-<h2 id="エレメントディレクティブ">エレメントディレクティブ</h2><p>いくつのケースでは、属性としてよりむしろカスタム要素の形でディレクティブを使いたい場合があります。これは、Angular の “E” モードディレクティブの概念に非常に似ています。エレメントディレクティブは軽量な代替を本格的なコンポーネントとして提供します(ガイドの後半で説明されています)。カスタム要素をディレクティブのように登録できます:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue.elementDirective(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  <span class="comment">// 標準のディレクティブのような同じ API</span></span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// this.el を操作 ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="オブジェクトリテラル">オブジェクトリテラル</h3><p>あなたのディレクティブが複数の値を必要ならば、JavaScript オブジェクトリテラルも渡すことができます。ディレクティブは任意の妥当な JavaScript 式を取ることができるのを覚えておいてください:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-demo</span>=<span class="value">"&#123; color: 'white', text: 'hello!' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'demo'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value.color) <span class="comment">// "white"</span></span><br><span class="line">  <span class="built_in">console</span>.log(value.text) <span class="comment">// "hello!"</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="リテラル修飾子">リテラル修飾子</h3><p>ディレクティブがリテラル修飾子 (literal modifier) で使用されるとき、属性の値は、プレーンな文字列として解釈され、そして直接 <code>update</code> メソッドに渡されます。<code>update</code> メソッドはプレーンな文字列はリアクティブにできないため、一度だけ呼ばれます。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-demo.literal</span>=<span class="value">"foo bar baz"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'demo'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value) <span class="comment">// "foo bar baz"</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="エレメントディレクティブ">エレメントディレクティブ</h3><p>いくつのケースでは、属性としてよりむしろカスタム要素の形でディレクティブを使いたい場合があります。これは、Angular の “E” モードディレクティブの概念に非常に似ています。エレメントディレクティブ (element directive) は軽量な代替を本格的なコンポーネントとして提供します(ガイドの後半で説明されています)。カスタム要素をディレクティブのように登録できます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.elementDirective(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  <span class="comment">// 標準のディレクティブのような同じ API</span></span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// this.el を操作 ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>この時、以下の代わりに:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-my-directive</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-my-directive</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>以下のように書くことができます:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">my-directive</span>&gt;</span><span class="tag">&lt;/<span class="title">my-directive</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>エレメントディレクティブは引数または expressions を受け付けることはできません。しかし、その振舞いを決定するために要素の属性を読み取ることはできます。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">my-directive</span>&gt;</span><span class="tag">&lt;/<span class="title">my-directive</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>エレメントディレクティブは引数または式を受け付けることはできません。しかし、その振舞いを決定するために要素の属性を読み取ることはできます。</p>
 <p>標準のディレクティブとの大きな違いは、エレメントディレクティブは<strong>ターミナル</strong>で、Vue が一度エレメントディレクティブに遭遇したことを意味します。それは、要素とその子を残したまま、エレメントディレクティブそれ自体、要素とその子を操作することができるようになります。</p>
-<p>次は <a href="/guide/custom-filter.html">カスタムフィルタ</a></p>
+<h2 id="高度なオプション">高度なオプション</h2><h3 id="params">params</h3><p>カスタムディレクティブは <code>params</code> 配列を提供でき、Vue コンパイラは自動的にディレクティブがバインドされた要素でこれらの属性を抽出します。例:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-example</span> <span class="attribute">a</span>=<span class="value">"hi"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'example'</span>, &#123;</span><br><span class="line">  params: [<span class="string">'a'</span>],</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.params.a) <span class="comment">// -&gt; "hi"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>この API は動的な属性もサポートします。<code>this.params[key]</code> の値は自動的に最新に保ちます。加えて、値が変更されたときコールバックも指定できます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-example</span> <span class="attribute">v-bind:a</span>=<span class="value">"someValue"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'example'</span>, &#123;</span><br><span class="line">  params: [<span class="string">'a'</span>],</span><br><span class="line">  paramWatchers: &#123;</span><br><span class="line">    a: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'a changed!'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="deep">deep</h3><p>もしカスタムディレクティブでオブジェクトを扱いたい場合で、オブジェクトの内側のネストされたプロパティが変更された時に <code>update</code> をトリガしたい場合は、ディレクティブの定義に <code>deep: true</code> を渡す必要があります。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-my-directive</span>=<span class="value">"obj"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  deep: <span class="literal">true</span>,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// `obj` の中のネストされたプロパティが</span></span><br><span class="line">    <span class="comment">// 変更された時に呼ばれる</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="twoWay">twoWay</h3><p>あなたのディレクティブが Vue インスタンスにデータを書き戻す場合、<code>twoWay: true</code> で渡す必要があります。このオプションは、ディレクティブ内部で <code>this.set(value)</code> を使用することができます:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'example'</span>, &#123;</span><br><span class="line">  twoWay: <span class="literal">true</span>,</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.handler = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// vm にデータをセットします</span></span><br><span class="line">      <span class="comment">// もしディレクティブが v-example="a.b.c" とひも付いている場合,</span></span><br><span class="line">      <span class="comment">// 与えられた値を `vm.a.b.c` に</span></span><br><span class="line">      <span class="comment">// セットしようと試みます</span></span><br><span class="line">      <span class="keyword">this</span>.set(<span class="keyword">this</span>.el.value)</span><br><span class="line">    &#125;.bind(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">this</span>.el.addEventListener(<span class="string">'input'</span>, <span class="keyword">this</span>.handler)</span><br><span class="line">  &#125;,</span><br><span class="line">  unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.el.removeEventListener(<span class="string">'input'</span>, <span class="keyword">this</span>.handler)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="acceptStatement">acceptStatement</h3><p><code>acceptStatement: true</code> を渡すことでカスタムディレクティブが <code>v-on</code> が行っているようなインラインステートメントを使用できるようになります: </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-my-directive</span>=<span class="value">"a++"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  acceptStatement: <span class="literal">true</span>,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 呼び出される際に渡される値は function です</span></span><br><span class="line">    <span class="comment">// function は "a++" ステートメントを</span></span><br><span class="line">    <span class="comment">// 所有者の vm　のスコープで実行します</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>ただし、テンプレート内のサイドエフェクトを避けるためにも、賢く使いましょう。</p>
+<h3 id="priority">priority</h3><p>ディレクティブには任意で優先度の数値 (デフォルトは0) を与えることができます。同じ要素上で高い優先度をもつディレクティブは他のディレクティブより早く処理されます。同じ優先度をもつディレクティブは要素上の属性のリストに出現する順番で処理されますが、ブラウザが異なる場合、一貫した順番になることは保証されません。</p>
+<p>いくつかのビルトインディレクティブに関する優先度は <a href="/api/#Directives">API</a> で確認できます。さらに フロー制御するディレクティブ <code>v-if</code> と <code>v-for</code> は、コンパイル処理の中で常に最も高い優先度を持ちます。</p>
 
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/reactivity.html">リアクティブの探求</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/custom-filter.html">カスタムフィルタ</a> →</span>
+        
+      </div>
+    
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
 </div>
 
                 
